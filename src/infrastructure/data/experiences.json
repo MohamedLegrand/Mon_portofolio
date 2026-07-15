@@ -1,0 +1,19 @@
+[
+  {
+    "id": "exp-1",
+    "company": "Tech Solutions SARL",
+    "role": "Développeur Full Stack Senior",
+    "startDate": "2024-03",
+    "description": "Responsable de la conception et du développement d'applications cloud. Migration d'architectures monolithiques vers des microservices et encadrement d'une équipe de 3 développeurs juniors.",
+    "technologies": ["React", "Node.js", "TypeScript", "Docker", "AWS", "PostgreSQL"]
+  },
+  {
+    "id": "exp-2",
+    "company": "Digital Factory",
+    "role": "Développeur Front End React",
+    "startDate": "2022-09",
+    "endDate": "2024-02",
+    "description": "Développement d'interfaces utilisateur modernes et hautement interactives pour divers clients de l'agence. Optimisation des performances et amélioration de l'accessibilité Web (WCAG).",
+    "technologies": ["React", "Redux Toolkit", "JavaScript", "TailwindCSS", "Sass", "Jest"]
+  }
+]

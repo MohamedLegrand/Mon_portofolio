@@ -1,0 +1,62 @@
+import type { Experience } from '@/domain/entities/Experience';
+
+interface ExperienceItemProps {
+  experience: Experience;
+}
+
+export function ExperienceItem({ experience }: ExperienceItemProps) {
+  // Formateur simple de date (ex: 2024-03 -> Mars 2024)
+  const formatDate = (dateStr: string) => {
+    if (!dateStr) return '';
+    const [year, month] = dateStr.split('-');
+    const months = [
+      'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 
+      'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'
+    ];
+    const monthIdx = parseInt(month, 10) - 1;
+    return monthIdx >= 0 && monthIdx < 12 ? `${months[monthIdx]} ${year}` : dateStr;
+  };
+
+  const startFormatted = formatDate(experience.startDate);
+  const endFormatted = experience.endDate ? formatDate(experience.endDate) : 'Présent';
+
+  return (
+    <div className="relative pl-8 sm:pl-10 pb-12 last:pb-0 group">
+      {/* Ligne verticale de la timeline */}
+      <div className="absolute left-[11px] top-2 bottom-0 w-[2px] bg-zinc-800 group-last:hidden" />
+
+      {/* Point de la timeline */}
+      <div className="absolute left-[4px] top-1.5 h-4 w-4 rounded-full border border-red-500 bg-zinc-950 transition-all duration-300 group-hover:bg-red-500 group-hover:ring-4 group-hover:ring-red-500/20" />
+
+      {/* Conteneur de l'expérience */}
+      <div className="flex flex-col gap-1.5">
+        {/* Période */}
+        <span className="text-xs font-semibold uppercase tracking-wider text-red-500">
+          {startFormatted} &mdash; {endFormatted}
+        </span>
+
+        {/* Rôle & Entreprise */}
+        <h3 className="text-lg font-bold text-white group-hover:text-red-500 transition-colors">
+          {experience.role} <span className="text-zinc-500 font-normal">chez</span> {experience.company}
+        </h3>
+
+        {/* Description */}
+        <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+          {experience.description}
+        </p>
+
+        {/* Technologies utilisées */}
+        <div className="mt-4 flex flex-wrap gap-1.5">
+          {experience.technologies.map((tech) => (
+            <span
+              key={tech}
+              className="rounded-md bg-zinc-900 px-2 py-0.5 text-xs font-medium text-zinc-400 border border-zinc-800/80"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}

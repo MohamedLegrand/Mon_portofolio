@@ -1,0 +1,75 @@
+[
+  {
+    "id": "hr-pay",
+    "title": "HR-PAY",
+    "description": "Analyse fonctionnelle et modélisation complète d'une solution d'agrégateur de paiement multi-services sécurisé et hautement disponible.",
+    "stack": ["UML", "Merise", "Architecture de paiement", "Sécurité API"],
+    "imageUrl": "/assets/projects/ecommerce.jpg",
+    "featured": true,
+    "category": "analyse",
+    "details": "HR-PAY est un agrégateur de paiement multi-services conçu pour unifier plusieurs passerelles de transaction sous une seule interface API. L'analyse fonctionnelle et la modélisation UML/Merise ont permis de structurer la gestion sécurisée des clés d'API, de concevoir le schéma de base de données relationnelle et de documenter les diagrammes de cas d'utilisation pour les marchands et les clients finaux."
+  },
+  {
+    "id": "perenkap",
+    "title": "Perenkap",
+    "description": "Analyse et conception de l'architecture d'une application mobile pour les transferts d'argent rapides, intégrant des workflows de transactions résilients.",
+    "stack": ["UML", "Merise", "Architecture Mobile", "Microservices"],
+    "imageUrl": "/assets/projects/devops.jpg",
+    "featured": true,
+    "category": "analyse",
+    "details": "Perenkap est une solution mobile fintech de transfert d'argent instantané. La modélisation de son architecture sous UML et Merise détaille les étapes d'intégration avec les opérateurs de téléphonie (Mobile Money), le système d'authentification à double facteur, et les mécanismes de reprise sur panne pour garantir qu'aucune transaction ne soit perdue en cas d'interruption réseau."
+  },
+  {
+    "id": "mynakp",
+    "title": "Mynakp",
+    "description": "Conception technique et modélisation de Mynakp, une application intelligente dédiée au suivi et à la gestion des finances personnelles.",
+    "stack": ["UML", "Modélisation de données", "Spécifications fonctionnelles"],
+    "imageUrl": "/assets/projects/tasks.jpg",
+    "featured": false,
+    "category": "analyse",
+    "details": "Mynakp est une application mobile d'intelligence budgétaire personnelle. Sa conception fonctionnelle décrit la structure relationnelle pour catégoriser de manière automatique les revenus et dépenses des utilisateurs, la gestion des alertes de dépassement de budget et la visualisation des flux de trésorerie sous forme de graphiques."
+  },
+  {
+    "id": "ebook-analysis",
+    "title": "E-Book Platform Analysis",
+    "description": "Modélisation fonctionnelle globale d'une plateforme de commerce électronique spécialisée dans la vente et la lecture en ligne de livres numériques.",
+    "stack": ["UML", "Merise", "Analyse fonctionnelle"],
+    "imageUrl": "/assets/projects/ecommerce.jpg",
+    "featured": false,
+    "category": "analyse",
+    "details": "Cette analyse définit le cahier des charges et l'architecture fonctionnelle d'un système de vente et de lecture de livres électroniques en ligne. Elle décrit la sécurisation de l'accès aux fichiers PDF/EPUB, la gestion des abonnements de lecture et les cas d'utilisation liés aux transactions d'achat."
+  },
+  {
+    "id": "national-energy",
+    "title": "National Energy",
+    "description": "Développement complet du site vitrine de la station nationale d'énergie National Energy. Optimisation de l'accessibilité, du référencement (SEO) et du temps de réponse.",
+    "stack": ["React", "TypeScript", "TailwindCSS", "Vite"],
+    "liveUrl": "https://national-energ.com",
+    "imageUrl": "/assets/projects/devops.jpg",
+    "featured": true,
+    "category": "code",
+    "details": "National Energy est le site vitrine officiel de la station nationale d'énergie. Il a été développé sous React avec TailwindCSS pour offrir une interface moderne, fluide et 100% responsive. L'accent a été mis sur les performances web (Fast Load Time), l'indexation de contenu (SEO technique) et la mise en conformité de l'accessibilité numérique."
+  },
+  {
+    "id": "afritech-sas",
+    "title": "AFRITECH SAS",
+    "description": "Création du site vitrine dynamique pour la startup AFRITECH SAS, mettant en valeur ses technologies innovantes et ses services digitaux.",
+    "stack": ["React", "Next.js", "TailwindCSS", "Framer Motion"],
+    "liveUrl": "https://afriktechsas.vercel.app",
+    "imageUrl": "/assets/projects/tasks.jpg",
+    "featured": true,
+    "category": "code",
+    "details": "AFRITECH SAS est le portail web de présentation de la startup éponyme. Il a été développé avec Next.js et TailwindCSS, enrichi par des transitions animées haut de gamme avec Framer Motion. Ce site met en lumière les solutions technologiques de l'entreprise et intègre un formulaire de contact asynchrone avec validation de saisie en temps réel."
+  },
+  {
+    "id": "sagesse-africaine",
+    "title": "Sagesse Africaine E-Book",
+    "description": "Développement et déploiement de la plateforme e-commerce e-book Sagesse Africaine, dédiée à la diffusion et vente de livres culturels.",
+    "stack": ["React", "TailwindCSS", "Node.js", "Stripe API"],
+    "liveUrl": "https://sagesseafricaine.org",
+    "imageUrl": "/assets/projects/ecommerce.jpg",
+    "featured": false,
+    "category": "code",
+    "details": "Sagesse Africaine E-Book est une plateforme e-commerce opérationnelle dédiée à la vente de livres numériques littéraires et culturels. Elle intègre l'API Stripe pour le traitement sécurisé des paiements et un tableau de bord permettant aux utilisateurs connectés de télécharger et de consulter leurs e-books achetés."
+  }
+]
