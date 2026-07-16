@@ -7,7 +7,7 @@ import { QuoteCard } from '@/presentation/components/sections/QuoteCard';
 
 export function Home() {
   return (
-    <div className="bg-black">
+    <div className="bg-white dark:bg-black">
       {/* Section Hero d'introduction tripartite */}
       <Hero />
 
@@ -18,7 +18,7 @@ export function Home() {
       <SelectedProjects />
 
       {/* Section d'informations secondaires (3 colonnes side-by-side) */}
-      <section className="mx-auto max-w-7xl px-6 py-20 border-t border-zinc-900">
+      <section className="mx-auto max-w-7xl px-6 py-20 border-t border-zinc-200 dark:border-zinc-900">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Éducation & Compétences */}
           <div className="lg:col-span-4">

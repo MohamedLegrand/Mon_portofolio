@@ -200,12 +200,12 @@ export function CodeTypewriter() {
       `}</style>
 
       {/* Titre au-dessus */}
-      <h2 className="font-bebas text-3xl md:text-5xl text-white border-b border-zinc-900 pb-3 mb-8 tracking-wider">
+      <h2 className="font-bebas text-3xl md:text-5xl text-zinc-900 dark:text-white border-b border-zinc-200 dark:border-zinc-900 pb-3 mb-8 tracking-wider">
         ...au <span className="text-red-600">Code</span>.
       </h2>
 
-      {/* Fenêtre Code macOS */}
-      <div className="w-full rounded-2xl border border-zinc-900 bg-zinc-950/20 backdrop-blur-sm overflow-hidden">
+      {/* Fenêtre Code macOS (toujours sombre, comme un vrai éditeur) */}
+      <div className="w-full rounded-2xl border border-zinc-200 dark:border-zinc-900 bg-zinc-950/90 dark:bg-zinc-950/20 backdrop-blur-sm overflow-hidden">
         {/* Barre de titre macOS */}
         <div className="flex items-center justify-between px-4 py-3 bg-zinc-900/60 border-b border-zinc-900/80">
           <div className="flex items-center gap-1.5">

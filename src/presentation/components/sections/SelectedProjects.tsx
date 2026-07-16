@@ -9,14 +9,14 @@ export function SelectedProjects() {
   if (loading || error || selected.length === 0) return null;
 
   return (
-    <section className="mx-auto max-w-7xl px-6 py-20 border-t border-zinc-900">
+    <section className="mx-auto max-w-7xl px-6 py-20 border-t border-zinc-200 dark:border-zinc-900">
       <div className="flex items-center justify-between mb-12">
-        <h3 className="text-xl font-bold tracking-wider text-white font-bebas text-2xl">
+        <h3 className="text-xl font-bold tracking-wider text-zinc-900 dark:text-white font-bebas text-2xl">
           SELECTED PROJECTS
         </h3>
         <Link
           to="/projets"
-          className="group flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-red-500 hover:text-white transition-colors"
+          className="group flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-red-600 dark:text-red-500 hover:text-zinc-900 dark:hover:text-white transition-colors"
         >
           Voir tous les projets
           <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
@@ -30,10 +30,10 @@ export function SelectedProjects() {
             <Link
               key={project.id}
               to="/projets"
-              className="group flex flex-col gap-4 border-b border-zinc-900 pb-6 hover:border-red-600 transition-colors"
+              className="group flex flex-col gap-4 border-b border-zinc-200 dark:border-zinc-900 pb-6 hover:border-red-600 transition-colors"
             >
               {/* Image */}
-              <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-zinc-950">
+              <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-950">
                 <img
                   src={project.imageUrl}
                   alt={project.title}
@@ -48,19 +48,19 @@ export function SelectedProjects() {
                 <div className="font-bebas text-4xl text-red-600 leading-none">
                   {num}
                 </div>
-                
+
                 {/* Titre & Catégorie */}
                 <div className="flex-1 flex flex-col text-left">
-                  <h4 className="text-base font-bold text-white uppercase group-hover:text-red-500 transition-colors line-clamp-1">
+                  <h4 className="text-base font-bold text-zinc-900 dark:text-white uppercase group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors line-clamp-1">
                     {project.title}
                   </h4>
-                  <p className="text-xs text-zinc-500 uppercase mt-0.5 tracking-wider font-semibold">
+                  <p className="text-xs text-zinc-600 dark:text-zinc-500 uppercase mt-0.5 tracking-wider font-semibold">
                     {project.stack.slice(0, 3).join(' / ')}
                   </p>
                 </div>
 
                 {/* Arrow */}
-                <ArrowRight className="h-5 w-5 text-zinc-600 group-hover:text-red-500 group-hover:translate-x-1 transition-all" />
+                <ArrowRight className="h-5 w-5 text-zinc-500 dark:text-zinc-600 group-hover:text-red-600 dark:group-hover:text-red-500 group-hover:translate-x-1 transition-all" />
               </div>
             </Link>
           );

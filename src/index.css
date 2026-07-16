@@ -12,6 +12,11 @@
     overflow-x: hidden;
   }
 
+  html.light body {
+    background-color: #fafafa;
+    color: #09090b;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Grenze Gotisch', serif;
     text-transform: uppercase;
@@ -47,5 +52,15 @@
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #fafafa;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background: #e4e4e7;
+}
+html.light ::-webkit-scrollbar-thumb:hover {
   background: #dc2626;
 }

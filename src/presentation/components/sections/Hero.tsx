@@ -3,10 +3,10 @@ import { ArrowRight } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section className="relative w-full overflow-hidden bg-black py-20 px-6 md:px-12 flex items-center min-h-[90svh]">
+    <section className="relative w-full overflow-hidden bg-white dark:bg-black py-20 px-6 md:px-12 flex items-center min-h-[90svh]">
       {/* Mot PORTFOLIO géant en arrière-plan */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden z-0">
-        <span className="font-bebas text-[11rem] sm:text-[18rem] md:text-[22rem] text-red-950/15 leading-none tracking-widest select-none">
+        <span className="font-bebas text-[11rem] sm:text-[18rem] md:text-[22rem] text-red-500/10 dark:text-red-950/15 leading-none tracking-widest select-none">
           PORTFOLIO
         </span>
       </div>
@@ -14,17 +14,17 @@ export function Hero() {
       <div className="relative mx-auto max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
         {/* Colonne de Gauche : Nom & Présentation */}
         <div className="lg:col-span-4 flex flex-col items-start text-left">
-          <span className="font-caveat text-4xl text-red-500 font-bold mb-2">
+          <span className="font-caveat text-4xl text-red-600 dark:text-red-500 font-bold mb-2">
             Hello, I'm
           </span>
-          <h1 className="font-bebas text-6xl sm:text-8xl text-white leading-[0.85] tracking-tight">
+          <h1 className="font-bebas text-6xl sm:text-8xl text-zinc-900 dark:text-white leading-[0.85] tracking-tight">
             MOHAMED
             <span className="block text-red-600">LEGRAND</span>
           </h1>
-          <p className="mt-4 font-monster text-sm font-semibold tracking-widest text-red-500">
+          <p className="mt-4 font-monster text-sm font-semibold tracking-widest text-red-600 dark:text-red-500">
             ANALYSTE DE PROJET & DÉVELOPPEUR FULLSTACK
           </p>
-          <p className="mt-6 text-sm leading-relaxed text-zinc-400 max-w-xs">
+          <p className="mt-6 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 max-w-xs">
             Je conçois et développe des applications web et mobiles robustes. Passionné par l'automatisation, le code propre et les architectures performantes.
           </p>
 
@@ -32,20 +32,20 @@ export function Hero() {
           <div className="mt-8 flex items-center gap-6">
             <Link
               to="/projets"
-              className="group flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-red-500 hover:text-white transition-colors"
+              className="group flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-red-600 dark:text-red-500 hover:text-zinc-900 dark:hover:text-white transition-colors"
             >
               Mes projets
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
               to="/contact"
-              className="text-xs font-bold uppercase tracking-wider text-zinc-400 hover:text-white transition-colors"
+              className="text-xs font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
             >
               Me contacter
             </Link>
           </div>
 
-          <div className="mt-12 flex items-center gap-2 rounded-full border border-red-500/20 bg-red-500/5 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-red-500">
+          <div className="mt-12 flex items-center gap-2 rounded-full border border-red-500/20 bg-red-500/10 dark:bg-red-500/5 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-red-600 dark:text-red-500">
             <span className="flex h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" />
             Disponible pour Freelance
           </div>
@@ -53,9 +53,9 @@ export function Hero() {
 
         {/* Colonne Centrale : Portrait */}
         <div className="lg:col-span-4 flex justify-center items-center">
-          <div className="relative w-64 h-80 sm:w-80 sm:h-[400px] overflow-hidden rounded-2xl border border-zinc-900 bg-zinc-950/40">
-            {/* Dégradé de fusion avec le noir */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10" />
+          <div className="relative w-64 h-80 sm:w-80 sm:h-[400px] overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-900 bg-zinc-100/60 dark:bg-zinc-950/40">
+            {/* Dégradé de fusion avec le fond */}
+            <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-transparent to-transparent z-10" />
             <img
               src="/images/photo.jpg"
               alt="Mohamed Legrand"
@@ -68,37 +68,37 @@ export function Hero() {
         <div className="lg:col-span-4 flex flex-col items-start lg:items-end text-left lg:text-right gap-12">
           <div className="max-w-xs flex flex-col lg:items-end gap-3">
             {/* Indicateur point rouge */}
-            <div className="flex h-6 w-6 items-center justify-center rounded-full border border-red-600/30 text-red-500">
+            <div className="flex h-6 w-6 items-center justify-center rounded-full border border-red-600/30 text-red-600 dark:text-red-500">
               <span className="h-1.5 w-1.5 rounded-full bg-red-600 animate-ping" />
             </div>
-            <p className="text-zinc-400 text-sm font-medium leading-relaxed">
+            <p className="text-zinc-600 dark:text-zinc-400 text-sm font-medium leading-relaxed">
               Transformer vos idées en solutions numériques hautement performantes et automatisées.
             </p>
           </div>
 
           {/* Statistiques */}
           <div className="flex flex-col gap-6 w-full lg:w-auto">
-            <div className="flex items-center lg:justify-end gap-4 border-t border-zinc-900 pt-4">
+            <div className="flex items-center lg:justify-end gap-4 border-t border-zinc-200 dark:border-zinc-900 pt-4">
               <div className="font-monster text-4xl sm:text-5xl text-red-600 leading-none">
                 3+
               </div>
-              <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 text-left">
+              <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400 text-left">
                 Années<br />d'expérience
               </div>
             </div>
-            <div className="flex items-center lg:justify-end gap-4 border-t border-zinc-900 pt-4">
+            <div className="flex items-center lg:justify-end gap-4 border-t border-zinc-200 dark:border-zinc-900 pt-4">
               <div className="font-monster text-4xl sm:text-5xl text-red-600 leading-none">
                 40+
               </div>
-              <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 text-left">
+              <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400 text-left">
                 Projets<br />réalisés
               </div>
             </div>
-            <div className="flex items-center lg:justify-end gap-4 border-t border-zinc-900 pt-4">
+            <div className="flex items-center lg:justify-end gap-4 border-t border-zinc-200 dark:border-zinc-900 pt-4">
               <div className="font-monster text-4xl sm:text-5xl text-red-600 leading-none">
                 20+
               </div>
-              <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 text-left">
+              <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400 text-left">
                 Clients<br />satisfaits
               </div>
             </div>
