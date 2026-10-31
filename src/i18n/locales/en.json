@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "title": "TAKADJIO Mohamed — Fullstack Web & Mobile Developer",
+    "description": "Portfolio of TAKADJIO Mohamed, software engineer and fullstack web & mobile developer based in Yaoundé: API design, React, FastAPI, Flutter, UML/MERISE analysis."
+  },
+  "common": {
+    "loading": "Loading...",
+    "scrollTop": "Back to top",
+    "downloadCv": "Download my resume",
+    "available": "Available for freelance",
+    "location": "Nkoabang, Yaoundé, Cameroon"
+  },
+  "nav": {
+    "home": "Home",
+    "skills": "Skills",
+    "experiences": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "toggleTheme": "Toggle theme",
+    "toggleMenu": "Toggle menu",
+    "switchLanguage": "Passer en français"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "role": "SOFTWARE ENGINEER · FULLSTACK WEB & MOBILE DEVELOPER",
+    "intro": "Specialized in API design, I build complete web and mobile applications and take them to production, from UML/MERISE analysis all the way to deployment.",
+    "myProjects": "My projects",
+    "contactMe": "Contact me",
+    "tagline": "Founder of MyNkap, an AI-assisted financial management SaaS platform already used in production.",
+    "statInternships1": "Company",
+    "statInternships2": "internships",
+    "statSites1": "Websites",
+    "statSites2": "in production",
+    "statUsers1": "MyNkap",
+    "statUsers2": "users"
+  },
+  "analysis": {
+    "titleFrom": "From",
+    "titleAnalysis": "Analysis",
+    "subject": "Subject: Portfolio Application",
+    "actor": "Client / Project owner",
+    "useCaseNeed": "Express a need",
+    "useCaseModel": "Model",
+    "useCaseSpecs": "Write the specifications",
+    "useCaseArchitecture": "Design the architecture",
+    "transition": "Once the architecture is set, it's time to code.",
+    "titleTo": "...to",
+    "titleCode": "Code"
+  },
+  "selectedProjects": {
+    "heading": "SELECTED PROJECTS",
+    "viewAll": "View all projects"
+  },
+  "educationSkills": {
+    "heading": "EDUCATION & SKILLS",
+    "education": "Education",
+    "skills": "Skills"
+  },
+  "education": {
+    "school": "African Institute of Computer Science (IAI-Cameroon), Yaoundé",
+    "engineerDegree": "Software Engineering Degree (Ingénieur des Travaux Informatiques)",
+    "engineerDetails": "Specialization in software engineering: object-oriented design, UML and MERISE modeling, project management and application development.",
+    "dtsDegree": "Higher Technician Diploma (DTS) in Computer Science",
+    "dtsDetails": "Computer science fundamentals: algorithms, programming, databases, networks and systems."
+  },
+  "process": {
+    "heading": "PROJECT LIFECYCLE",
+    "steps": [
+      { "title": "REQUIREMENTS", "desc": "Careful listening, gathering the client's requirements and precisely defining the scope." },
+      { "title": "ANALYSIS", "desc": "Technical feasibility study, architecture structuring and technology choices." },
+      { "title": "MODELING", "desc": "Designing data schemas and producing UML / MERISE diagrams." },
+      { "title": "CODING", "desc": "Building the solution with clean, modular and efficient code." },
+      { "title": "TESTING", "desc": "Full feature validation, security checks and integration testing." },
+      { "title": "DEPLOYMENT", "desc": "Secure release to production and automation of the CI/CD pipeline." },
+      { "title": "MAINTENANCE", "desc": "Post-deployment follow-up, bug fixes and application improvements." }
+    ]
+  },
+  "quote": {
+    "text": "Code itself is not the essence of a project; its true value lies in the analysis and modeling of its solution.",
+    "caption": "Methodology & Modeling"
+  },
+  "footer": {
+    "about": "Software engineer and fullstack web & mobile developer. I design APIs, model systems with UML/MERISE and ship complete applications to production.",
+    "sitemap": "Sitemap",
+    "contactHeading": "Contact & Location",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "location": "Location",
+    "rights": "All rights reserved."
+  },
+  "contact": {
+    "titleLine1": "LET'S WORK",
+    "titleLine2": "TOGETHER",
+    "intro": "I'm currently open to new opportunities and collaborations. Let's talk about your project and build something great together.",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "location": "Location",
+    "successTitle": "Message sent successfully!",
+    "successText": "Thank you for reaching out. I'll get back to you as soon as possible.",
+    "errorTitle": "Something went wrong",
+    "nameLabel": "Full name",
+    "namePlaceholder": "e.g. John Smith",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "e.g. john.smith@gmail.com",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "e.g. Project request / Collaboration",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Write your message here...",
+    "send": "Send message",
+    "sending": "Sending...",
+    "errors": {
+      "required": "All fields are required.",
+      "invalidEmail": "Please enter a valid email address.",
+      "sendFailed": "An error occurred while sending the message."
+    }
+  },
+  "projects": {
+    "titleA": "My",
+    "titleB": "Projects",
+    "subtitle": "Explore my recent work, from complex system analysis to web and mobile application development.",
+    "analysisHeading": "Analysis & Modeling Projects",
+    "codeHeading": "Development Projects",
+    "empty": "No projects found yet.",
+    "loadError": "An error occurred while loading the projects.",
+    "featured": "Featured",
+    "learnMore": "Learn more",
+    "visit": "Visit"
+  },
+  "projectDetail": {
+    "loading": "Loading project details...",
+    "missingId": "Missing project identifier.",
+    "loadError": "An error occurred while loading the project.",
+    "notFound": "Project not found",
+    "notFoundText": "The requested project could not be loaded.",
+    "back": "Back to projects",
+    "categoryAnalysis": "Analysis & Modeling",
+    "categoryCode": "Development & Code",
+    "overview": "Functional overview",
+    "umlHeading": "UML Specifications",
+    "umlText": "Simplified visual of the UML technical design modeled for this project.",
+    "codeHeading": "Code excerpt",
+    "codeText": "View of the implemented source code ({{stack}}).",
+    "codeFrontend": "ReactJS Front-end",
+    "codeBackend": "Python Back-end",
+    "technologies": "Technologies used",
+    "liveLink": "Production link",
+    "visitLive": "Visit the live website",
+    "uml": {
+      "mobileMoneySystem": "MOBILE MONEY SYSTEM",
+      "fintechClient": "Fintech Client",
+      "authenticate": "Authenticate (2FA)",
+      "transferFunds": "Transfer funds",
+      "manageCards": "Manage virtual cards",
+      "buyAirtime": "Buy airtime",
+      "client": "Client",
+      "merchantSite": "Merchant Site",
+      "bank": "Bank/Momo",
+      "step1": "1. Initiate payment",
+      "step2": "2. Request token",
+      "step3": "3. Debit client",
+      "step4": "4. OTP success",
+      "step5": "5. Webhook OK",
+      "step6": "6. Confirmation page"
+    }
+  },
+  "experiences": {
+    "titleA": "My",
+    "titleB": "Journey",
+    "subtitle": "My professional experience and my education as a higher technician and then engineer.",
+    "proHeading": "Professional experience",
+    "educationHeading": "Education & Degrees",
+    "empty": "No experience listed yet.",
+    "loadError": "An error occurred while loading the experiences.",
+    "at": "at",
+    "present": "Present",
+    "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  },
+  "skillsPage": {
+    "titleA": "My",
+    "titleB": "Skills",
+    "subtitle": "Explore my technical skills, detailed and explained by area of application.",
+    "categories": {
+      "analysis": {
+        "title": "Analysis & Modeling",
+        "description": "Structuring and modeling a project's requirements before development."
+      },
+      "languages": {
+        "title": "Programming languages",
+        "description": "The core technologies I use to write software."
+      },
+      "frameworks": {
+        "title": "Frameworks & Libraries",
+        "description": "The building blocks that speed up the development of interfaces and services."
+      },
+      "tools": {
+        "title": "Development tools",
+        "description": "The software I use every day to stay productive."
+      },
+      "devops": {
+        "title": "DevOps & Platforms",
+        "description": "Versioning and continuous integration, essential for shipping reliable projects."
+      },
+      "databases": {
+        "title": "Databases (DBMS)",
+        "description": "Structured storage systems that guarantee data persistence and consistency."
+      }
+    },
+    "skills": {
+      "uml": "Helps me model software architecture, design use case diagrams and give projects a solid technical structure.",
+      "merise": "Helps me design and model complex relational databases through conceptual and logical data models (MCD/MLD).",
+      "python": "Used to build fast APIs, process data, write automation scripts and run back-end tasks.",
+      "htmlCssJs": "The foundation for building interactive, accessible web interfaces that adapt to every screen.",
+      "djangoRest": "Lets me quickly structure and deploy robust, secure REST APIs with a powerful ORM.",
+      "react": "Helps me build dynamic, reusable and high-performance client-side user interfaces.",
+      "tailwind": "Makes it easy to build modern designs with a fully responsive utility-first approach.",
+      "fastapi": "Ideal for building fast, lightweight asynchronous APIs with automatic OpenAPI documentation.",
+      "postman": "Essential for testing, documenting, mocking and validating all my API routes.",
+      "vscode": "My main code editor, configured to boost my day-to-day productivity.",
+      "antigravity": "My AI-powered development environment (IDE) for designing, debugging and coding more efficiently.",
+      "github": "Helps me host, version and manage my projects' code while collaborating through Pull Requests.",
+      "mysql": "For storing and efficiently querying my applications' relational data.",
+      "postgresql": "My relational DBMS of choice for handling large volumes of data reliably, with support for complex types.",
+      "sqlserver": "Used to administer, optimize and secure enterprise-grade databases."
+    }
+  }
+}

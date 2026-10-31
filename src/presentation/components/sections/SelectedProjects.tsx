@@ -1,8 +1,10 @@
 import { useProjects } from '@/presentation/hooks/useProjects';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function SelectedProjects() {
+  const { t } = useTranslation();
   const { projects, loading, error } = useProjects();
   const selected = projects.filter((p) => p.featured === true).slice(0, 3);
 
@@ -12,13 +14,13 @@ export function SelectedProjects() {
     <section className="mx-auto max-w-7xl px-6 py-20 border-t border-zinc-200 dark:border-zinc-900">
       <div className="flex items-center justify-between mb-12">
         <h3 className="text-xl font-bold tracking-wider text-zinc-900 dark:text-white font-bebas text-2xl">
-          SELECTED PROJECTS
+          {t('selectedProjects.heading')}
         </h3>
         <Link
           to="/projets"
           className="group flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-red-600 dark:text-red-500 hover:text-zinc-900 dark:hover:text-white transition-colors"
         >
-          Voir tous les projets
+          {t('selectedProjects.viewAll')}
           <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
         </Link>
       </div>

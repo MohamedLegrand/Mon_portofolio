@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useInView } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 // Types de tokens
 interface CodeToken {
@@ -130,6 +131,7 @@ function useTypewriter(snippets: Snippet[], inView: boolean) {
 }
 
 export function CodeTypewriter() {
+  const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: false, amount: 0.3 });
 
@@ -201,7 +203,7 @@ export function CodeTypewriter() {
 
       {/* Titre au-dessus */}
       <h2 className="font-bebas text-3xl md:text-5xl text-zinc-900 dark:text-white border-b border-zinc-200 dark:border-zinc-900 pb-3 mb-8 tracking-wider">
-        ...au <span className="text-red-600">Code</span>.
+        {t('analysis.titleTo')} <span className="text-red-600">{t('analysis.titleCode')}</span>.
       </h2>
 
       {/* Fenêtre Code macOS (toujours sombre, comme un vrai éditeur) */}

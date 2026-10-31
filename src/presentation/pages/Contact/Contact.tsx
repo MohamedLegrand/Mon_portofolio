@@ -1,7 +1,9 @@
 import { useContactForm } from '@/presentation/hooks/useContactForm';
 import { Send, CheckCircle2, AlertCircle, Mail, Phone, MapPin } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function Contact() {
+  const { t } = useTranslation();
   const {
     formData,
     isSubmitting,
@@ -20,15 +22,15 @@ export function Contact() {
             {/* Petit indicateur rouge */}
             <div className="flex w-fit items-center gap-2 rounded-full border border-red-500/20 bg-red-500/10 dark:bg-red-500/5 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-red-600 dark:text-red-500 mb-6">
               <span className="flex h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" />
-              AVAILABLE FOR FREELANCE
+              {t('common.available')}
             </div>
 
             <h1 className="font-bebas text-4xl xs:text-5xl sm:text-7xl text-zinc-900 dark:text-white leading-none">
-              LET'S WORK<br />
-              <span className="text-red-600">TOGETHER</span>
+              {t('contact.titleLine1')}<br />
+              <span className="text-red-600">{t('contact.titleLine2')}</span>
             </h1>
             <p className="mt-6 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 max-w-sm">
-              Je suis actuellement ouvert à de nouvelles opportunités et collaborations. Discutons de votre projet et créons quelque chose d'exceptionnel ensemble.
+              {t('contact.intro')}
             </p>
           </div>
 
@@ -39,9 +41,9 @@ export function Contact() {
                 <Mail className="h-5 w-5" />
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 dark:text-zinc-500">Email</span>
-                <a href="mailto:legrandmohmed67@gmail.com" className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-red-500 transition-colors">
-                  legrandmohmed67@gmail.com
+                <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 dark:text-zinc-500">{t('contact.email')}</span>
+                <a href="mailto:legrandmohamed67@gmail.com" className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-red-500 transition-colors">
+                  legrandmohamed67@gmail.com
                 </a>
               </div>
             </div>
@@ -62,12 +64,29 @@ export function Contact() {
 
             <div className="flex items-center gap-4 group">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 group-hover:border-red-600 group-hover:text-red-500 transition-colors">
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 dark:text-zinc-500">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/mohamed-legrand-366411344" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-red-500 transition-colors">
+                  linkedin.com/in/mohamed-legrand-366411344
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4 group">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 group-hover:border-red-600 group-hover:text-red-500 transition-colors">
                 <Phone className="h-5 w-5" />
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 dark:text-zinc-500">WhatsApp / Téléphone</span>
+                <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 dark:text-zinc-500">{t('contact.whatsapp')}</span>
                 <a href="https://wa.me/237677246900" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-red-500 transition-colors">
                   +237 677 24 69 00
+                </a>
+                <a href="https://wa.me/237641212750" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-red-500 transition-colors">
+                  +237 641 21 27 50
                 </a>
               </div>
             </div>
@@ -77,9 +96,9 @@ export function Contact() {
                 <MapPin className="h-5 w-5" />
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 dark:text-zinc-500">Localisation</span>
+                <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 dark:text-zinc-500">{t('contact.location')}</span>
                 <span className="text-sm font-semibold text-zinc-900 dark:text-white">
-                  Yaoundé, Cameroun
+                  {t('common.location')}
                 </span>
               </div>
             </div>
@@ -93,9 +112,9 @@ export function Contact() {
             <div className="mb-8 flex items-start gap-3 rounded-xl border border-emerald-500/20 bg-emerald-500/10 dark:bg-emerald-500/5 p-4 text-emerald-700 dark:text-emerald-400 text-left">
               <CheckCircle2 className="h-5 w-5 shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-semibold text-sm">Message envoyé avec succès !</h4>
+                <h4 className="font-semibold text-sm">{t('contact.successTitle')}</h4>
                 <p className="mt-1 text-xs text-emerald-700/80 dark:text-emerald-400/80">
-                  Merci pour votre intérêt. Je vous répondrai dans les plus brefs délais. (Données loggées en console)
+                  {t('contact.successText')}
                 </p>
               </div>
             </div>
@@ -106,7 +125,7 @@ export function Contact() {
             <div className="mb-8 flex items-start gap-3 rounded-xl border border-red-500/20 bg-red-500/10 dark:bg-red-500/5 p-4 text-red-700 dark:text-red-400 text-left">
               <AlertCircle className="h-5 w-5 shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-semibold text-sm">Une erreur est survenue</h4>
+                <h4 className="font-semibold text-sm">{t('contact.errorTitle')}</h4>
                 <p className="mt-1 text-xs text-red-700/80 dark:text-red-400/80">{errorMessage}</p>
               </div>
             </div>
@@ -116,7 +135,7 @@ export function Contact() {
             {/* Nom */}
             <div>
               <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400">
-                Nom complet
+                {t('contact.nameLabel')}
               </label>
               <input
                 type="text"
@@ -127,14 +146,14 @@ export function Contact() {
                 required
                 disabled={isSubmitting}
                 className="mt-2 w-full rounded-xl border border-zinc-300 dark:border-zinc-900 bg-white dark:bg-black px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-500 dark:placeholder-zinc-600 outline-none transition-all focus:border-red-600 focus:ring-1 focus:ring-red-600/30 disabled:opacity-50"
-                placeholder="Ex : Mohamed Legrand"
+                placeholder={t('contact.namePlaceholder')}
               />
             </div>
 
             {/* Email */}
             <div>
               <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400">
-                Adresse email
+                {t('contact.emailLabel')}
               </label>
               <input
                 type="email"
@@ -145,14 +164,14 @@ export function Contact() {
                 required
                 disabled={isSubmitting}
                 className="mt-2 w-full rounded-xl border border-zinc-300 dark:border-zinc-900 bg-white dark:bg-black px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-500 dark:placeholder-zinc-600 outline-none transition-all focus:border-red-600 focus:ring-1 focus:ring-red-600/30 disabled:opacity-50"
-                placeholder="Ex : mohamed@gmail.com"
+                placeholder={t('contact.emailPlaceholder')}
               />
             </div>
 
             {/* Sujet */}
             <div>
               <label htmlFor="subject" className="block text-xs font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400">
-                Sujet
+                {t('contact.subjectLabel')}
               </label>
               <input
                 type="text"
@@ -163,14 +182,14 @@ export function Contact() {
                 required
                 disabled={isSubmitting}
                 className="mt-2 w-full rounded-xl border border-zinc-300 dark:border-zinc-900 bg-white dark:bg-black px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-500 dark:placeholder-zinc-600 outline-none transition-all focus:border-red-600 focus:ring-1 focus:ring-red-600/30 disabled:opacity-50"
-                placeholder="Ex : Demande de projet / Collaboration"
+                placeholder={t('contact.subjectPlaceholder')}
               />
             </div>
 
             {/* Message */}
             <div>
               <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400">
-                Message
+                {t('contact.messageLabel')}
               </label>
               <textarea
                 id="message"
@@ -181,7 +200,7 @@ export function Contact() {
                 required
                 disabled={isSubmitting}
                 className="mt-2 w-full rounded-xl border border-zinc-300 dark:border-zinc-900 bg-white dark:bg-black px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-500 dark:placeholder-zinc-600 outline-none transition-all focus:border-red-600 focus:ring-1 focus:ring-red-600/30 disabled:opacity-50 resize-y min-h-[120px]"
-                placeholder="Écrivez votre message ici..."
+                placeholder={t('contact.messagePlaceholder')}
               />
             </div>
 
@@ -193,12 +212,12 @@ export function Contact() {
             >
               {isSubmitting ? (
                 <>
-                  Envoi en cours...
+                  {t('contact.sending')}
                   <div className="h-4 w-4 animate-spin rounded-full border-2 border-white/20 border-t-white" />
                 </>
               ) : (
                 <>
-                  Envoyer le message
+                  {t('contact.send')}
                   <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </>
               )}

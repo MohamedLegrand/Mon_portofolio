@@ -1,24 +1,23 @@
 import type { Experience } from '@/domain/entities/Experience';
+import { useTranslation } from 'react-i18next';
 
 interface ExperienceItemProps {
   experience: Experience;
 }
 
 export function ExperienceItem({ experience }: ExperienceItemProps) {
+  const { t } = useTranslation();
   // Formateur simple de date (ex: 2024-03 -> Mars 2024)
   const formatDate = (dateStr: string) => {
     if (!dateStr) return '';
     const [year, month] = dateStr.split('-');
-    const months = [
-      'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 
-      'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'
-    ];
+    const months = t('experiences.months', { returnObjects: true }) as string[];
     const monthIdx = parseInt(month, 10) - 1;
     return monthIdx >= 0 && monthIdx < 12 ? `${months[monthIdx]} ${year}` : dateStr;
   };
 
   const startFormatted = formatDate(experience.startDate);
-  const endFormatted = experience.endDate ? formatDate(experience.endDate) : 'Présent';
+  const endFormatted = experience.endDate ? formatDate(experience.endDate) : t('experiences.present');
 
   return (
     <div className="relative pl-8 sm:pl-10 pb-12 last:pb-0 group">
@@ -32,12 +31,12 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
       <div className="flex flex-col gap-1.5">
         {/* Période */}
         <span className="text-xs font-semibold uppercase tracking-wider text-red-600 dark:text-red-500">
-          {startFormatted} &mdash; {endFormatted}
+          {startFormatted === endFormatted ? startFormatted : <>{startFormatted} &mdash; {endFormatted}</>}
         </span>
 
         {/* Rôle & Entreprise */}
         <h3 className="text-lg font-bold text-zinc-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors">
-          {experience.role} <span className="text-zinc-600 dark:text-zinc-500 font-normal">chez</span> {experience.company}
+          {experience.role} <span className="text-zinc-600 dark:text-zinc-500 font-normal">{t('experiences.at')}</span> {experience.company}
         </h3>
 
         {/* Description */}

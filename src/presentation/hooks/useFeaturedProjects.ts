@@ -1,15 +1,19 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '@/presentation/hooks/useLanguage';
 import type { Project } from '@/domain/entities/Project';
 import { getFeaturedProjectsUseCase } from '@/di/container';
 
 export function useFeaturedProjects() {
   const [projects, setProjects] = useState<Project[]>([]);
+  const { t } = useTranslation();
+  const lang = useLanguage();
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     let isMounted = true;
-    getFeaturedProjectsUseCase.execute()
+    getFeaturedProjectsUseCase.execute(lang)
       .then((data) => {
         if (isMounted) {
           setProjects(data);
@@ -18,7 +22,7 @@ export function useFeaturedProjects() {
       })
       .catch((err: unknown) => {
         if (isMounted) {
-          setError(err instanceof Error ? err.message : 'Une erreur est survenue lors du chargement des projets mis en avant.');
+          setError(err instanceof Error ? err.message : t('projects.loadError'));
           setLoading(false);
         }
       });
@@ -26,7 +30,7 @@ export function useFeaturedProjects() {
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [lang, t]);
 
   return { projects, loading, error };
 }

@@ -1,132 +1,129 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 interface SkillItem {
   name: string;
   image: string;
-  description: string;
+  // Clé de traduction sous skillsPage.skills
+  descKey: string;
 }
 
 interface SkillCategory {
-  title: string;
-  description: string;
+  // Clé de traduction sous skillsPage.categories
+  key: string;
   skills: SkillItem[];
 }
 
 const skillCategories: SkillCategory[] = [
   {
-    title: "Analyse & Modélisation",
-    description: "La structuration théorique et la modélisation des besoins d'un projet avant son développement.",
+    key: "analysis",
     skills: [
       { 
         name: "UML", 
         image: "/images/analyse/uml.jpg",
-        description: "M'aide à modéliser l'architecture logicielle, concevoir les diagrammes de cas d'utilisation et structurer techniquement les projets."
+        descKey: "uml"
       },
       { 
         name: "MERISE", 
         image: "/images/analyse/merise.jpg",
-        description: "M'aide à concevoir et modéliser des bases de données relationnelles complexes via l'élaboration de MCD et MLD."
+        descKey: "merise"
       }
     ]
   },
   {
-    title: "Langages maîtrisés",
-    description: "Les technologies fondamentales que j'utilise pour programmer et instruire les machines.",
+    key: "languages",
     skills: [
       { 
         name: "Python", 
         image: "/images/langage/python.jpg",
-        description: "Utilisé pour concevoir des APIs rapides, manipuler des données, écrire des scripts d'automatisation et exécuter des tâches back-end."
+        descKey: "python"
       },
       { 
         name: "HTML / CSS / JS", 
         image: "/images/langage/html-css-js.jpg",
-        description: "Le socle fondamental pour concevoir des interfaces web interactives, accessibles et adaptées à tous les écrans."
+        descKey: "htmlCssJs"
       }
     ]
   },
   {
-    title: "Frameworks & Librairies",
-    description: "Les architectures applicatives clés en main pour accélérer le développement d'interfaces et de services.",
+    key: "frameworks",
     skills: [
       { 
         name: "Django REST", 
         image: "/images/framework/django-rest.jpg",
-        description: "Me permet de structurer et de déployer rapidement des APIs REST robustes et sécurisées avec un ORM puissant."
+        descKey: "djangoRest"
       },
       { 
         name: "ReactJS", 
         image: "/images/framework/reactjs.jpg",
-        description: "M'aide à créer des interfaces utilisateurs dynamiques, réutilisables et hautement performantes côté client."
+        descKey: "react"
       },
       { 
         name: "TailwindCSS", 
         image: "/images/framework/tailwind-css.jpg",
-        description: "Permet d'intégrer des designs UI modernes de manière fluide avec une approche utility-first entièrement responsive."
+        descKey: "tailwind"
       },
       { 
         name: "FastAPI", 
         image: "/images/framework/fast-api.jpg",
-        description: "Parfait pour développer des APIs asynchrones à haute performance, légères et documentées automatiquement via OpenAPI."
+        descKey: "fastapi"
       }
     ]
   },
   {
-    title: "Outils de développement",
-    description: "Les logiciels et outils qui m'accompagnent au quotidien pour maximiser ma productivité.",
+    key: "tools",
     skills: [
       { 
         name: "Postman", 
         image: "/images/outils/postman.jpg",
-        description: "Essentiel pour tester, documenter, simuler et valider le comportement de toutes mes routes d'APIs."
+        descKey: "postman"
       },
       { 
         name: "VS Code", 
         image: "/images/outils/vscode.jpg",
-        description: "Mon éditeur de code principal hautement configuré, optimisé pour accroître ma productivité au quotidien."
+        descKey: "vscode"
       },
       { 
         name: "Antigravity", 
         image: "/images/outils/antigravity.jpg",
-        description: "Mon environnement de développement (IDE) augmenté par IA pour concevoir, déboguer et coder avec une efficacité inégalée."
+        descKey: "antigravity"
       }
     ]
   },
   {
-    title: "DevOps & Plateformes",
-    description: "Les processus de versioning et d'intégration continue indispensables pour livrer des projets fiables.",
+    key: "devops",
     skills: [
       { 
         name: "GitHub", 
         image: "/images/devops/github.jpg",
-        description: "M'aide à héberger, versionner et gérer le code de mes projets tout en collaborant en équipe via les Pull Requests."
+        descKey: "github"
       }
     ]
   },
   {
-    title: "Bases de données (SGBD)",
-    description: "Les systèmes de stockage structurés pour garantir la persistance et la cohérence des données.",
+    key: "databases",
     skills: [
       { 
         name: "MySQL", 
         image: "/images/sgbd/my-sql.jpg",
-        description: "Pour stocker de façon structurée et interroger efficacement les données relationnelles de mes applications."
+        descKey: "mysql"
       },
       { 
         name: "PostgreSQL", 
         image: "/images/sgbd/postgresql.jpg",
-        description: "Mon SGBD relationnel de choix pour gérer de grands volumes de données avec une grande fiabilité et des types complexes."
+        descKey: "postgresql"
       },
       { 
         name: "SQL Server", 
         image: "/images/sgbd/sql-server.jpg",
-        description: "Utilisé pour administrer, optimiser et sécuriser des bases de données de niveau entreprise."
+        descKey: "sqlserver"
       }
     ]
   }
 ];
 
 export function SkillsPage() {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -151,10 +148,10 @@ export function SkillsPage() {
       {/* En-tête de page */}
       <div className="text-center mb-16">
         <h1 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-5xl">
-          Mes <span className="bg-gradient-to-r from-red-500 to-red-600 dark:from-red-400 dark:to-red-600 bg-clip-text text-transparent">Compétences</span>
+          {t('skillsPage.titleA')} <span className="bg-gradient-to-r from-red-500 to-red-600 dark:from-red-400 dark:to-red-600 bg-clip-text text-transparent">{t('skillsPage.titleB')}</span>
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-base text-zinc-600 dark:text-zinc-400 sm:text-lg">
-          Découvrez mes compétences techniques détaillées et expliquées par domaines d'application.
+          {t('skillsPage.subtitle')}
         </p>
       </div>
 
@@ -170,10 +167,10 @@ export function SkillsPage() {
             {/* Titre & Description de la catégorie */}
             <div className="border-b border-zinc-200 dark:border-zinc-900 pb-3 text-left">
               <h3 className="text-xl font-bold text-zinc-900 dark:text-white tracking-widest font-monster text-2xl">
-                {category.title}
+                {t(`skillsPage.categories.${category.key}.title`)}
               </h3>
               <p className="text-xs text-zinc-600 dark:text-zinc-500 mt-1 font-medium italic">
-                {category.description}
+                {t(`skillsPage.categories.${category.key}.description`)}
               </p>
             </div>
 
@@ -202,7 +199,7 @@ export function SkillsPage() {
                       {skill.name}
                     </span>
                     <p className="text-xs leading-relaxed text-zinc-600 dark:text-zinc-400">
-                      {skill.description}
+                      {t(`skillsPage.skills.${skill.descKey}`)}
                     </p>
                   </div>
                 </motion.div>

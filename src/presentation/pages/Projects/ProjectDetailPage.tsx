@@ -2,7 +2,9 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, BookOpen, Layers, CheckCircle2, ChevronRight, Code } from 'lucide-react';
 import { useProject } from '@/presentation/hooks/useProject';
-import { projectDetails } from '@/presentation/data/projectDetails';
+import { getProjectDetail } from '@/presentation/data/getProjectDetail';
+import { useLanguage } from '@/presentation/hooks/useLanguage';
+import { useTranslation } from 'react-i18next';
 
 // Fonction de coloration syntaxique à la volée basée sur regex
 function tokenizeLine(line: string) {
@@ -53,12 +55,13 @@ function tokenizeLine(line: string) {
 
 // Composant pour dessiner le diagramme UML correspondant pour la catégorie 'analyse'
 function UmlDiagram({ type }: { type: 'usecase' | 'sequence' | 'class' }) {
+  const { t } = useTranslation();
   if (type === 'usecase') {
     return (
       <svg viewBox="0 0 450 320" className="w-full h-auto text-zinc-400 select-none">
         {/* Cadre du Système */}
         <rect x="140" y="20" width="280" height="280" rx="12" fill="#000" stroke="#dc2626" strokeWidth="1.5" opacity="0.3" />
-        <text x="150" y="40" fill="#dc2626" fontSize="10" fontWeight="bold" letterSpacing="0.05em">SYSTÈME MOBILE MONEY</text>
+        <text x="150" y="40" fill="#dc2626" fontSize="10" fontWeight="bold" letterSpacing="0.05em">{t('projectDetail.uml.mobileMoneySystem')}</text>
 
         {/* Acteur Stick Figure */}
         <g transform="translate(50, 130)" stroke="#fff" strokeWidth="2.5" fill="none">
@@ -67,22 +70,22 @@ function UmlDiagram({ type }: { type: 'usecase' | 'sequence' | 'class' }) {
           <line x1="2" y1="48" x2="38" y2="48" />
           <line x1="20" y1="75" x2="5" y2="110" />
           <line x1="20" y1="75" x2="35" y2="110" />
-          <text x="20" y="130" fill="#fff" fontSize="10" fontWeight="bold" stroke="none" textAnchor="middle">Client Fintech</text>
+          <text x="20" y="130" fill="#fff" fontSize="10" fontWeight="bold" stroke="none" textAnchor="middle">{t('projectDetail.uml.fintechClient')}</text>
         </g>
 
         {/* Cas d'utilisation (ellipses) */}
         <g transform="translate(160, 60)">
           <ellipse cx="120" cy="25" rx="90" ry="20" fill="#18181b" stroke="#dc2626" strokeWidth="1.5" />
-          <text x="120" y="28" fill="#fff" fontSize="9" fontWeight="bold" textAnchor="middle">S'authentifier (2FA)</text>
+          <text x="120" y="28" fill="#fff" fontSize="9" fontWeight="bold" textAnchor="middle">{t('projectDetail.uml.authenticate')}</text>
 
           <ellipse cx="120" cy="85" rx="90" ry="20" fill="#18181b" stroke="#dc2626" strokeWidth="1.5" />
-          <text x="120" y="88" fill="#fff" fontSize="9" fontWeight="bold" textAnchor="middle">Transférer des fonds</text>
+          <text x="120" y="88" fill="#fff" fontSize="9" fontWeight="bold" textAnchor="middle">{t('projectDetail.uml.transferFunds')}</text>
 
           <ellipse cx="120" cy="145" rx="90" ry="20" fill="#18181b" stroke="#dc2626" strokeWidth="1.5" />
-          <text x="120" y="148" fill="#fff" fontSize="9" fontWeight="bold" textAnchor="middle">Gérer les cartes virtuelles</text>
+          <text x="120" y="148" fill="#fff" fontSize="9" fontWeight="bold" textAnchor="middle">{t('projectDetail.uml.manageCards')}</text>
 
           <ellipse cx="120" cy="205" rx="90" ry="20" fill="#18181b" stroke="#dc2626" strokeWidth="1.5" />
-          <text x="120" y="208" fill="#fff" fontSize="9" fontWeight="bold" textAnchor="middle">Acheter du crédit appel</text>
+          <text x="120" y="208" fill="#fff" fontSize="9" fontWeight="bold" textAnchor="middle">{t('projectDetail.uml.buyAirtime')}</text>
         </g>
 
         {/* Relations de liaison */}
@@ -110,16 +113,16 @@ function UmlDiagram({ type }: { type: 'usecase' | 'sequence' | 'class' }) {
         {/* En-tête des participants */}
         <g fill="#18181b" stroke="#dc2626" strokeWidth="1.5" textAnchor="middle" fontSize="9" fontWeight="bold">
           <rect x="20" y="20" width="80" height="30" rx="4" />
-          <text x="60" y="38" fill="#fff" stroke="none">Client</text>
+          <text x="60" y="38" fill="#fff" stroke="none">{t('projectDetail.uml.client')}</text>
 
           <rect x="140" y="20" width="80" height="30" rx="4" />
-          <text x="180" y="38" fill="#fff" stroke="none">Site Marchand</text>
+          <text x="180" y="38" fill="#fff" stroke="none">{t('projectDetail.uml.merchantSite')}</text>
 
           <rect x="260" y="20" width="80" height="30" rx="4" />
-          <text x="300" y="38" fill="#fff" stroke="none">HR-PAY API</text>
+          <text x="300" y="38" fill="#fff" stroke="none">HR-Skills Pay API</text>
 
           <rect x="360" y="20" width="80" height="30" rx="4" />
-          <text x="400" y="38" fill="#fff" stroke="none">Banque/Momo</text>
+          <text x="400" y="38" fill="#fff" stroke="none">{t('projectDetail.uml.bank')}</text>
         </g>
 
         {/* Blocs d'activation */}
@@ -132,22 +135,22 @@ function UmlDiagram({ type }: { type: 'usecase' | 'sequence' | 'class' }) {
         {/* Messages / Flèches */}
         <g strokeWidth="1.2" fontSize="8" fontWeight="bold">
           <path d="M 63 90 L 171 90" fill="none" stroke="#fff" markerEnd="url(#arrow)" />
-          <text x="117" y="85" fill="#fff" textAnchor="middle">1. Initier paiement</text>
+          <text x="117" y="85" fill="#fff" textAnchor="middle">{t('projectDetail.uml.step1')}</text>
 
           <path d="M 183 110 L 291 110" fill="none" stroke="#dc2626" markerEnd="url(#arrow)" />
-          <text x="237" y="105" fill="#dc2626" textAnchor="middle">2. Request Token</text>
+          <text x="237" y="105" fill="#dc2626" textAnchor="middle">{t('projectDetail.uml.step2')}</text>
 
           <path d="M 303 130 L 391 130" fill="none" stroke="#fff" markerEnd="url(#arrow)" />
-          <text x="347" y="125" fill="#fff" textAnchor="middle">3. Débiter client</text>
+          <text x="347" y="125" fill="#fff" textAnchor="middle">{t('projectDetail.uml.step3')}</text>
 
           <path d="M 391 160 L 303 160" fill="none" stroke="#9ca3af" strokeDasharray="3 3" markerEnd="url(#arrow)" />
-          <text x="347" y="155" fill="#9ca3af" textAnchor="middle">4. Succès OTP</text>
+          <text x="347" y="155" fill="#9ca3af" textAnchor="middle">{t('projectDetail.uml.step4')}</text>
 
           <path d="M 297 190 L 183 190" fill="none" stroke="#dc2626" markerEnd="url(#arrow)" />
-          <text x="237" y="185" fill="#dc2626" textAnchor="middle">5. Webhook OK</text>
+          <text x="237" y="185" fill="#dc2626" textAnchor="middle">{t('projectDetail.uml.step5')}</text>
 
           <path d="M 177 220 L 63 220" fill="none" stroke="#9ca3af" strokeDasharray="3 3" markerEnd="url(#arrow)" />
-          <text x="117" y="215" fill="#9ca3af" textAnchor="middle">6. Page de confirmation</text>
+          <text x="117" y="215" fill="#9ca3af" textAnchor="middle">{t('projectDetail.uml.step6')}</text>
         </g>
 
         <defs>
@@ -212,15 +215,17 @@ function UmlDiagram({ type }: { type: 'usecase' | 'sequence' | 'class' }) {
 }
 
 export function ProjectDetailPage() {
+  const { t } = useTranslation();
   const { id } = useParams<{ id: string }>();
   const { project, loading, error } = useProject(id);
-  const detail = id ? projectDetails[id] : null;
+  const lang = useLanguage();
+  const detail = id ? getProjectDetail(id, lang) : null;
 
   if (loading) {
     return (
       <div className="min-h-[70vh] flex items-center justify-center bg-white dark:bg-black text-zinc-900 dark:text-white">
         <span className="flex h-5 w-5 rounded-full border-2 border-red-600 border-t-transparent animate-spin mr-3" />
-        Chargement des détails du projet...
+        {t('projectDetail.loading')}
       </div>
     );
   }
@@ -228,11 +233,11 @@ export function ProjectDetailPage() {
   if (error || !project || !detail) {
     return (
       <section className="mx-auto max-w-xl px-6 py-32 text-center text-zinc-900 dark:text-white">
-        <h2 className="text-2xl font-bold text-red-600 dark:text-red-500">Projet Introuvable</h2>
-        <p className="mt-4 text-zinc-600 dark:text-zinc-400 text-sm">Le projet spécifié n'a pas pu être chargé.</p>
+        <h2 className="text-2xl font-bold text-red-600 dark:text-red-500">{t('projectDetail.notFound')}</h2>
+        <p className="mt-4 text-zinc-600 dark:text-zinc-400 text-sm">{t('projectDetail.notFoundText')}</p>
         <Link to="/projets" className="mt-8 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-red-600 dark:text-red-500 hover:text-zinc-900 dark:hover:text-white border border-red-500/20 hover:border-red-600 px-4 py-2 rounded transition-all">
           <ArrowLeft className="h-4 w-4" />
-          Retour aux projets
+          {t('projectDetail.back')}
         </Link>
       </section>
     );
@@ -248,14 +253,14 @@ export function ProjectDetailPage() {
         className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-600 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-colors mb-12"
       >
         <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
-        Retour aux projets
+        {t('projectDetail.back')}
       </Link>
 
       {/* En-tête */}
       <div className="border-b border-zinc-200 dark:border-zinc-900 pb-8 mb-12">
         <div className="flex items-center gap-3">
           <span className="rounded-full bg-red-100 dark:bg-red-950/40 border border-red-300 dark:border-red-900/30 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-red-700 dark:text-red-500 font-mono">
-            {isAnalyse ? "Analyse & Modélisation" : "Développement & Code"}
+            {isAnalyse ? t('projectDetail.categoryAnalysis') : t('projectDetail.categoryCode')}
           </span>
           <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-500 font-mono">
             {isAnalyse ? "UML & MERISE" : "ReactJS / FastAPI / Django REST"}
@@ -276,7 +281,7 @@ export function ProjectDetailPage() {
           <div className="space-y-4">
             <h3 className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-zinc-900 dark:text-white font-mono">
               <BookOpen className="h-4 w-4 text-red-600 dark:text-red-500" />
-              Présentation fonctionnelle
+              {t('projectDetail.overview')}
             </h3>
             <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed">
               {detail.mainDescription}
@@ -315,12 +320,12 @@ export function ProjectDetailPage() {
               <div className="flex items-center gap-2 border-b border-zinc-900 pb-3 mb-6">
                 <Layers className="h-4 w-4 text-red-500" />
                 <h3 className="text-sm font-bold text-white uppercase tracking-wider font-mono">
-                  Spécifications UML
+                  {t('projectDetail.umlHeading')}
                 </h3>
               </div>
               
               <p className="text-xs text-zinc-500 mb-6 italic leading-relaxed">
-                Visualisation graphique simplifiée de la conception technique UML modélisée pour ce projet.
+                {t('projectDetail.umlText')}
               </p>
 
               {/* Rendu SVG */}
@@ -339,12 +344,12 @@ export function ProjectDetailPage() {
               <div className="flex items-center gap-2 border-b border-zinc-900 pb-3 mb-6">
                 <Code className="h-4 w-4 text-red-500" />
                 <h3 className="text-sm font-bold text-white uppercase tracking-wider font-mono">
-                  Extrait de Code Réel
+                  {t('projectDetail.codeHeading')}
                 </h3>
               </div>
 
               <p className="text-xs text-zinc-500 mb-6 italic leading-relaxed">
-                Visualisation du code source implémenté ({detail.codeLanguage === 'javascript' ? 'ReactJS Front-end' : 'Python Back-end'}).
+                {t('projectDetail.codeText', { stack: detail.codeLanguage === 'javascript' ? t('projectDetail.codeFrontend') : t('projectDetail.codeBackend') })}
               </p>
 
               {/* Rendu Code avec coloration syntaxique */}
@@ -379,7 +384,7 @@ export function ProjectDetailPage() {
 
           <div className="rounded-2xl border border-zinc-200 dark:border-zinc-900 bg-zinc-100/40 dark:bg-zinc-950/10 p-6 text-left">
             <h4 className="text-xs font-bold text-zinc-900 dark:text-white uppercase tracking-widest font-mono border-b border-zinc-200 dark:border-zinc-900 pb-2 mb-3">
-              Technologies Utilisées
+              {t('projectDetail.technologies')}
             </h4>
             <div className="flex flex-wrap gap-2">
               {project.stack.map((tech, idx) => (
@@ -394,14 +399,14 @@ export function ProjectDetailPage() {
 
             {project.liveUrl && (
               <div className="mt-6 pt-5 border-t border-zinc-200 dark:border-zinc-900 flex flex-col gap-2">
-                <span className="text-[10px] uppercase font-bold text-zinc-600 dark:text-zinc-500 tracking-wider">Lien de Production</span>
+                <span className="text-[10px] uppercase font-bold text-zinc-600 dark:text-zinc-500 tracking-wider">{t('projectDetail.liveLink')}</span>
                 <a
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs font-bold text-red-600 dark:text-red-500 hover:underline flex items-center gap-1.5"
                 >
-                  Consulter le site en ligne
+                  {t('projectDetail.visitLive')}
                   <ArrowLeft className="h-3 w-3 rotate-180" />
                 </a>
               </div>

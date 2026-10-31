@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export function AnalysisDiagram() {
+  const { t } = useTranslation();
   // Animation variants
   const fadeInVariants = (delay: number) => ({
     hidden: { opacity: 0, y: 10 },
@@ -23,7 +25,7 @@ export function AnalysisDiagram() {
     <div className="w-full text-left">
       {/* Titre de la section */}
       <h2 className="font-bebas text-3xl md:text-5xl text-zinc-900 dark:text-white border-b border-zinc-200 dark:border-zinc-900 pb-3 mb-8 tracking-wider">
-        De l' <span className="text-red-600">Analyse</span>...
+        {t('analysis.titleFrom')} <span className="text-red-600">{t('analysis.titleAnalysis')}</span>...
       </h2>
 
       {/* SVG Canvas Container */}
@@ -79,7 +81,7 @@ export function AnalysisDiagram() {
             className="text-[10px] font-bold fill-zinc-600 dark:fill-zinc-500 uppercase tracking-widest font-mono"
             variants={fadeInVariants(0.4)}
           >
-            Sujet : Application Portfolio
+            {t('analysis.subject')}
           </motion.text>
 
           {/* ACTEUR UML (Client / Porteur de projet) */}
@@ -152,7 +154,7 @@ export function AnalysisDiagram() {
               textAnchor="middle"
               variants={fadeInVariants(0.4)}
             >
-              Client / Porteur de projet
+              {t('analysis.actor')}
             </motion.text>
           </g>
 
@@ -218,7 +220,7 @@ export function AnalysisDiagram() {
               textAnchor="middle"
               variants={fadeInVariants(0.8)}
             >
-              Exprimer un besoin
+              {t('analysis.useCaseNeed')}
             </motion.text>
           </g>
 
@@ -241,7 +243,7 @@ export function AnalysisDiagram() {
               textAnchor="middle"
               variants={fadeInVariants(1.2)}
             >
-              Modéliser
+              {t('analysis.useCaseModel')}
             </motion.text>
           </g>
 
@@ -264,7 +266,7 @@ export function AnalysisDiagram() {
               textAnchor="middle"
               variants={fadeInVariants(1.6)}
             >
-              Rédiger les spécifications
+              {t('analysis.useCaseSpecs')}
             </motion.text>
           </g>
 
@@ -287,7 +289,7 @@ export function AnalysisDiagram() {
               textAnchor="middle"
               variants={fadeInVariants(2.0)}
             >
-              Concevoir l'architecture
+              {t('analysis.useCaseArchitecture')}
             </motion.text>
           </g>
 
@@ -385,7 +387,7 @@ export function AnalysisDiagram() {
 
       {/* Phrase de transition */}
       <p className="font-monster text-lg text-red-600 dark:text-red-500 mt-6 tracking-wider text-left">
-        Une fois l'architecture posée, place au code.
+        {t('analysis.transition')}
       </p>
     </div>
   );

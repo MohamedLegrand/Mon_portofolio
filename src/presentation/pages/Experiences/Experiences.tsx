@@ -1,33 +1,26 @@
 import { useExperiences } from '@/presentation/hooks/useExperiences';
 import { ExperienceItem } from '@/presentation/components/common/ExperienceItem';
 import { LoadingSpinner } from '@/presentation/components/common/LoadingSpinner';
-
-interface EducationItem {
-  id: string;
-  degree: string;
-  institution: string;
-  period: string;
-  details: string;
-}
-
-const educationList: EducationItem[] = [
-  {
-    id: "edu-1",
-    degree: "Diplôme d'Ingénieur des Travaux Informatiques",
-    institution: "École Supérieure Polytechnique",
-    period: "",
-    details: "Spécialisation en Génie Logiciel, Conception Orientée Objet, Modélisation UML, Gestion de Projets et Développement d'Applications."
-  },
-  {
-    id: "edu-2",
-    degree: "Diplôme de Technicien Supérieur (DTS)",
-    institution: "Institut Supérieur de Technologie",
-    period: "",
-    details: "Administration système Linux/Windows, architecture réseaux, routage, sécurité et protocoles de communication."
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 export function Experiences() {
+  const { t } = useTranslation();
+  const educationList = [
+    {
+      id: 'edu-engineer',
+      degree: t('education.engineerDegree'),
+      institution: t('education.school'),
+      period: '2026',
+      details: t('education.engineerDetails'),
+    },
+    {
+      id: 'edu-dts',
+      degree: t('education.dtsDegree'),
+      institution: t('education.school'),
+      period: '2025',
+      details: t('education.dtsDetails'),
+    },
+  ];
   const { experiences, loading, error } = useExperiences();
 
   // Trier les expériences de la plus récente à la plus ancienne par date de début
@@ -40,11 +33,11 @@ export function Experiences() {
       <div className="text-center mb-16">
         {/* Titre */}
         <h1 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-5xl">
-          Mon <span className="bg-gradient-to-r from-red-500 to-red-600 dark:from-red-400 dark:to-red-600 bg-clip-text text-transparent">Parcours</span>
+          {t('experiences.titleA')} <span className="bg-gradient-to-r from-red-500 to-red-600 dark:from-red-400 dark:to-red-600 bg-clip-text text-transparent">{t('experiences.titleB')}</span>
         </h1>
         {/* Sous-titre */}
         <p className="mx-auto mt-4 text-base text-zinc-600 dark:text-zinc-400 sm:text-lg">
-          Mon historique professionnel et mon éducation académique de technicien et ingénieur.
+          {t('experiences.subtitle')}
         </p>
       </div>
 
@@ -64,14 +57,14 @@ export function Experiences() {
           {/* Expériences professionnelles */}
           <div className="space-y-8">
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-white tracking-widest border-b border-zinc-200 dark:border-zinc-900 pb-3 font-monster text-3xl text-left">
-              Expériences Professionnelles
+              {t('experiences.proHeading')}
             </h2>
             <div className="relative pl-2">
               {sortedExperiences.map((experience) => (
                 <ExperienceItem key={experience.id} experience={experience} />
               ))}
               {experiences.length === 0 && (
-                <p className="text-zinc-600 dark:text-zinc-500">Aucune expérience répertoriée pour le moment.</p>
+                <p className="text-zinc-600 dark:text-zinc-500">{t('experiences.empty')}</p>
               )}
             </div>
           </div>
@@ -79,7 +72,7 @@ export function Experiences() {
           {/* Éducation & Formations */}
           <div className="space-y-8 text-left">
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-white tracking-widest border-b border-zinc-200 dark:border-zinc-900 pb-3 font-monster text-3xl">
-              Éducation & Diplômes
+              {t('experiences.educationHeading')}
             </h2>
             <div className="space-y-8 pl-2">
               {educationList.map((edu) => (

@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "title": "TAKADJIO Mohamed — Développeur Fullstack Web & Mobile",
+    "description": "Portfolio de TAKADJIO Mohamed, ingénieur des travaux informatiques et développeur fullstack web & mobile à Yaoundé : conception d'API, React, FastAPI, Flutter, analyse UML/MERISE."
+  },
+  "common": {
+    "loading": "Chargement en cours...",
+    "scrollTop": "Retour en haut de la page",
+    "downloadCv": "Télécharger mon CV",
+    "available": "Disponible pour freelance",
+    "location": "Nkoabang, Yaoundé, Cameroun"
+  },
+  "nav": {
+    "home": "Accueil",
+    "skills": "Compétences",
+    "experiences": "Expériences",
+    "projects": "Projets",
+    "contact": "Contact",
+    "toggleTheme": "Changer de thème",
+    "toggleMenu": "Ouvrir ou fermer le menu",
+    "switchLanguage": "Switch to English"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "role": "INGÉNIEUR DES TRAVAUX INFORMATIQUES · DÉVELOPPEUR FULLSTACK WEB & MOBILE",
+    "intro": "Spécialisé dans la conception d'API, je développe des applications web et mobiles complètes et j'assure leur mise en production, de l'analyse UML/MERISE jusqu'au déploiement.",
+    "myProjects": "Mes projets",
+    "contactMe": "Me contacter",
+    "tagline": "Fondateur de MyNkap, une plateforme SaaS de gestion financière assistée par l'IA, déjà utilisée en production.",
+    "statInternships1": "Stages",
+    "statInternships2": "en entreprise",
+    "statSites1": "Sites",
+    "statSites2": "en production",
+    "statUsers1": "Utilisateurs",
+    "statUsers2": "MyNkap"
+  },
+  "analysis": {
+    "titleFrom": "De l'",
+    "titleAnalysis": "Analyse",
+    "subject": "Sujet : Application Portfolio",
+    "actor": "Client / Porteur de projet",
+    "useCaseNeed": "Exprimer un besoin",
+    "useCaseModel": "Modéliser",
+    "useCaseSpecs": "Rédiger les spécifications",
+    "useCaseArchitecture": "Concevoir l'architecture",
+    "transition": "Une fois l'architecture posée, place au code.",
+    "titleTo": "...au",
+    "titleCode": "Code"
+  },
+  "selectedProjects": {
+    "heading": "PROJETS PHARES",
+    "viewAll": "Voir tous les projets"
+  },
+  "educationSkills": {
+    "heading": "FORMATION & COMPÉTENCES",
+    "education": "Formation",
+    "skills": "Compétences"
+  },
+  "education": {
+    "school": "Institut Africain d'Informatique (IAI-Cameroun), Yaoundé",
+    "engineerDegree": "Diplôme d'Ingénieur des Travaux Informatiques, Génie Logiciel",
+    "engineerDetails": "Spécialisation en génie logiciel : conception orientée objet, modélisation UML et MERISE, gestion de projets et développement d'applications.",
+    "dtsDegree": "Diplôme de Technicien Supérieur (DTS) en Informatique",
+    "dtsDetails": "Bases de l'informatique : algorithmique, programmation, bases de données, réseaux et systèmes."
+  },
+  "process": {
+    "heading": "CYCLE DE VIE D'UN PROJET",
+    "steps": [
+      { "title": "EXPRESSION DES BESOINS", "desc": "Écoute attentive, recueil des exigences du client et définition précise du périmètre." },
+      { "title": "ANALYSE", "desc": "Étude technique de faisabilité, structuration de l'architecture et choix technologiques." },
+      { "title": "MODÉLISATION", "desc": "Conception des schémas de données et élaboration des diagrammes UML / MERISE." },
+      { "title": "CODAGE", "desc": "Développement de la solution avec écriture d'un code propre, modulaire et performant." },
+      { "title": "TEST", "desc": "Validation complète des fonctionnalités, vérification de la sécurité et tests d'intégration." },
+      { "title": "DÉPLOIEMENT", "desc": "Mise en production sécurisée de l'application et automatisation du pipeline CI/CD." },
+      { "title": "MAINTENANCE", "desc": "Suivi post-déploiement, correction des anomalies et évolutions applicatives." }
+    ]
+  },
+  "quote": {
+    "text": "Le code en lui-même n'est pas l'essence d'un projet ; sa véritable valeur réside dans l'analyse et la modélisation de sa solution.",
+    "caption": "Méthodologie & Modélisation"
+  },
+  "footer": {
+    "about": "Ingénieur des travaux informatiques et développeur fullstack web & mobile. Je conçois des API, modélise sous UML/MERISE et mets en production des applications complètes.",
+    "sitemap": "Plan du site",
+    "contactHeading": "Contact & Localisation",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "location": "Localisation",
+    "rights": "Tous droits réservés."
+  },
+  "contact": {
+    "titleLine1": "TRAVAILLONS",
+    "titleLine2": "ENSEMBLE",
+    "intro": "Je suis actuellement ouvert à de nouvelles opportunités et collaborations. Discutons de votre projet et créons quelque chose d'exceptionnel ensemble.",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "location": "Localisation",
+    "successTitle": "Message envoyé avec succès !",
+    "successText": "Merci pour votre intérêt. Je vous répondrai dans les plus brefs délais.",
+    "errorTitle": "Une erreur est survenue",
+    "nameLabel": "Nom complet",
+    "namePlaceholder": "Ex : Jean Dupont",
+    "emailLabel": "Adresse email",
+    "emailPlaceholder": "Ex : jean.dupont@gmail.com",
+    "subjectLabel": "Sujet",
+    "subjectPlaceholder": "Ex : Demande de projet / Collaboration",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Écrivez votre message ici...",
+    "send": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "errors": {
+      "required": "Tous les champs sont requis.",
+      "invalidEmail": "Veuillez entrer une adresse email valide.",
+      "sendFailed": "Une erreur est survenue lors de l'envoi du message."
+    }
+  },
+  "projects": {
+    "titleA": "Mes",
+    "titleB": "Projets",
+    "subtitle": "Découvrez mes travaux récents, entre analyse de systèmes complexes et développement d'applications web et mobiles.",
+    "analysisHeading": "Projets d'Analyse & Modélisation",
+    "codeHeading": "Projets de Développement",
+    "empty": "Aucun projet n'a été trouvé pour le moment.",
+    "loadError": "Une erreur est survenue lors du chargement des projets.",
+    "featured": "Mis en avant",
+    "learnMore": "En savoir plus",
+    "visit": "Visiter"
+  },
+  "projectDetail": {
+    "loading": "Chargement des détails du projet...",
+    "missingId": "Identifiant de projet manquant.",
+    "loadError": "Une erreur est survenue lors du chargement du projet.",
+    "notFound": "Projet introuvable",
+    "notFoundText": "Le projet demandé n'a pas pu être chargé.",
+    "back": "Retour aux projets",
+    "categoryAnalysis": "Analyse & Modélisation",
+    "categoryCode": "Développement & Code",
+    "overview": "Présentation fonctionnelle",
+    "umlHeading": "Spécifications UML",
+    "umlText": "Visualisation graphique simplifiée de la conception technique UML modélisée pour ce projet.",
+    "codeHeading": "Extrait de code",
+    "codeText": "Visualisation du code source implémenté ({{stack}}).",
+    "codeFrontend": "ReactJS Front-end",
+    "codeBackend": "Python Back-end",
+    "technologies": "Technologies utilisées",
+    "liveLink": "Lien de production",
+    "visitLive": "Consulter le site en ligne",
+    "uml": {
+      "mobileMoneySystem": "SYSTÈME MOBILE MONEY",
+      "fintechClient": "Client Fintech",
+      "authenticate": "S'authentifier (2FA)",
+      "transferFunds": "Transférer des fonds",
+      "manageCards": "Gérer les cartes virtuelles",
+      "buyAirtime": "Acheter du crédit appel",
+      "client": "Client",
+      "merchantSite": "Site Marchand",
+      "bank": "Banque/Momo",
+      "step1": "1. Initier paiement",
+      "step2": "2. Demande de jeton",
+      "step3": "3. Débiter client",
+      "step4": "4. Succès OTP",
+      "step5": "5. Webhook OK",
+      "step6": "6. Page de confirmation"
+    }
+  },
+  "experiences": {
+    "titleA": "Mon",
+    "titleB": "Parcours",
+    "subtitle": "Mon parcours professionnel et ma formation de technicien supérieur puis d'ingénieur.",
+    "proHeading": "Expériences professionnelles",
+    "educationHeading": "Formation & Diplômes",
+    "empty": "Aucune expérience répertoriée pour le moment.",
+    "loadError": "Une erreur est survenue lors du chargement des expériences.",
+    "at": "chez",
+    "present": "Présent",
+    "months": ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+  },
+  "skillsPage": {
+    "titleA": "Mes",
+    "titleB": "Compétences",
+    "subtitle": "Découvrez mes compétences techniques, détaillées et expliquées par domaine d'application.",
+    "categories": {
+      "analysis": {
+        "title": "Analyse & Modélisation",
+        "description": "La structuration et la modélisation des besoins d'un projet avant son développement."
+      },
+      "languages": {
+        "title": "Langages maîtrisés",
+        "description": "Les technologies fondamentales que j'utilise pour programmer."
+      },
+      "frameworks": {
+        "title": "Frameworks & Librairies",
+        "description": "Les briques applicatives qui accélèrent le développement d'interfaces et de services."
+      },
+      "tools": {
+        "title": "Outils de développement",
+        "description": "Les logiciels qui m'accompagnent au quotidien pour être plus productif."
+      },
+      "devops": {
+        "title": "DevOps & Plateformes",
+        "description": "Le versioning et l'intégration continue, indispensables pour livrer des projets fiables."
+      },
+      "databases": {
+        "title": "Bases de données (SGBD)",
+        "description": "Les systèmes de stockage structurés qui garantissent la persistance et la cohérence des données."
+      }
+    },
+    "skills": {
+      "uml": "M'aide à modéliser l'architecture logicielle, concevoir les diagrammes de cas d'utilisation et structurer techniquement les projets.",
+      "merise": "M'aide à concevoir et modéliser des bases de données relationnelles complexes via l'élaboration de MCD et MLD.",
+      "python": "Utilisé pour concevoir des API rapides, manipuler des données, écrire des scripts d'automatisation et exécuter des tâches back-end.",
+      "htmlCssJs": "Le socle fondamental pour concevoir des interfaces web interactives, accessibles et adaptées à tous les écrans.",
+      "djangoRest": "Me permet de structurer et de déployer rapidement des API REST robustes et sécurisées avec un ORM puissant.",
+      "react": "M'aide à créer des interfaces utilisateur dynamiques, réutilisables et performantes côté client.",
+      "tailwind": "Permet d'intégrer des designs modernes de manière fluide avec une approche utility-first entièrement responsive.",
+      "fastapi": "Idéal pour développer des API asynchrones performantes, légères et documentées automatiquement via OpenAPI.",
+      "postman": "Essentiel pour tester, documenter, simuler et valider le comportement de toutes mes routes d'API.",
+      "vscode": "Mon éditeur de code principal, configuré pour accroître ma productivité au quotidien.",
+      "antigravity": "Mon environnement de développement (IDE) augmenté par l'IA pour concevoir, déboguer et coder plus efficacement.",
+      "github": "M'aide à héberger, versionner et gérer le code de mes projets tout en collaborant en équipe via les Pull Requests.",
+      "mysql": "Pour stocker de façon structurée et interroger efficacement les données relationnelles de mes applications.",
+      "postgresql": "Mon SGBD relationnel de prédilection pour gérer de grands volumes de données avec fiabilité et des types complexes.",
+      "sqlserver": "Utilisé pour administrer, optimiser et sécuriser des bases de données de niveau entreprise."
+    }
+  }
+}

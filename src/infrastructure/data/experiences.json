@@ -1,19 +1,82 @@
 [
   {
-    "id": "exp-1",
-    "company": "Tech Solutions SARL",
-    "role": "Développeur Full Stack Senior",
-    "startDate": "2024-03",
-    "description": "Responsable de la conception et du développement d'applications cloud. Migration d'architectures monolithiques vers des microservices et encadrement d'une équipe de 3 développeurs juniors.",
-    "technologies": ["React", "Node.js", "TypeScript", "Docker", "AWS", "PostgreSQL"]
+    "id": "exp-hr-skills",
+    "company": "HR-Skills SARL",
+    "role": {
+      "fr": "Analyste-Développeur Fullstack & QA (Stage professionnel)",
+      "en": "Fullstack Analyst-Developer & QA (Professional internship)"
+    },
+    "startDate": "2026-07",
+    "endDate": "2026-10",
+    "description": {
+      "fr": "Analyste principal de l'entreprise : modélisation des systèmes avec UML et MERISE. Analyse et conception de HR-Skills Pay (hrskills-pay.com), l'agrégateur de paiement de l'entreprise, et participation à son développement. Analyse et conception de Père Nkap, application mobile de transactions financières. Réalisation des tests d'acceptation utilisateur (UAT) et d'assurance qualité (QA) sur les applications de l'entreprise.",
+      "en": "Lead analyst of the company: system modeling with UML and MERISE. Analysis and design of HR-Skills Pay (hrskills-pay.com), the company's payment aggregator, and contribution to its development. Analysis and design of Père Nkap, a mobile financial transactions app. User acceptance testing (UAT) and quality assurance (QA) on the company's applications."
+    },
+    "technologies": [
+      "UML",
+      "MERISE",
+      "React",
+      "Go",
+      "PostgreSQL",
+      "UAT / QA"
+    ]
   },
   {
-    "id": "exp-2",
-    "company": "Digital Factory",
-    "role": "Développeur Front End React",
-    "startDate": "2022-09",
-    "endDate": "2024-02",
-    "description": "Développement d'interfaces utilisateur modernes et hautement interactives pour divers clients de l'agence. Optimisation des performances et amélioration de l'accessibilité Web (WCAG).",
-    "technologies": ["React", "Redux Toolkit", "JavaScript", "TailwindCSS", "Sass", "Jest"]
+    "id": "exp-national-energy",
+    "company": "National Energy",
+    "role": {
+      "fr": "Développeur Front-end Freelance",
+      "en": "Freelance Front-end Developer"
+    },
+    "startDate": "2026",
+    "endDate": "2026",
+    "description": {
+      "fr": "Conception et développement du site vitrine de la station-service (carburants, services, boutique) : national-energ.com. Déploiement sur Vercel et configuration du nom de domaine.",
+      "en": "Design and development of the service station's showcase website (fuels, services, shop): national-energ.com. Deployment on Vercel and domain name configuration."
+    },
+    "technologies": [
+      "React",
+      "Vercel"
+    ]
+  },
+  {
+    "id": "exp-afriktech",
+    "company": "AfrikTech",
+    "role": {
+      "fr": "Développeur Front-end Freelance",
+      "en": "Freelance Front-end Developer"
+    },
+    "startDate": "2026",
+    "endDate": "2026",
+    "description": {
+      "fr": "Conception et développement du site vitrine présentant les services de la startup. Déploiement et mise en production sur Vercel.",
+      "en": "Design and development of the showcase website presenting the startup's services. Deployment to production on Vercel."
+    },
+    "technologies": [
+      "React",
+      "Vercel"
+    ]
+  },
+  {
+    "id": "exp-true-site",
+    "company": "True Site Technology SARL",
+    "role": {
+      "fr": "Développeur Web (Stage académique)",
+      "en": "Web Developer (Academic internship)"
+    },
+    "startDate": "2025-07",
+    "endDate": "2025-09",
+    "description": {
+      "fr": "Développement d'un site e-commerce pour l'entreprise avec Django et MySQL. Intégration des interfaces en HTML, CSS, Tailwind CSS et JavaScript.",
+      "en": "Development of an e-commerce website for the company with Django and MySQL. Interface integration with HTML, CSS, Tailwind CSS and JavaScript."
+    },
+    "technologies": [
+      "Django",
+      "MySQL",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "JavaScript"
+    ]
   }
 ]

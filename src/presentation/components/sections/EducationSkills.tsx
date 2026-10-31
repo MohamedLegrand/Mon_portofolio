@@ -1,14 +1,17 @@
+import { useTranslation } from 'react-i18next';
+
 export function EducationSkills() {
+  const { t } = useTranslation();
   const educations = [
     {
-      degree: "Diplôme d'Ingénieur des Travaux Informatiques",
-      school: "École Supérieure Polytechnique",
-      date: ""
+      degree: t('education.engineerDegree'),
+      school: t('education.school'),
+      date: '2026'
     },
     {
-      degree: "Diplôme de Technicien Supérieur (DTS) en Informatique",
-      school: "Institut Supérieur de Technologie",
-      date: ""
+      degree: t('education.dtsDegree'),
+      school: t('education.school'),
+      date: '2025'
     }
   ];
 
@@ -23,13 +26,13 @@ export function EducationSkills() {
     <div className="flex flex-col gap-8 text-left">
       <div>
         <h3 className="text-xl font-bold text-zinc-900 dark:text-white tracking-wider border-b border-zinc-200 dark:border-zinc-900 pb-3 font-bebas text-2xl">
-          EDUCATION & SKILLS
+          {t('educationSkills.heading')}
         </h3>
 
         {/* Education Section */}
         <div className="mt-6 flex flex-col gap-6">
           <h4 className="text-xs uppercase tracking-widest text-red-600 dark:text-red-500 font-bold">
-            Education
+            {t('educationSkills.education')}
           </h4>
           <div className="flex flex-col gap-4">
             {educations.map((edu, index) => (
@@ -56,7 +59,7 @@ export function EducationSkills() {
       {/* Skills Logo Grid */}
       <div className="flex flex-col gap-4">
         <h4 className="text-xs uppercase tracking-widest text-red-600 dark:text-red-500 font-bold">
-          Skills
+          {t('educationSkills.skills')}
         </h4>
         <div className="grid grid-cols-2 gap-4">
           {skills.map((skill) => (

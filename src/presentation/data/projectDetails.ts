@@ -20,19 +20,19 @@ export interface DetailedProject {
   codeContent?: string;
 }
 
-export const projectDetails: Record<string, DetailedProject> = {
+export const projectDetailsFr: Record<string, DetailedProject> = {
   "perenkap": {
     id: "perenkap",
-    title: "Perenkap",
+    title: "Père Nkap",
     category: "analyse",
     subtitle: "Architecture & Modélisation d'une Fintech Mobile Interopérable",
-    mainDescription: "Perenkap est une application mobile fintech innovante conçue pour simplifier et démocratiser le transfert d'argent et les transactions financières du quotidien. L'objectif principal de cette modélisation est de proposer un système résilient, sécurisé et interopérable capable d'interagir avec divers fournisseurs de services financiers et opérateurs de téléphonie mobile.",
-    umlDiagramName: "Diagramme de Cas d'Utilisation UML - Perenkap",
+    mainDescription: "Père Nkap est une application mobile fintech innovante conçue pour simplifier et démocratiser le transfert d'argent et les transactions financières du quotidien. L'objectif principal de cette modélisation est de proposer un système résilient, sécurisé et interopérable capable d'interagir avec divers fournisseurs de services financiers et opérateurs de téléphonie mobile.",
+    umlDiagramName: "Diagramme de Cas d'Utilisation UML - Père Nkap",
     umlSvgType: "usecase",
     sections: [
       {
         title: "1. Transfert d'Argent Inter-Opérateurs",
-        content: "La problématique majeure résolue par Perenkap est le cloisonnement des services de Mobile Money (MTN MoMo, Orange Money, Wave, etc.). Grâce à notre modèle d'analyse :",
+        content: "La problématique majeure résolue par Père Nkap est le cloisonnement des services de Mobile Money (MTN MoMo, Orange Money, Wave, etc.). Grâce à notre modèle d'analyse :",
         list: [
           "Passerelle d'échange unifiée reliant les API des différents opérateurs.",
           "Rapprochement automatique des soldes entre opérateurs en arrière-plan.",
@@ -72,16 +72,16 @@ export const projectDetails: Record<string, DetailedProject> = {
   },
   "hr-pay": {
     id: "hr-pay",
-    title: "HR-PAY",
+    title: "HR-Skills Pay",
     category: "analyse",
     subtitle: "Modélisation d'un Agrégateur de Paiement Multi-Passerelles",
-    mainDescription: "HR-PAY est une solution d'agrégation de paiement de niveau entreprise. Elle agit comme une passerelle unique centralisant plusieurs méthodes d'encaissement et de décaissement (Cartes bancaires, Mobile Money, Virements bancaires). Cette étude d'analyse et de modélisation assure la robustesse du système face à des pics de transactions et définit l'architecture de sécurité indispensable pour manipuler des données financières.",
-    umlDiagramName: "Diagramme de Séquence UML - Processus de Paiement HR-PAY",
+    mainDescription: "HR-Skills Pay est une solution d'agrégation de paiement de niveau entreprise. Elle agit comme une passerelle unique centralisant plusieurs méthodes d'encaissement et de décaissement (Cartes bancaires, Mobile Money, Virements bancaires). Cette étude d'analyse et de modélisation assure la robustesse du système face à des pics de transactions et définit l'architecture de sécurité indispensable pour manipuler des données financières.",
+    umlDiagramName: "Diagramme de Séquence UML - Processus de Paiement HR-Skills Pay",
     umlSvgType: "sequence",
     sections: [
       {
         title: "1. Passerelle API Unique & SDKs",
-        content: "HR-PAY simplifie la vie des développeurs de plateformes e-commerce en fournissant une API unifiée :",
+        content: "HR-Skills Pay simplifie la vie des développeurs de plateformes e-commerce en fournissant une API unifiée :",
         list: [
           "Point d'entrée unique pour initier, vérifier et rembourser des transactions.",
           "Système de routage intelligent qui choisit la passerelle la plus économique et disponible à l'instant T.",
@@ -120,11 +120,11 @@ export const projectDetails: Record<string, DetailedProject> = {
   },
   "mynakp": {
     id: "mynakp",
-    title: "Mynakp",
+    title: "MyNkap",
     category: "analyse",
     subtitle: "Conception Technique d'une Application d'Intelligence Budgétaire",
-    mainDescription: "Mynakp est un projet d'analyse pour une application de gestion intelligente des finances personnelles. L'étude se concentre sur l'ergonomie de saisie, l'automatisation de la catégorisation des dépenses et la sécurité des données financières privées des utilisateurs.",
-    umlDiagramName: "Diagramme de Cas d'Utilisation UML - Mynakp",
+    mainDescription: "MyNkap est un projet d'analyse pour une application de gestion intelligente des finances personnelles. L'étude se concentre sur l'ergonomie de saisie, l'automatisation de la catégorisation des dépenses et la sécurité des données financières privées des utilisateurs.",
+    umlDiagramName: "Diagramme de Cas d'Utilisation UML - MyNkap",
     umlSvgType: "usecase",
     sections: [
       {
@@ -247,10 +247,10 @@ export function EnergyEstimator() {
   },
   "afritech-sas": {
     id: "afritech-sas",
-    title: "AFRITECH SAS",
+    title: "AfrikTech",
     category: "code",
     subtitle: "API Asynchrone de Capture de Leads avec FastAPI",
-    mainDescription: "Développement d'une route backend asynchrone performante en Python à l'aide du framework FastAPI. Cette route gère l'enregistrement et la validation instantanée des formulaires de prospection commerciale pour la start-up AFRITECH SAS.",
+    mainDescription: "Développement d'une route backend asynchrone performante en Python à l'aide du framework FastAPI. Cette route gère l'enregistrement et la validation instantanée des formulaires de prospection commerciale pour la start-up AfrikTech.",
     codeFilename: "lead_api.py",
     codeLanguage: "python",
     codeContent: `from fastapi import FastAPI, HTTPException, status
@@ -258,7 +258,7 @@ from pydantic import BaseModel, EmailStr
 from typing import Optional
 import uvicorn
 
-app = FastAPI(title="Afritech Lead API")
+app = FastAPI(title="AfrikTech Lead API")
 
 # Schéma Pydantic de validation de données prospect
 class LeadCreate(BaseModel):
@@ -359,6 +359,60 @@ class StripeWebhookView(APIView):
       {
         title: "2. API REST standardisée avec Django",
         content: "L'utilisation de Django REST Framework assure une architecture claire, propre et modulaire, facilitant l'intégration des fonctionnalités e-commerce."
+      }
+    ]
+  },
+  "mynkap": {
+    id: "mynkap",
+    title: "MyNkap",
+    category: "code",
+    subtitle: "Plateforme SaaS de Gestion Financière Assistée par l'IA",
+    mainDescription: "MyNkap est une plateforme SaaS de gestion financière assistée par l'intelligence artificielle, que j'ai fondée et développée de bout en bout. En production sur my-nkap.com, elle a réuni une trentaine d'utilisateurs actifs dès son premier mois.",
+    sections: [
+      {
+        title: "1. Une Plateforme SaaS Complète",
+        content: "Développement fullstack de l'application, du front-end à la base de données :",
+        list: [
+          "Front-end React, responsive et optimisé pour le mobile.",
+          "API REST avec FastAPI.",
+          "Base de données PostgreSQL."
+        ]
+      },
+      {
+        title: "2. Intelligence Artificielle",
+        content: "Intégration d'une API d'IA au cœur du produit :",
+        list: [
+          "Analyse automatique des dépenses.",
+          "Prédiction des tendances financières.",
+          "Conseils personnalisés pour chaque utilisateur."
+        ]
+      },
+      {
+        title: "3. DevOps & Mise en Production",
+        content: "Une chaîne de déploiement professionnelle :",
+        list: [
+          "Conteneurisation avec Docker.",
+          "Déploiement sur VPS avec Nginx et certificat SSL.",
+          "Pipeline CI/CD avec GitHub Actions."
+        ]
+      }
+    ]
+  },
+  "raycard": {
+    id: "raycard",
+    title: "RayCard",
+    category: "code",
+    subtitle: "Cartes Virtuelles Liées au Mobile Money",
+    mainDescription: "RayCard est une application mobile, actuellement en cours de développement, qui permet de créer des cartes virtuelles à partir de comptes Mobile Money.",
+    sections: [
+      {
+        title: "1. Architecture Technique",
+        content: "Le projet s'appuie sur trois briques :",
+        list: [
+          "Application mobile développée avec Flutter.",
+          "API REST avec FastAPI et PostgreSQL.",
+          "Tableau de bord d'administration web avec React."
+        ]
       }
     ]
   }
