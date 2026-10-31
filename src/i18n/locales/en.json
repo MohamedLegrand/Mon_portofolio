@@ -214,6 +214,8 @@
       "react": "Helps me build dynamic, reusable and high-performance client-side user interfaces.",
       "tailwind": "Makes it easy to build modern designs with a fully responsive utility-first approach.",
       "fastapi": "Ideal for building fast, lightweight asynchronous APIs with automatic OpenAPI documentation.",
+      "flutter": "Google's framework that I use to build smooth cross-platform mobile apps (Android and iOS) from a single codebase.",
+      "dart": "A modern, typed language at the heart of Flutter, which I use to write the logic and interfaces of my mobile apps.",
       "postman": "Essential for testing, documenting, mocking and validating all my API routes.",
       "vscode": "My main code editor, configured to boost my day-to-day productivity.",
       "antigravity": "My AI-powered development environment (IDE) for designing, debugging and coding more efficiently.",

@@ -42,6 +42,11 @@ const skillCategories: SkillCategory[] = [
         name: "HTML / CSS / JS", 
         image: "/images/langage/html-css-js.jpg",
         descKey: "htmlCssJs"
+      },
+      {
+        name: "Dart",
+        image: "/images/langage/dart.jpg",
+        descKey: "dart"
       }
     ]
   },
@@ -67,6 +72,11 @@ const skillCategories: SkillCategory[] = [
         name: "FastAPI", 
         image: "/images/framework/fast-api.jpg",
         descKey: "fastapi"
+      },
+      {
+        name: "Flutter",
+        image: "/images/framework/flutter.jpg",
+        descKey: "flutter"
       }
     ]
   },
