@@ -1,16 +1,15 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Layout } from '@/presentation/components/layout/Layout';
 import { Home } from '@/presentation/pages/Home/Home';
-import { Projects } from '@/presentation/pages/Projects/Projects';
-import { ProjectDetailPage } from '@/presentation/pages/Projects/ProjectDetailPage';
-import { SkillsPage } from '@/presentation/pages/Skills/SkillsPage';
-import { Experiences } from '@/presentation/pages/Experiences/Experiences';
-import { Contact } from '@/presentation/pages/Contact/Contact';
+import { LoadingSpinner } from '@/presentation/components/common/LoadingSpinner';
 
+// L'accueil est chargé immédiatement ; les autres pages ne sont téléchargées
+// qu'au moment où l'on y navigue (code splitting).
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
+    hydrateFallbackElement: <LoadingSpinner />,
     children: [
       {
         path: '',
@@ -18,23 +17,32 @@ const router = createBrowserRouter([
       },
       {
         path: 'projets',
-        element: <Projects />,
+        lazy: () =>
+          import('@/presentation/pages/Projects/Projects').then((m) => ({ Component: m.Projects })),
       },
       {
         path: 'projets/:id',
-        element: <ProjectDetailPage />,
+        lazy: () =>
+          import('@/presentation/pages/Projects/ProjectDetailPage').then((m) => ({
+            Component: m.ProjectDetailPage,
+          })),
       },
       {
         path: 'competences',
-        element: <SkillsPage />,
+        lazy: () =>
+          import('@/presentation/pages/Skills/SkillsPage').then((m) => ({ Component: m.SkillsPage })),
       },
       {
         path: 'experiences',
-        element: <Experiences />,
+        lazy: () =>
+          import('@/presentation/pages/Experiences/Experiences').then((m) => ({
+            Component: m.Experiences,
+          })),
       },
       {
         path: 'contact',
-        element: <Contact />,
+        lazy: () =>
+          import('@/presentation/pages/Contact/Contact').then((m) => ({ Component: m.Contact })),
       },
     ],
   },

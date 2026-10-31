@@ -65,8 +65,10 @@ export function useContactForm() {
         message: '',
       });
     } catch (err: unknown) {
+      // Le détail technique va dans la console ; le visiteur voit un message clair et traduit.
+      console.error('Échec de l\'envoi du formulaire de contact :', err);
       setSubmitStatus('error');
-      setErrorMessage(err instanceof Error ? err.message : t('contact.errors.sendFailed'));
+      setErrorMessage(t('contact.errors.sendFailed'));
     } finally {
       setIsSubmitting(false);
     }
