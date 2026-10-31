@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import type { Project } from '@/domain/entities/Project';
 import { ExternalLink } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface ProjectCardProps {
   project: Project;
@@ -8,6 +9,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
+  const { t } = useTranslation();
   const num = `0${index + 1}`;
   const hasImage = project.imageUrl && project.imageUrl.trim() !== '';
 
@@ -31,7 +33,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         )}
         {project.featured && (
           <span className="absolute right-4 top-4 rounded-full bg-red-600 px-2.5 py-1 text-[8px] font-bold uppercase tracking-wider text-white shadow-md">
-            Mis en avant
+            {t('projects.featured')}
           </span>
         )}
       </div>
@@ -63,7 +65,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           to={`/projets/${project.id}`}
           className="text-[10px] font-bold uppercase tracking-wider text-red-600 dark:text-red-500 hover:text-zinc-900 dark:hover:text-white border border-red-500/20 hover:border-red-600 px-3 py-1.5 rounded transition-all inline-block"
         >
-          En savoir plus
+          {t('projects.learnMore')}
         </Link>
 
         {project.githubUrl && (
@@ -87,7 +89,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-red-600 dark:text-red-500 hover:text-red-500 dark:hover:text-red-400 transition-colors ml-auto"
           >
-            Visiter
+            {t('projects.visit')}
             <ExternalLink className="h-3 w-3" />
           </a>
         )}

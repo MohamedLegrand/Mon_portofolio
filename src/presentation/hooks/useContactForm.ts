@@ -2,8 +2,10 @@ import { useState } from 'react';
 import type { ChangeEvent, FormEvent } from 'react';
 import type { ContactFormDTO } from '@/application/dto/ContactFormDTO';
 import { sendContactMessageUseCase } from '@/di/container';
+import { useTranslation } from 'react-i18next';
 
 export function useContactForm() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState<ContactFormDTO>({
     name: '',
     email: '',
@@ -30,14 +32,14 @@ export function useContactForm() {
 
   const validate = (): boolean => {
     if (!formData.name.trim() || !formData.email.trim() || !formData.subject.trim() || !formData.message.trim()) {
-      setErrorMessage('Tous les champs sont requis.');
+      setErrorMessage(t('contact.errors.required'));
       setSubmitStatus('error');
       return false;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email.trim())) {
-      setErrorMessage('Veuillez entrer une adresse email valide.');
+      setErrorMessage(t('contact.errors.invalidEmail'));
       setSubmitStatus('error');
       return false;
     }
@@ -64,7 +66,7 @@ export function useContactForm() {
       });
     } catch (err: unknown) {
       setSubmitStatus('error');
-      setErrorMessage(err instanceof Error ? err.message : "Une erreur est survenue lors de l'envoi du message.");
+      setErrorMessage(err instanceof Error ? err.message : t('contact.errors.sendFailed'));
     } finally {
       setIsSubmitting(false);
     }

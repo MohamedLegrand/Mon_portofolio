@@ -1,5 +1,6 @@
 import type { IProjectRepository } from '@/domain/repositories/IProjectRepository';
 import type { Project } from '@/domain/entities/Project';
+import type { Language } from '@/domain/value-objects/Language';
 
 export class GetProjectById {
   private repository: IProjectRepository;
@@ -8,7 +9,7 @@ export class GetProjectById {
     this.repository = repository;
   }
 
-  async execute(id: string): Promise<Project | null> {
-    return this.repository.getById(id);
+  async execute(id: string, lang: Language): Promise<Project | null> {
+    return this.repository.getById(id, lang);
   }
 }

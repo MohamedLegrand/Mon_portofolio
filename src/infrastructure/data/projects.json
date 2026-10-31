@@ -1,75 +1,192 @@
 [
   {
     "id": "hr-pay",
-    "title": "HR-PAY",
-    "description": "Analyse fonctionnelle et modélisation complète d'une solution d'agrégateur de paiement multi-services sécurisé et hautement disponible.",
-    "stack": ["UML", "Merise", "Architecture de paiement", "Sécurité API"],
+    "title": "HR-Skills Pay",
+    "description": {
+      "fr": "Analyse et conception de HR-Skills Pay, l'agrégateur de paiement de HR-Skills SARL, et participation à son développement avec React, Go et PostgreSQL.",
+      "en": "Analysis and design of HR-Skills Pay, the payment aggregator of HR-Skills SARL, and contribution to its development with React, Go and PostgreSQL."
+    },
+    "stack": [
+      "UML",
+      "MERISE",
+      "React",
+      "Go",
+      "PostgreSQL"
+    ],
     "imageUrl": "/assets/projects/ecommerce.jpg",
     "featured": true,
     "category": "analyse",
-    "details": "HR-PAY est un agrégateur de paiement multi-services conçu pour unifier plusieurs passerelles de transaction sous une seule interface API. L'analyse fonctionnelle et la modélisation UML/Merise ont permis de structurer la gestion sécurisée des clés d'API, de concevoir le schéma de base de données relationnelle et de documenter les diagrammes de cas d'utilisation pour les marchands et les clients finaux."
+    "details": {
+      "fr": "HR-Skills Pay est un agrégateur de paiement multi-services conçu pour unifier plusieurs passerelles de transaction sous une seule interface API. L'analyse fonctionnelle et la modélisation UML/Merise ont permis de structurer la gestion sécurisée des clés d'API, de concevoir le schéma de base de données relationnelle et de documenter les diagrammes de cas d'utilisation pour les marchands et les clients finaux.",
+      "en": "HR-Skills Pay is a multi-service payment aggregator designed to unify several transaction gateways behind a single API. The functional analysis and UML/MERISE modeling structured the secure management of API keys, the design of the relational database schema and the use case diagrams for merchants and end customers."
+    },
+    "liveUrl": "https://hrskills-pay.com"
   },
   {
     "id": "perenkap",
-    "title": "Perenkap",
-    "description": "Analyse et conception de l'architecture d'une application mobile pour les transferts d'argent rapides, intégrant des workflows de transactions résilients.",
-    "stack": ["UML", "Merise", "Architecture Mobile", "Microservices"],
+    "title": "Père Nkap",
+    "description": {
+      "fr": "Analyse et conception de Père Nkap, application mobile de transactions financières réalisée pour HR-Skills SARL.",
+      "en": "Analysis and design of Père Nkap, a mobile financial transactions app built for HR-Skills SARL."
+    },
+    "stack": [
+      "UML",
+      "MERISE",
+      "Mobile Money"
+    ],
     "imageUrl": "/assets/projects/devops.jpg",
     "featured": true,
     "category": "analyse",
-    "details": "Perenkap est une solution mobile fintech de transfert d'argent instantané. La modélisation de son architecture sous UML et Merise détaille les étapes d'intégration avec les opérateurs de téléphonie (Mobile Money), le système d'authentification à double facteur, et les mécanismes de reprise sur panne pour garantir qu'aucune transaction ne soit perdue en cas d'interruption réseau."
+    "details": {
+      "fr": "Père Nkap est une solution mobile fintech de transfert d'argent instantané. La modélisation de son architecture sous UML et Merise détaille les étapes d'intégration avec les opérateurs de téléphonie (Mobile Money), le système d'authentification à double facteur, et les mécanismes de reprise sur panne pour garantir qu'aucune transaction ne soit perdue en cas d'interruption réseau.",
+      "en": "Père Nkap is a fintech mobile solution for instant money transfers. Its UML and MERISE architecture model details the integration steps with mobile operators (Mobile Money), the two-factor authentication system, and the failure recovery mechanisms that ensure no transaction is lost during a network interruption."
+    }
   },
   {
     "id": "mynakp",
-    "title": "Mynakp",
-    "description": "Conception technique et modélisation de Mynakp, une application intelligente dédiée au suivi et à la gestion des finances personnelles.",
-    "stack": ["UML", "Modélisation de données", "Spécifications fonctionnelles"],
+    "title": "MyNkap",
+    "description": {
+      "fr": "Analyse fonctionnelle et modélisation UML de MyNkap, ma plateforme SaaS de gestion financière assistée par l'IA.",
+      "en": "Functional analysis and UML modeling of MyNkap, my AI-assisted financial management SaaS platform."
+    },
+    "stack": [
+      "UML",
+      "MERISE"
+    ],
     "imageUrl": "/assets/projects/tasks.jpg",
     "featured": false,
     "category": "analyse",
-    "details": "Mynakp est une application mobile d'intelligence budgétaire personnelle. Sa conception fonctionnelle décrit la structure relationnelle pour catégoriser de manière automatique les revenus et dépenses des utilisateurs, la gestion des alertes de dépassement de budget et la visualisation des flux de trésorerie sous forme de graphiques."
+    "details": {
+      "fr": "MyNkap est une application d'intelligence budgétaire personnelle. Sa conception fonctionnelle décrit la structure relationnelle pour catégoriser automatiquement les revenus et dépenses des utilisateurs, la gestion des alertes de dépassement de budget et la visualisation des flux de trésorerie sous forme de graphiques.",
+      "en": "MyNkap is a personal budget intelligence application. Its functional design describes the relational structure used to automatically categorize users' income and expenses, budget overrun alerts and the visualization of cash flows as charts."
+    }
   },
   {
     "id": "ebook-analysis",
-    "title": "E-Book Platform Analysis",
-    "description": "Modélisation fonctionnelle globale d'une plateforme de commerce électronique spécialisée dans la vente et la lecture en ligne de livres numériques.",
-    "stack": ["UML", "Merise", "Analyse fonctionnelle"],
+    "title": "E-Book Platform",
+    "description": {
+      "fr": "Modélisation fonctionnelle globale d'une plateforme de commerce électronique spécialisée dans la vente et la lecture en ligne de livres numériques.",
+      "en": "Global functional modeling of an e-commerce platform dedicated to selling and reading e-books online."
+    },
+    "stack": [
+      "UML",
+      "MERISE"
+    ],
     "imageUrl": "/assets/projects/ecommerce.jpg",
     "featured": false,
     "category": "analyse",
-    "details": "Cette analyse définit le cahier des charges et l'architecture fonctionnelle d'un système de vente et de lecture de livres électroniques en ligne. Elle décrit la sécurisation de l'accès aux fichiers PDF/EPUB, la gestion des abonnements de lecture et les cas d'utilisation liés aux transactions d'achat."
+    "details": {
+      "fr": "Cette analyse définit le cahier des charges et l'architecture fonctionnelle d'un système de vente et de lecture de livres électroniques en ligne. Elle décrit la sécurisation de l'accès aux fichiers PDF/EPUB, la gestion des abonnements de lecture et les cas d'utilisation liés aux transactions d'achat.",
+      "en": "This analysis defines the specifications and functional architecture of a system for selling and reading e-books online. It covers securing access to PDF/EPUB files, managing reading subscriptions and the use cases related to purchase transactions."
+    }
   },
   {
     "id": "national-energy",
     "title": "National Energy",
-    "description": "Développement complet du site vitrine de la station nationale d'énergie National Energy. Optimisation de l'accessibilité, du référencement (SEO) et du temps de réponse.",
-    "stack": ["React", "TypeScript", "TailwindCSS", "Vite"],
+    "description": {
+      "fr": "Conception et développement du site vitrine de la station-service National Energy (carburants, services, boutique), déployé sur Vercel avec configuration du nom de domaine.",
+      "en": "Design and development of the showcase website of the National Energy service station (fuels, services, shop), deployed on Vercel with custom domain setup."
+    },
+    "stack": [
+      "React",
+      "TailwindCSS",
+      "Vercel"
+    ],
     "liveUrl": "https://national-energ.com",
     "imageUrl": "/assets/projects/devops.jpg",
     "featured": true,
     "category": "code",
-    "details": "National Energy est le site vitrine officiel de la station nationale d'énergie. Il a été développé sous React avec TailwindCSS pour offrir une interface moderne, fluide et 100% responsive. L'accent a été mis sur les performances web (Fast Load Time), l'indexation de contenu (SEO technique) et la mise en conformité de l'accessibilité numérique."
+    "details": {
+      "fr": "National Energy est le site vitrine officiel de la station-service. Il a été développé avec React et TailwindCSS pour offrir une interface moderne, fluide et 100 % responsive. L'accent a été mis sur les performances web, le référencement (SEO technique) et l'accessibilité numérique.",
+      "en": "National Energy is the official showcase website of the service station. It was built with React and TailwindCSS to deliver a modern, smooth and fully responsive interface. The focus was on web performance, technical SEO and digital accessibility."
+    }
   },
   {
     "id": "afritech-sas",
-    "title": "AFRITECH SAS",
-    "description": "Création du site vitrine dynamique pour la startup AFRITECH SAS, mettant en valeur ses technologies innovantes et ses services digitaux.",
-    "stack": ["React", "Next.js", "TailwindCSS", "Framer Motion"],
+    "title": "AfrikTech",
+    "description": {
+      "fr": "Conception et développement du site vitrine présentant les services de la startup AfrikTech, déployé et mis en production sur Vercel.",
+      "en": "Design and development of the showcase website presenting the services of the startup AfrikTech, deployed to production on Vercel."
+    },
+    "stack": [
+      "React",
+      "TailwindCSS",
+      "Vercel"
+    ],
     "liveUrl": "https://afriktechsas.vercel.app",
     "imageUrl": "/assets/projects/tasks.jpg",
     "featured": true,
     "category": "code",
-    "details": "AFRITECH SAS est le portail web de présentation de la startup éponyme. Il a été développé avec Next.js et TailwindCSS, enrichi par des transitions animées haut de gamme avec Framer Motion. Ce site met en lumière les solutions technologiques de l'entreprise et intègre un formulaire de contact asynchrone avec validation de saisie en temps réel."
+    "details": {
+      "fr": "AfrikTech est le site de présentation de la startup éponyme. Développé avec React et TailwindCSS, il met en avant les services technologiques de l'entreprise et a été mis en production sur Vercel.",
+      "en": "AfrikTech is the presentation website of the startup of the same name. Built with React and TailwindCSS, it highlights the company's technology services and was deployed to production on Vercel."
+    }
   },
   {
     "id": "sagesse-africaine",
     "title": "Sagesse Africaine E-Book",
-    "description": "Développement et déploiement de la plateforme e-commerce e-book Sagesse Africaine, dédiée à la diffusion et vente de livres culturels.",
-    "stack": ["React", "TailwindCSS", "Node.js", "Stripe API"],
+    "description": {
+      "fr": "Développement et déploiement de la plateforme e-commerce e-book Sagesse Africaine, dédiée à la diffusion et vente de livres culturels.",
+      "en": "Development and deployment of Sagesse Africaine, an e-book e-commerce platform dedicated to distributing and selling cultural books."
+    },
+    "stack": [
+      "React",
+      "TailwindCSS",
+      "Node.js",
+      "Stripe API"
+    ],
     "liveUrl": "https://sagesseafricaine.org",
     "imageUrl": "/assets/projects/ecommerce.jpg",
     "featured": false,
     "category": "code",
-    "details": "Sagesse Africaine E-Book est une plateforme e-commerce opérationnelle dédiée à la vente de livres numériques littéraires et culturels. Elle intègre l'API Stripe pour le traitement sécurisé des paiements et un tableau de bord permettant aux utilisateurs connectés de télécharger et de consulter leurs e-books achetés."
+    "details": {
+      "fr": "Sagesse Africaine E-Book est une plateforme e-commerce opérationnelle dédiée à la vente de livres numériques littéraires et culturels. Elle intègre l'API Stripe pour le traitement sécurisé des paiements et un tableau de bord permettant aux utilisateurs connectés de télécharger et de consulter leurs e-books achetés.",
+      "en": "Sagesse Africaine E-Book is a live e-commerce platform dedicated to selling literary and cultural e-books. It integrates the Stripe API for secure payment processing and a dashboard that lets signed-in users download and read the e-books they purchased."
+    }
+  },
+  {
+    "id": "mynkap",
+    "title": "MyNkap",
+    "description": {
+      "fr": "Plateforme SaaS de gestion financière assistée par l'IA, dont je suis le fondateur. Une trentaine d'utilisateurs actifs dès le premier mois de mise en production.",
+      "en": "AI-assisted financial management SaaS platform that I founded. Around thirty active users in its first month in production."
+    },
+    "stack": [
+      "React",
+      "FastAPI",
+      "PostgreSQL",
+      "Docker",
+      "Nginx",
+      "GitHub Actions"
+    ],
+    "liveUrl": "https://my-nkap.com",
+    "imageUrl": "/assets/projects/tasks.jpg",
+    "featured": true,
+    "category": "code",
+    "details": {
+      "fr": "MyNkap est une plateforme SaaS complète de gestion financière développée avec React, FastAPI et PostgreSQL. Une API d'intelligence artificielle analyse les dépenses, prédit les tendances financières et fournit des conseils personnalisés. L'application est conteneurisée avec Docker, déployée sur un VPS avec Nginx et SSL, et livrée via un pipeline CI/CD GitHub Actions.",
+      "en": "MyNkap is a complete financial management SaaS platform built with React, FastAPI and PostgreSQL. An artificial intelligence API analyzes spending, predicts financial trends and provides personalized advice. The application is containerized with Docker, deployed on a VPS with Nginx and SSL, and shipped through a GitHub Actions CI/CD pipeline."
+    }
+  },
+  {
+    "id": "raycard",
+    "title": "RayCard",
+    "description": {
+      "fr": "Application mobile de création de cartes virtuelles à partir de comptes Mobile Money (en cours de développement).",
+      "en": "Mobile app for creating virtual cards from Mobile Money accounts (in development)."
+    },
+    "stack": [
+      "Flutter",
+      "FastAPI",
+      "PostgreSQL",
+      "React"
+    ],
+    "imageUrl": "/assets/projects/devops.jpg",
+    "featured": false,
+    "category": "code",
+    "details": {
+      "fr": "RayCard est une application mobile Flutter permettant de créer des cartes virtuelles liées à des comptes Mobile Money. Elle s'appuie sur une API REST FastAPI / PostgreSQL et un tableau de bord d'administration web développé avec React. Le projet est actuellement en cours de développement.",
+      "en": "RayCard is a Flutter mobile app that lets users create virtual cards linked to Mobile Money accounts. It relies on a FastAPI / PostgreSQL REST API and a web admin dashboard built with React. The project is currently in development."
+    }
   }
 ]
