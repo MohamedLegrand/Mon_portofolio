@@ -126,6 +126,16 @@
     "learnMore": "Learn more",
     "visit": "Visit"
   },
+  "notFoundPage": {
+    "title": "Page not found",
+    "text": "The page you are looking for doesn't exist or has been moved. Check the address or go back to the home page.",
+    "home": "Back to home"
+  },
+  "errorPage": {
+    "title": "Oops, something went wrong",
+    "text": "This page couldn't be displayed. Please reload it: the site may have been updated in the meantime.",
+    "reload": "Reload the page"
+  },
   "projectDetail": {
     "loading": "Loading project details...",
     "missingId": "Missing project identifier.",

@@ -126,6 +126,16 @@
     "learnMore": "En savoir plus",
     "visit": "Visiter"
   },
+  "notFoundPage": {
+    "title": "Page introuvable",
+    "text": "La page que vous cherchez n'existe pas ou a été déplacée. Vérifiez l'adresse ou revenez à l'accueil.",
+    "home": "Retour à l'accueil"
+  },
+  "errorPage": {
+    "title": "Oups, un problème est survenu",
+    "text": "La page n'a pas pu s'afficher. Rechargez-la : le site a peut-être été mis à jour entre-temps.",
+    "reload": "Recharger la page"
+  },
   "projectDetail": {
     "loading": "Chargement des détails du projet...",
     "missingId": "Identifiant de projet manquant.",
