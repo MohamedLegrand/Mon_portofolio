@@ -48,8 +48,8 @@ export function Hero() {
           </div>
 
           <a
-            href="/images/CV_TAKADJIO_Mohamed.pdf"
-            download="CV_TAKADJIO_Mohamed.pdf"
+            href={`/images/${t('common.cvFile')}`}
+            download={t('common.cvFile')}
             className="group mt-6 inline-flex items-center gap-2 rounded-xl bg-red-600 px-5 py-3 text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-red-500/10 transition-all hover:bg-red-500 hover:shadow-red-500/20 active:scale-95"
           >
             <Download className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />

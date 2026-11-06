@@ -24,8 +24,8 @@ export function Footer() {
               {t('common.available')}
             </div>
             <a
-              href="/images/CV_TAKADJIO_Mohamed.pdf"
-              download="CV_TAKADJIO_Mohamed.pdf"
+              href={`/images/${t('common.cvFile')}`}
+              download={t('common.cvFile')}
               className="mt-1 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-red-600 dark:text-red-500 hover:text-zinc-900 dark:hover:text-white transition-colors w-fit"
             >
               <Download className="h-3.5 w-3.5" />
