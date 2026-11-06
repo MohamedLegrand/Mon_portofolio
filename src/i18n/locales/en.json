@@ -54,7 +54,13 @@
   "educationSkills": {
     "heading": "EDUCATION & SKILLS",
     "education": "Education",
-    "skills": "Skills"
+    "skills": "Skills",
+    "domains": {
+      "webMobile": "Web & mobile app development",
+      "database": "Database administration",
+      "devops": "DevOps",
+      "analysis": "Project analyst"
+    }
   },
   "education": {
     "school": "African Institute of Computer Science (IAI-Cameroon), Yaoundé",
@@ -230,6 +236,9 @@
       "vscode": "My main code editor, configured to boost my day-to-day productivity.",
       "antigravity": "My AI-powered development environment (IDE) for designing, debugging and coding more efficiently.",
       "github": "Helps me host, version and manage my projects' code while collaborating through Pull Requests.",
+      "linux": "The system I use to administer my VPS servers, configure Nginx and deploy my applications to production.",
+      "cicd": "GitHub Actions pipelines I set up to automatically test, build and deploy my applications.",
+      "docker": "Lets me containerize my applications and their services for identical deployments locally and in production.",
       "mysql": "For storing and efficiently querying my applications' relational data.",
       "postgresql": "My relational DBMS of choice for handling large volumes of data reliably, with support for complex types.",
       "sqlserver": "Used to administer, optimize and secure enterprise-grade databases."

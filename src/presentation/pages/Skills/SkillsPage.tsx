@@ -107,6 +107,21 @@ const skillCategories: SkillCategory[] = [
         name: "GitHub", 
         image: "/images/devops/github.jpg",
         descKey: "github"
+      },
+      {
+        name: "Linux",
+        image: "/images/devops/linux.jpg",
+        descKey: "linux"
+      },
+      {
+        name: "CI/CD",
+        image: "/images/devops/ci-cd.jpg",
+        descKey: "cicd"
+      },
+      {
+        name: "Docker",
+        image: "/images/devops/docker.jpg",
+        descKey: "docker"
       }
     ]
   },

@@ -54,7 +54,13 @@
   "educationSkills": {
     "heading": "FORMATION & COMPÉTENCES",
     "education": "Formation",
-    "skills": "Compétences"
+    "skills": "Compétences",
+    "domains": {
+      "webMobile": "Développement d'applications web & mobile",
+      "database": "Administration de bases de données",
+      "devops": "DevOps",
+      "analysis": "Analyste de projet"
+    }
   },
   "education": {
     "school": "Institut Africain d'Informatique (IAI-Cameroun), Yaoundé",
@@ -230,6 +236,9 @@
       "vscode": "Mon éditeur de code principal, configuré pour accroître ma productivité au quotidien.",
       "antigravity": "Mon environnement de développement (IDE) augmenté par l'IA pour concevoir, déboguer et coder plus efficacement.",
       "github": "M'aide à héberger, versionner et gérer le code de mes projets tout en collaborant en équipe via les Pull Requests.",
+      "linux": "Système que j'utilise pour administrer mes serveurs VPS, configurer Nginx et déployer mes applications en production.",
+      "cicd": "Pipelines GitHub Actions que je mets en place pour tester, construire et déployer automatiquement mes applications.",
+      "docker": "Me permet de conteneuriser mes applications et leurs services pour des déploiements identiques en local et en production.",
       "mysql": "Pour stocker de façon structurée et interroger efficacement les données relationnelles de mes applications.",
       "postgresql": "Mon SGBD relationnel de prédilection pour gérer de grands volumes de données avec fiabilité et des types complexes.",
       "sqlserver": "Utilisé pour administrer, optimiser et sécuriser des bases de données de niveau entreprise."
