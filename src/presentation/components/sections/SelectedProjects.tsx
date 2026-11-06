@@ -40,7 +40,11 @@ export function SelectedProjects() {
                   src={project.imageUrl}
                   alt={project.title}
                   loading="lazy"
-                  className="h-full w-full object-cover grayscale brightness-90 contrast-105 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                  className={`h-full w-full grayscale brightness-90 contrast-105 group-hover:grayscale-0 transition-all duration-500 ${
+              project.imageUrl?.includes('/logo-')
+                ? 'object-contain p-6 bg-white group-hover:scale-[1.02]'
+                : 'object-cover group-hover:scale-105'
+            }`}
                 />
               </div>
 
