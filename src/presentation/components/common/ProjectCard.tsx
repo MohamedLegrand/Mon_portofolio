@@ -22,7 +22,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             src={project.imageUrl}
             alt={project.title}
             loading="lazy"
-            className="h-full w-full object-cover grayscale brightness-90 contrast-105 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+            className={`h-full w-full grayscale brightness-90 contrast-105 group-hover:grayscale-0 transition-all duration-500 ${
+              project.imageUrl?.includes('/logo-')
+                ? 'object-contain p-6 bg-white group-hover:scale-[1.02]'
+                : 'object-cover group-hover:scale-105'
+            }`}
           />
         ) : (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-red-50 dark:from-red-950/20 via-zinc-100 dark:via-zinc-900 to-zinc-50 dark:to-zinc-950 p-6 text-center">

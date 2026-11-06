@@ -53,7 +53,7 @@
       "UML",
       "MERISE"
     ],
-    "imageUrl": "/assets/projects/tasks.jpg",
+    "imageUrl": "/images/logo-mynkap.jpg",
     "featured": false,
     "category": "analyse",
     "details": {
@@ -72,7 +72,7 @@
       "UML",
       "MERISE"
     ],
-    "imageUrl": "/assets/projects/ecommerce.jpg",
+    "imageUrl": "/images/logo-sagesse-africaine.jpeg",
     "featured": false,
     "category": "analyse",
     "details": {
@@ -114,7 +114,7 @@
       "Vercel"
     ],
     "liveUrl": "https://afriktechsas.vercel.app",
-    "imageUrl": "/assets/projects/tasks.jpg",
+    "imageUrl": "/images/logo-afriktech.jpeg",
     "featured": true,
     "category": "code",
     "details": {
@@ -136,7 +136,7 @@
       "Stripe API"
     ],
     "liveUrl": "https://sagesseafricaine.org",
-    "imageUrl": "/assets/projects/ecommerce.jpg",
+    "imageUrl": "/images/logo-sagesse-africaine.jpeg",
     "featured": false,
     "category": "code",
     "details": {
@@ -160,7 +160,7 @@
       "GitHub Actions"
     ],
     "liveUrl": "https://my-nkap.com",
-    "imageUrl": "/assets/projects/tasks.jpg",
+    "imageUrl": "/images/logo-mynkap.jpg",
     "featured": true,
     "category": "code",
     "details": {

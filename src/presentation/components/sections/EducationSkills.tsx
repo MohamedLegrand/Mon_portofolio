@@ -19,7 +19,9 @@ export function EducationSkills() {
     { name: "GitHub", image: "/images/devops/github.jpg" },
     { name: "ReactJS", image: "/images/framework/reactjs.jpg" },
     { name: "Python", image: "/images/langage/python.jpg" },
-    { name: "PostgreSQL", image: "/images/sgbd/postgresql.jpg" }
+    { name: "PostgreSQL", image: "/images/sgbd/postgresql.jpg" },
+    { name: "Flutter", image: "/images/framework/flutter.jpg" },
+    { name: "Dart", image: "/images/langage/dart.jpg" }
   ];
 
   return (
