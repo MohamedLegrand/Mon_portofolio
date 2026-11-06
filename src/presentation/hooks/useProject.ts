@@ -12,11 +12,7 @@ export function useProject(id: string | undefined) {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!id) {
-      setLoading(false);
-      setError(t('projectDetail.missingId'));
-      return;
-    }
+    if (!id) return;
 
     let isMounted = true;
     getProjectByIdUseCase.execute(id, lang)
@@ -37,6 +33,10 @@ export function useProject(id: string | undefined) {
       isMounted = false;
     };
   }, [id, lang, t]);
+
+  if (!id) {
+    return { project: null, loading: false, error: t('projectDetail.missingId') };
+  }
 
   return { project, loading, error };
 }

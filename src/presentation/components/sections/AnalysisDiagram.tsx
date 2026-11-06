@@ -9,7 +9,7 @@ export function AnalysisDiagram() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.4, ease: 'easeOut' as any, delay }
+      transition: { duration: 0.4, ease: 'easeOut' as const, delay }
     }
   });
 
@@ -17,7 +17,7 @@ export function AnalysisDiagram() {
     hidden: { pathLength: 0 },
     visible: {
       pathLength: 1,
-      transition: { duration: 0.4, ease: 'easeOut' as any, delay }
+      transition: { duration: 0.4, ease: 'easeOut' as const, delay }
     }
   });
 

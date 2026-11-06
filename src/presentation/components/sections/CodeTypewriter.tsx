@@ -91,7 +91,7 @@ function useTypewriter(snippets: Snippet[], inView: boolean) {
   useEffect(() => {
     if (!inView) return;
 
-    let timer: any;
+    let timer: ReturnType<typeof setTimeout> | undefined;
 
     const tick = () => {
       if (phase === 'typing') {
@@ -182,7 +182,6 @@ export function CodeTypewriter() {
           {tokenText.slice(0, sliceCount)}
         </span>
       );
-      displayedCharCount += sliceCount;
       break;
     } else {
       break;

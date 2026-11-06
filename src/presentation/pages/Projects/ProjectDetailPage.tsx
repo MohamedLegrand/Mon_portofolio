@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 
 // Fonction de coloration syntaxique à la volée basée sur regex
 function tokenizeLine(line: string) {
-  const regex = /(\/\/.*|#.*)|("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`)|(\b(?:import|from|export|default|const|let|var|function|class|def|return|async|await|try|except|raise|if|else|elif|for|in|self|from|as|while|break|continue|print)\b)|(\b\d+\b)|(\b[a-zA-Z_]\w*(?=[(\s{]))|([{}()\[\].,:;=+\-*\/&|!<>])/g;
+  const regex = /(\/\/.*|#.*)|("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`)|(\b(?:import|from|export|default|const|let|var|function|class|def|return|async|await|try|except|raise|if|else|elif|for|in|self|from|as|while|break|continue|print)\b)|(\b\d+\b)|(\b[a-zA-Z_]\w*(?=[(\s{]))|([{}()[\].,:;=+\-*/&|!<>])/g;
   
   const elements: React.ReactNode[] = [];
   let lastIndex = 0;
