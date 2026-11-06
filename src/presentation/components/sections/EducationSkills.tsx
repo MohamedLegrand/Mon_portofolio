@@ -15,13 +15,36 @@ export function EducationSkills() {
     }
   ];
 
-  const skills = [
-    { name: "GitHub", image: "/images/devops/github.jpg" },
-    { name: "ReactJS", image: "/images/framework/reactjs.jpg" },
-    { name: "Python", image: "/images/langage/python.jpg" },
-    { name: "PostgreSQL", image: "/images/sgbd/postgresql.jpg" },
-    { name: "Flutter", image: "/images/framework/flutter.jpg" },
-    { name: "Dart", image: "/images/langage/dart.jpg" }
+  const skillGroups = [
+    {
+      domain: t('educationSkills.domains.webMobile'),
+      items: [
+        { name: "Python", image: "/images/langage/python.jpg" },
+        { name: "ReactJS", image: "/images/framework/reactjs.jpg" },
+        { name: "Flutter", image: "/images/framework/flutter.jpg" },
+        { name: "Dart", image: "/images/langage/dart.jpg" }
+      ]
+    },
+    {
+      domain: t('educationSkills.domains.devops'),
+      items: [
+        { name: "GitHub", image: "/images/devops/github.jpg" },
+        { name: "Linux", image: "/images/devops/linux.jpg" },
+        { name: "CI/CD", image: "/images/devops/ci-cd.jpg" },
+        { name: "Docker", image: "/images/devops/docker.jpg" }
+      ]
+    },
+    {
+      domain: t('educationSkills.domains.database'),
+      items: [{ name: "PostgreSQL", image: "/images/sgbd/postgresql.jpg" }]
+    },
+    {
+      domain: t('educationSkills.domains.analysis'),
+      items: [
+        { name: "UML", image: "/images/analyse/uml.jpg" },
+        { name: "MERISE", image: "/images/analyse/merise.jpg" }
+      ]
+    }
   ];
 
   return (
@@ -63,23 +86,32 @@ export function EducationSkills() {
         <h4 className="text-xs uppercase tracking-widest text-red-600 dark:text-red-500 font-bold">
           {t('educationSkills.skills')}
         </h4>
-        <div className="grid grid-cols-2 gap-4">
-          {skills.map((skill) => (
-            <div
-              key={skill.name}
-              className="flex items-center gap-3 rounded-xl border border-zinc-200 dark:border-zinc-900 bg-zinc-100/60 dark:bg-zinc-950/40 p-3 hover:border-red-600 hover:scale-[1.01] transition-all duration-300 group select-none"
-            >
-              <div className="h-8 w-8 shrink-0 overflow-hidden rounded-md border border-zinc-300 dark:border-zinc-800 bg-white dark:bg-black flex items-center justify-center p-1 group-hover:border-red-600 transition-colors">
-                <img
-                  src={skill.image}
-                  alt={skill.name}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                />
+        <div className="flex flex-col gap-5">
+          {skillGroups.map((group) => (
+            <div key={group.domain} className="flex flex-col gap-2">
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500">
+                {group.domain}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {group.items.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="flex items-center gap-2 rounded-lg border border-zinc-200 dark:border-zinc-900 bg-zinc-100/60 dark:bg-zinc-950/40 py-1.5 pl-1.5 pr-3 hover:border-red-600 transition-colors duration-300 group select-none"
+                  >
+                    <div className="h-6 w-6 shrink-0 overflow-hidden rounded-md border border-zinc-300 dark:border-zinc-800 bg-white dark:bg-black flex items-center justify-center p-0.5 group-hover:border-red-600 transition-colors">
+                      <img
+                        src={skill.image}
+                        alt={skill.name}
+                        loading="lazy"
+                        className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                      />
+                    </div>
+                    <span className="text-xs font-bold text-zinc-600 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors uppercase tracking-wider">
+                      {skill.name}
+                    </span>
+                  </div>
+                ))}
               </div>
-              <span className="text-xs font-bold text-zinc-600 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors uppercase tracking-wider">
-                {skill.name}
-              </span>
             </div>
           ))}
         </div>
