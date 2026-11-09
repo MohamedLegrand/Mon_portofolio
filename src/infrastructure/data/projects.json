@@ -81,7 +81,7 @@
         ]
       }
     ],
-    "imageUrl": "/images/logo-mynkap.jpg",
+    "imageUrl": "/images/logo-mynkap.jpeg",
     "category": "analyse",
     "details": {
       "fr": "MyNkap est une application d'intelligence budgétaire personnelle. Sa conception fonctionnelle décrit la structure relationnelle pour catégoriser automatiquement les revenus et dépenses des utilisateurs, la gestion des alertes de dépassement de budget et la visualisation des flux de trésorerie sous forme de graphiques.",
@@ -196,7 +196,7 @@
       "SEO"
     ],
     "liveUrl": "https://my-nkap.com",
-    "imageUrl": "/images/logo-mynkap.jpg",
+    "imageUrl": "/images/logo-mynkap.jpeg",
     "category": "code",
     "details": {
       "fr": "MyNkap est une plateforme SaaS complète de gestion financière développée avec React, FastAPI et PostgreSQL. Une API d'intelligence artificielle analyse les dépenses, prédit les tendances financières et fournit des conseils personnalisés. L'application est conteneurisée avec Docker, déployée sur un VPS avec Nginx et SSL, et livrée via un pipeline CI/CD GitHub Actions.",
