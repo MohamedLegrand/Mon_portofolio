@@ -57,7 +57,7 @@ export function SelectedProjects() {
 
                 {/* Titre & Catégorie */}
                 <div className="flex-1 flex flex-col text-left">
-                  <h4 className="text-base font-bold text-zinc-900 dark:text-white uppercase group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors line-clamp-1">
+                  <h4 className="text-base font-bold text-zinc-900 dark:text-white uppercase group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors line-clamp-2 break-words">
                     {project.title}
                   </h4>
                   <p className="text-xs text-zinc-600 dark:text-zinc-500 uppercase mt-0.5 tracking-wider font-semibold">

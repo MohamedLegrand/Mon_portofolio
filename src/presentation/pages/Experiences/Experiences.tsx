@@ -58,7 +58,7 @@ export function Experiences() {
         <div className="space-y-20">
           {/* Expériences professionnelles */}
           <div className="space-y-8">
-            <h2 className="text-2xl font-bold text-zinc-900 dark:text-white tracking-widest border-b border-zinc-200 dark:border-zinc-900 pb-3 font-monster text-3xl text-left">
+            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white tracking-wider sm:tracking-widest break-words border-b border-zinc-200 dark:border-zinc-900 pb-3 font-monster text-left">
               {t('experiences.proHeading')}
             </h2>
             <div className="relative pl-2">
@@ -73,7 +73,7 @@ export function Experiences() {
 
           {/* Éducation & Formations */}
           <div className="space-y-8 text-left">
-            <h2 className="text-2xl font-bold text-zinc-900 dark:text-white tracking-widest border-b border-zinc-200 dark:border-zinc-900 pb-3 font-monster text-3xl">
+            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white tracking-wider sm:tracking-widest break-words border-b border-zinc-200 dark:border-zinc-900 pb-3 font-monster">
               {t('experiences.educationHeading')}
             </h2>
             <div className="space-y-8 pl-2">

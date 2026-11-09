@@ -90,7 +90,7 @@ export function Header() {
           {/* Hamburger Mobile */}
           <button
             onClick={toggleMenu}
-            className="text-zinc-600 dark:text-zinc-400 hover:text-red-600 dark:hover:text-white focus:outline-none"
+            className="-mr-2 inline-flex h-10 w-10 items-center justify-center rounded-md text-zinc-600 dark:text-zinc-400 hover:text-red-600 dark:hover:text-white focus:outline-none"
             aria-label={t('nav.toggleMenu')}
           >
             {isOpen ? (
