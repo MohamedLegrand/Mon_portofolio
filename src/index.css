@@ -17,10 +17,16 @@
     color: #09090b;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  /* Police gothique réservée aux grands titres ; les sous-titres restent lisibles */
+  h1, h2 {
     font-family: 'Grenze Gotisch', serif;
     text-transform: uppercase;
     letter-spacing: 0.08em;
+  }
+
+  h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: 0.01em;
   }
 
   .font-aot {

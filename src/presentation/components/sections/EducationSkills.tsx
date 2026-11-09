@@ -50,13 +50,13 @@ export function EducationSkills() {
   return (
     <div className="flex flex-col gap-8 text-left">
       <div>
-        <h3 className="text-xl font-bold text-zinc-900 dark:text-white tracking-wider border-b border-zinc-200 dark:border-zinc-900 pb-3 font-bebas text-2xl">
+        <h3 className="text-3xl font-bold uppercase text-zinc-900 dark:text-white tracking-wider border-b border-zinc-200 dark:border-zinc-900 pb-3 font-bebas">
           {t('educationSkills.heading')}
         </h3>
 
         {/* Education Section */}
         <div className="mt-6 flex flex-col gap-6">
-          <h4 className="text-xs uppercase tracking-widest text-red-600 dark:text-red-500 font-bold">
+          <h4 className="text-xs uppercase tracking-widest text-red-700 dark:text-red-500 font-bold">
             {t('educationSkills.education')}
           </h4>
           <div className="flex flex-col gap-4">
@@ -67,7 +67,7 @@ export function EducationSkills() {
                     {edu.degree}
                   </h5>
                   {edu.date && (
-                    <span className="text-xs font-semibold text-red-600 dark:text-red-500 shrink-0">
+                    <span className="text-xs font-semibold text-red-700 dark:text-red-500 shrink-0">
                       {edu.date}
                     </span>
                   )}
@@ -83,13 +83,13 @@ export function EducationSkills() {
 
       {/* Skills Logo Grid */}
       <div className="flex flex-col gap-4">
-        <h4 className="text-xs uppercase tracking-widest text-red-600 dark:text-red-500 font-bold">
+        <h4 className="text-xs uppercase tracking-widest text-red-700 dark:text-red-500 font-bold">
           {t('educationSkills.skills')}
         </h4>
         <div className="flex flex-col gap-5">
           {skillGroups.map((group) => (
             <div key={group.domain} className="flex flex-col gap-2">
-              <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500">
+              <p className="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
                 {group.domain}
               </p>
               <div className="flex flex-wrap gap-2">

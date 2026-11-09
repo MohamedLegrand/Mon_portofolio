@@ -74,7 +74,7 @@ export function Projects() {
 
       {/* Fallback si aucun projet */}
       {!loading && !error && projects.length === 0 && (
-        <p className="mt-16 text-center text-zinc-600 dark:text-zinc-500">
+        <p className="mt-16 text-center text-zinc-600 dark:text-zinc-400">
           {t('projects.empty')}
         </p>
       )}

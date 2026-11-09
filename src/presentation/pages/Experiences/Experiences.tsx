@@ -66,7 +66,7 @@ export function Experiences() {
                 <ExperienceItem key={experience.id} experience={experience} />
               ))}
               {experiences.length === 0 && (
-                <p className="text-zinc-600 dark:text-zinc-500">{t('experiences.empty')}</p>
+                <p className="text-zinc-600 dark:text-zinc-400">{t('experiences.empty')}</p>
               )}
             </div>
           </div>
@@ -89,12 +89,12 @@ export function Experiences() {
                         {edu.degree}
                       </h4>
                       {edu.period && (
-                        <span className="text-[10px] uppercase font-bold text-zinc-600 dark:text-zinc-500 tracking-wider">
+                        <span className="text-xs uppercase font-bold text-zinc-600 dark:text-zinc-400 tracking-wider">
                           {edu.period}
                         </span>
                       )}
                     </div>
-                    <span className="text-xs text-red-600 font-semibold uppercase tracking-wider font-mono">
+                    <span className="text-xs text-red-700 dark:text-red-500 font-semibold uppercase tracking-wider font-mono">
                       {edu.institution}
                     </span>
                     <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">

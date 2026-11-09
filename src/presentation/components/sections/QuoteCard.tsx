@@ -10,14 +10,14 @@ export function QuoteCard() {
 
       <div className="flex flex-col gap-4">
         {/* Icône de citation */}
-        <span className="text-red-600 dark:text-red-500 text-5xl font-serif leading-none select-none">“</span>
+        <span className="text-red-700 dark:text-red-500 text-5xl font-serif leading-none select-none">“</span>
         <p className="text-lg font-medium leading-relaxed tracking-wide text-red-900/80 dark:text-red-100/90">
           {t('quote.text')}
         </p>
       </div>
 
       <div className="mt-8">
-        <p className="text-xs uppercase tracking-wider text-red-600 font-bold">
+        <p className="text-xs uppercase tracking-wider text-red-700 dark:text-red-500 font-bold">
           {t('quote.caption')}
         </p>
       </div>

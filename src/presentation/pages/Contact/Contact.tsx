@@ -22,7 +22,7 @@ export function Contact() {
         <div className="lg:col-span-5 text-left flex flex-col gap-8">
           <div>
             {/* Petit indicateur rouge */}
-            <div className="flex w-fit items-center gap-2 rounded-full border border-red-500/20 bg-red-500/10 dark:bg-red-500/5 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-red-600 dark:text-red-500 mb-6">
+            <div className="flex w-fit items-center gap-2 rounded-full border border-red-500/20 bg-red-500/10 dark:bg-red-500/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-red-700 dark:text-red-500 mb-6">
               <span className="flex h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" />
               {t('common.available')}
             </div>
@@ -43,7 +43,7 @@ export function Contact() {
                 <Mail className="h-5 w-5" />
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 dark:text-zinc-500">{t('contact.email')}</span>
+                <span className="text-xs uppercase font-bold tracking-wider text-zinc-600 dark:text-zinc-400">{t('contact.email')}</span>
                 <a href="mailto:legrandmohamed67@gmail.com" className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-red-500 transition-colors">
                   legrandmohamed67@gmail.com
                 </a>
@@ -57,7 +57,7 @@ export function Contact() {
                 </svg>
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 dark:text-zinc-500">GitHub</span>
+                <span className="text-xs uppercase font-bold tracking-wider text-zinc-600 dark:text-zinc-400">GitHub</span>
                 <a href="https://github.com/MohamedLegrand" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-red-500 transition-colors">
                   github.com/MohamedLegrand
                 </a>
@@ -71,7 +71,7 @@ export function Contact() {
                 </svg>
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 dark:text-zinc-500">LinkedIn</span>
+                <span className="text-xs uppercase font-bold tracking-wider text-zinc-600 dark:text-zinc-400">LinkedIn</span>
                 <a href="https://www.linkedin.com/in/mohamed-legrand-366411344" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-red-500 transition-colors">
                   linkedin.com/in/mohamed-legrand-366411344
                 </a>
@@ -83,7 +83,7 @@ export function Contact() {
                 <Phone className="h-5 w-5" />
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 dark:text-zinc-500">{t('contact.whatsapp')}</span>
+                <span className="text-xs uppercase font-bold tracking-wider text-zinc-600 dark:text-zinc-400">{t('contact.whatsapp')}</span>
                 <a href="https://wa.me/237677246900" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-red-500 transition-colors">
                   +237 677 24 69 00
                 </a>
@@ -98,7 +98,7 @@ export function Contact() {
                 <MapPin className="h-5 w-5" />
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 dark:text-zinc-500">{t('contact.location')}</span>
+                <span className="text-xs uppercase font-bold tracking-wider text-zinc-600 dark:text-zinc-400">{t('contact.location')}</span>
                 <span className="text-sm font-semibold text-zinc-900 dark:text-white">
                   {t('common.location')}
                 </span>
@@ -147,7 +147,7 @@ export function Contact() {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
-                className="mt-2 w-full rounded-xl border border-zinc-300 dark:border-zinc-900 bg-white dark:bg-black px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-500 dark:placeholder-zinc-600 outline-none transition-all focus:border-red-600 focus:ring-1 focus:ring-red-600/30 disabled:opacity-50"
+                className="mt-2 w-full rounded-xl border border-zinc-300 dark:border-zinc-900 bg-white dark:bg-black px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-500 dark:placeholder-zinc-500 outline-none transition-all focus:border-red-600 focus:ring-1 focus:ring-red-600/30 disabled:opacity-50"
                 placeholder={t('contact.namePlaceholder')}
               />
             </div>
@@ -165,7 +165,7 @@ export function Contact() {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
-                className="mt-2 w-full rounded-xl border border-zinc-300 dark:border-zinc-900 bg-white dark:bg-black px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-500 dark:placeholder-zinc-600 outline-none transition-all focus:border-red-600 focus:ring-1 focus:ring-red-600/30 disabled:opacity-50"
+                className="mt-2 w-full rounded-xl border border-zinc-300 dark:border-zinc-900 bg-white dark:bg-black px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-500 dark:placeholder-zinc-500 outline-none transition-all focus:border-red-600 focus:ring-1 focus:ring-red-600/30 disabled:opacity-50"
                 placeholder={t('contact.emailPlaceholder')}
               />
             </div>
@@ -183,7 +183,7 @@ export function Contact() {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
-                className="mt-2 w-full rounded-xl border border-zinc-300 dark:border-zinc-900 bg-white dark:bg-black px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-500 dark:placeholder-zinc-600 outline-none transition-all focus:border-red-600 focus:ring-1 focus:ring-red-600/30 disabled:opacity-50"
+                className="mt-2 w-full rounded-xl border border-zinc-300 dark:border-zinc-900 bg-white dark:bg-black px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-500 dark:placeholder-zinc-500 outline-none transition-all focus:border-red-600 focus:ring-1 focus:ring-red-600/30 disabled:opacity-50"
                 placeholder={t('contact.subjectPlaceholder')}
               />
             </div>
@@ -201,7 +201,7 @@ export function Contact() {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
-                className="mt-2 w-full rounded-xl border border-zinc-300 dark:border-zinc-900 bg-white dark:bg-black px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-500 dark:placeholder-zinc-600 outline-none transition-all focus:border-red-600 focus:ring-1 focus:ring-red-600/30 disabled:opacity-50 resize-y min-h-[120px]"
+                className="mt-2 w-full rounded-xl border border-zinc-300 dark:border-zinc-900 bg-white dark:bg-black px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-500 dark:placeholder-zinc-500 outline-none transition-all focus:border-red-600 focus:ring-1 focus:ring-red-600/30 disabled:opacity-50 resize-y min-h-[120px]"
                 placeholder={t('contact.messagePlaceholder')}
               />
             </div>
