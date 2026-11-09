@@ -48,8 +48,8 @@ export function EducationSkills() {
     {
       domain: t('educationSkills.domains.testing'),
       items: [
-        { name: "Tests QA", image: "/images/tests/qa.svg" },
-        { name: "Tests UAT", image: "/images/tests/uat.svg" },
+        { name: "Tests QA", image: "/images/test-QA.avif" },
+        { name: "Tests UAT", image: "/images/test-uat.jpg" },
         { name: "Postman", image: "/images/outils/postman.jpg" }
       ]
     }
