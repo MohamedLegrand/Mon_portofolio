@@ -44,6 +44,14 @@ export function EducationSkills() {
         { name: "UML", image: "/images/analyse/uml.jpg" },
         { name: "MERISE", image: "/images/analyse/merise.jpg" }
       ]
+    },
+    {
+      domain: t('educationSkills.domains.testing'),
+      items: [
+        { name: "Tests QA", image: "/images/tests/qa.svg" },
+        { name: "Tests UAT", image: "/images/tests/uat.svg" },
+        { name: "Postman", image: "/images/outils/postman.jpg" }
+      ]
     }
   ];
 

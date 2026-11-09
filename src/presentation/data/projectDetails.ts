@@ -13,10 +13,12 @@ export interface DetailedProject {
   category: 'analyse' | 'code';
   // Specific to 'analyse'
   umlDiagramName?: string;
-  umlSvgType?: 'usecase' | 'sequence' | 'class';
+  umlSvgType?: 'usecase' | 'sequence' | 'class' | 'deployment';
+  /** Synthèse des livrables de modélisation, affichée sous le diagramme */
+  modelingSummary?: string;
   // Specific to 'code'
   codeFilename?: string;
-  codeLanguage?: 'javascript' | 'python';
+  codeLanguage?: 'javascript' | 'python' | 'go';
   codeContent?: string;
 }
 
@@ -25,9 +27,10 @@ export const projectDetailsFr: Record<string, DetailedProject> = {
     id: "perenkap",
     title: "Père Nkap",
     category: "analyse",
-    subtitle: "Architecture & Modélisation d'une Fintech Mobile Interopérable",
+    subtitle: "Application Fintech Mobile de Transactions Interopérables",
     mainDescription: "Père Nkap est une application mobile fintech innovante conçue pour simplifier et démocratiser le transfert d'argent et les transactions financières du quotidien. L'objectif principal de cette modélisation est de proposer un système résilient, sécurisé et interopérable capable d'interagir avec divers fournisseurs de services financiers et opérateurs de téléphonie mobile.",
     umlDiagramName: "Diagramme de Cas d'Utilisation UML - Père Nkap",
+    modelingSummary: "La modélisation de Père Nkap repose sur trois livrables destinés à guider l'équipe de développement. Le diagramme de cas d'utilisation définit les acteurs (client, système, opérateur télécom, passerelle de cartes) et leurs interactions. Le diagramme de séquence retrace la validation d'un transfert avec double vérification de la provision. Le modèle conceptuel de données Merise organise les entités Client, Portefeuille, Transaction et CarteVirtuelle avec des contraintes d'intégrité strictes.",
     umlSvgType: "usecase",
     sections: [
       {
@@ -58,15 +61,6 @@ export const projectDetailsFr: Record<string, DetailedProject> = {
           "Paiement récurrent automatisé pour les abonnements électricité, eau et internet.",
           "Interface simple de consultation de solde et historique consolidé."
         ]
-      },
-      {
-        title: "4. Architecture UML & Merise Modélisée",
-        content: "La modélisation technique comprend plusieurs livrables clés pour guider les équipes de développement :",
-        list: [
-          "Diagramme de Cas d'Utilisation : Définition des acteurs (Client, Système, Opérateur Télécom, Passerelle de Cartes) et de leurs interactions.",
-          "Diagramme de Séquence : Traçage de la cinématique de validation d'un transfert avec double vérification de provision.",
-          "Modèle Conceptuel de Données (MCD Merise) : Structuration optimale des entités Client, Portefeuille, Transaction, et CarteVirtuelle avec contraintes d'intégrité référentielle strictes."
-        ]
       }
     ]
   },
@@ -77,6 +71,7 @@ export const projectDetailsFr: Record<string, DetailedProject> = {
     subtitle: "Modélisation d'un Agrégateur de Paiement Multi-Passerelles",
     mainDescription: "HR-Skills Pay est une solution d'agrégation de paiement de niveau entreprise. Elle agit comme une passerelle unique centralisant plusieurs méthodes d'encaissement et de décaissement (Cartes bancaires, Mobile Money, Virements bancaires). Cette étude d'analyse et de modélisation assure la robustesse du système face à des pics de transactions et définit l'architecture de sécurité indispensable pour manipuler des données financières.",
     umlDiagramName: "Diagramme de Séquence UML - Processus de Paiement HR-Skills Pay",
+    modelingSummary: "La modélisation s'appuie sur trois livrables complémentaires. Le diagramme de séquence décrit le parcours d'un paiement sécurisé, de son initiation jusqu'à la notification du marchand par webhook, en passant par la validation OTP. Le diagramme de classes structure les entités Merchant, SubAccount, Transaction, Settlement et APIKey. Enfin, le modèle logique de données Merise définit un schéma relationnel normalisé qui prévient toute incohérence de solde.",
     umlSvgType: "sequence",
     sections: [
       {
@@ -108,12 +103,12 @@ export const projectDetailsFr: Record<string, DetailedProject> = {
         ]
       },
       {
-        title: "4. Conception UML & Merise",
-        content: "Les livrables d'analyse logicielle réalisés garantissent la conformité et la scalabilité du produit :",
+        title: "4. Référencement SEO",
+        content: "Le site est en production et son référencement naturel est soigné pour être bien visible sur Google :",
         list: [
-          "Diagramme de Séquence : Modélisation du flux de paiement sécurisé (Initiation -> Redirection -> Validation OTP -> Notification Webhook).",
-          "Diagramme de Classes UML : Modélisation des entités complexes Merchant, SubAccount, Transaction, Settlement et APIKey.",
-          "Modèle Logique de Données (MLD Merise) : Schéma relationnel hautement normalisé pour prévenir toute incohérence de solde financier."
+          "Titres et méta-descriptions optimisés pour chaque page.",
+          "Structure du contenu et balisage HTML pensés pour les moteurs de recherche.",
+          "Chargement rapide et affichage adapté au mobile, deux critères pris en compte par Google."
         ]
       }
     ]
@@ -124,8 +119,9 @@ export const projectDetailsFr: Record<string, DetailedProject> = {
     category: "analyse",
     subtitle: "Conception Technique d'une Application d'Intelligence Budgétaire",
     mainDescription: "MyNkap est un projet d'analyse pour une application de gestion intelligente des finances personnelles. L'étude se concentre sur l'ergonomie de saisie, l'automatisation de la catégorisation des dépenses et la sécurité des données financières privées des utilisateurs.",
-    umlDiagramName: "Diagramme de Cas d'Utilisation UML - MyNkap",
-    umlSvgType: "usecase",
+    umlDiagramName: "Diagramme de Déploiement UML - MyNkap",
+    modelingSummary: "Le diagramme de déploiement montre comment MyNkap est mis en production. Les utilisateurs accèdent au service depuis un navigateur (application React) ou un smartphone (application Flutter), en HTTPS. Sur le serveur VPS Linux, Nginx joue le rôle de reverse proxy et gère le chiffrement TLS, puis transmet les requêtes à l'API FastAPI. L'API, le module d'intelligence artificielle (analyse et prédiction) et la base PostgreSQL tournent dans des conteneurs Docker. Chaque mise à jour est déployée automatiquement par un pipeline CI/CD GitHub Actions.",
+    umlSvgType: "deployment",
     sections: [
       {
         title: "1. Suivi Automatisé des Dépenses",
@@ -143,6 +139,16 @@ export const projectDetailsFr: Record<string, DetailedProject> = {
           "Création d'enveloppes budgétaires mensuelles par catégorie.",
           "Système de notifications push et in-app en cas d'approche de la limite fixée.",
           "Générateur de rapports mensuels d'analyse de santé financière."
+        ]
+      },
+      {
+        title: "3. Analyse et Prédiction par l'Intelligence Artificielle",
+        content: "L'intelligence artificielle analyse les habitudes financières de chaque utilisateur pour l'aider à mieux gérer son argent :",
+        list: [
+          "Analyse automatique des revenus et dépenses pour identifier les postes de dépense les plus importants.",
+          "Prédiction des dépenses et du solde des mois à venir à partir de l'historique.",
+          "Propositions personnalisées pour réduire certaines dépenses, épargner davantage et atteindre ses objectifs.",
+          "Détection des dépenses inhabituelles avec alerte à l'utilisateur."
         ]
       }
     ]
@@ -299,6 +305,15 @@ async def create_lead(lead: LeadCreate):
       {
         title: "2. Intégration Simplifiée",
         content: "L'API expose des endpoints standardisés facilitant la communication asynchrone avec le front-end ReactJS/Next.js de la plateforme."
+      },
+      {
+        title: "3. Référencement SEO",
+        content: "Le site est en production et son référencement naturel est soigné pour être bien visible sur Google :",
+        list: [
+          "Titres et méta-descriptions optimisés pour chaque page.",
+          "Structure du contenu et balisage HTML pensés pour les moteurs de recherche.",
+          "Chargement rapide et affichage adapté au mobile, deux critères pris en compte par Google."
+        ]
       }
     ]
   },
@@ -306,59 +321,84 @@ async def create_lead(lead: LeadCreate):
     id: "sagesse-africaine",
     title: "Sagesse Africaine E-Book",
     category: "code",
-    subtitle: "API Django REST Framework de Validation de Paiement",
-    mainDescription: "Développement d'une API backend robuste avec Django REST Framework (DRF) en Python. Cette vue prend en charge la réception des webhooks Stripe, la validation des signatures de sécurité et la libération automatique des e-books achetés.",
-    codeFilename: "payment_views.py",
-    codeLanguage: "python",
-    codeContent: `from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
-import stripe
-import logging
+    subtitle: "Plateforme E-Book avec API Go et Paiements Sécurisés",
+    mainDescription: "Développement complet de la plateforme e-commerce Sagesse Africaine, dédiée à la vente et à la lecture de livres numériques sur la culture africaine. Le backend est écrit en Go, l'interface en ReactJS et les données sont stockées dans PostgreSQL. Les paiements sont sécurisés grâce à l'agrégateur HR-Skills Pay.",
+    codeFilename: "payment_webhook.go",
+    codeLanguage: "go",
+    codeContent: `package payment
 
-logger = logging.getLogger(__name__)
+import (
+	"crypto/hmac"
+	"crypto/sha256"
+	"encoding/hex"
+	"encoding/json"
+	"io"
+	"net/http"
+)
 
-class StripeWebhookView(APIView):
-    """
-    Vue Django REST Framework pour intercepter et valider les webhooks Stripe
-    """
-    def post(self, request, *args, **kwargs):
-        payload = request.body
-        sig_header = request.META.get('HTTP_STRIPE_SIGNATURE')
-        event = None
+// Webhook appelé par HR-Skills Pay après chaque paiement
+func (h *Handler) PaymentWebhook(w http.ResponseWriter, r *http.Request) {
+	body, err := io.ReadAll(r.Body)
+	if err != nil {
+		http.Error(w, "requête invalide", http.StatusBadRequest)
+		return
+	}
 
-        try:
-            # Validation de la signature pour s'assurer que la requête vient bien de Stripe
-            event = stripe.Webhook.construct_event(
-                payload, sig_header, "whsec_mock_key_sagesse_africaine"
-            )
-        except ValueError as e:
-            return Response({"error": "Payload invalide"}, status=status.HTTP_400_BAD_REQUEST)
-        except stripe.error.SignatureVerificationError as e:
-            return Response({"error": "Signature invalide"}, status=status.HTTP_400_BAD_REQUEST)
+	// Vérifie que la notification vient bien de HR-Skills Pay
+	if !validSignature(body, r.Header.Get("X-Signature"), h.secret) {
+		http.Error(w, "signature invalide", http.StatusUnauthorized)
+		return
+	}
 
-        # Traitement de l'événement validé
-        if event['type'] == 'checkout.session.completed':
-            session = event['data']['object']
-            customer_email = session.get('customer_details', {}).get('email')
-            # Logique d'activation de l'accès au livre pour le compte client correspondant
-            logger.info(f"Paiement validé pour le client : {customer_email}")
+	var event PaymentEvent
+	if err := json.Unmarshal(body, &event); err != nil {
+		http.Error(w, "contenu invalide", http.StatusBadRequest)
+		return
+	}
 
-        return Response({"success": True}, status=status.HTTP_200_OK)
-`,
+	// Paiement confirmé : commande payée et e-book débloqué (PostgreSQL)
+	if event.Status == "SUCCESS" {
+		if err := h.orders.MarkPaid(r.Context(), event.OrderID); err != nil {
+			http.Error(w, "erreur serveur", http.StatusInternalServerError)
+			return
+		}
+	}
+	w.WriteHeader(http.StatusOK)
+}
+
+func validSignature(body []byte, signature, secret string) bool {
+	mac := hmac.New(sha256.New, []byte(secret))
+	mac.Write(body)
+	expected := hex.EncodeToString(mac.Sum(nil))
+	return hmac.Equal([]byte(expected), []byte(signature))
+}`,
     sections: [
       {
-        title: "1. Sécurisation des Transactions avec Stripe",
-        content: "La vue REST vérifie l'authenticité des requêtes Stripe via la signature du webhook avant de modifier le statut des commandes utilisateur :",
+        title: "1. Paiements Sécurisés avec HR-Skills Pay",
+        content: "Les paiements sont confiés à l'agrégateur HR-Skills Pay, qui centralise plusieurs moyens de paiement :",
         list: [
-          "Gestion robuste des exceptions Stripe (SignatureVerificationError).",
-          "Traitement asynchrone des événements de paiement validé.",
-          "Logs d'audit fiables pour le suivi des transactions financières."
+          "Vérification de la signature de chaque notification de paiement (webhook) avant tout traitement.",
+          "Déblocage automatique de l'e-book dès que le paiement est confirmé.",
+          "Historique des transactions enregistré dans PostgreSQL pour le suivi des ventes."
         ]
       },
       {
-        title: "2. API REST standardisée avec Django",
-        content: "L'utilisation de Django REST Framework assure une architecture claire, propre et modulaire, facilitant l'intégration des fonctionnalités e-commerce."
+        title: "2. Backend Go & Interface ReactJS",
+        content: "L'API est développée en Go pour sa rapidité et sa fiabilité, l'interface en ReactJS pour une navigation fluide :",
+        list: [
+          "Catalogue, commandes et bibliothèque des lecteurs stockés dans PostgreSQL.",
+          "Espace personnel permettant de retrouver et de lire les e-books achetés.",
+          "Interface responsive, agréable sur ordinateur comme sur mobile."
+        ]
+      },
+      {
+        title: "3. Référencement SEO",
+        content: "Le site est en production et son référencement naturel est soigné pour être bien visible sur Google :",
+        list: [
+          "Titres et méta-descriptions optimisés pour chaque page.",
+          "Structure du contenu et balisage HTML pensés pour les moteurs de recherche.",
+          "Chargement rapide et affichage adapté au mobile, deux critères pris en compte par Google."
+        ]
       }
     ]
   },
@@ -394,6 +434,15 @@ class StripeWebhookView(APIView):
           "Conteneurisation avec Docker.",
           "Déploiement sur VPS avec Nginx et certificat SSL.",
           "Pipeline CI/CD avec GitHub Actions."
+        ]
+      },
+      {
+        title: "4. Référencement SEO",
+        content: "Le site est en production et son référencement naturel est soigné pour être bien visible sur Google :",
+        list: [
+          "Titres et méta-descriptions optimisés pour chaque page.",
+          "Structure du contenu et balisage HTML pensés pour les moteurs de recherche.",
+          "Chargement rapide et affichage adapté au mobile, deux critères pris en compte par Google."
         ]
       }
     ]

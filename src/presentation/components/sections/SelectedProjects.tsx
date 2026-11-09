@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { projectImageClass } from '@/presentation/utils/projectImage';
 
-// Projets mis en avant sur l'accueil, dans cet ordre
+// Projets phares de l'accueil, dans cet ordre
 const HOME_PROJECT_IDS = ['mynkap', 'sagesse-africaine', 'hr-pay'];
 
 export function SelectedProjects() {

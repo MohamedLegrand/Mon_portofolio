@@ -7,7 +7,7 @@
     "projectsTitle": "Projects",
     "projectsDescription": "Projects by TAKADJIO Mohamed: MyNkap (AI-assisted financial management SaaS), HR-Skills Pay, RayCard, Père Nkap and React showcase websites. From UML/MERISE analysis to production.",
     "skillsTitle": "Skills",
-    "skillsDescription": "Skills of TAKADJIO Mohamed: Python, Go, TypeScript, Dart, FastAPI, Django, React, Flutter, PostgreSQL, Docker, Nginx, Linux, CI/CD with GitHub Actions, UML and MERISE.",
+    "skillsDescription": "Skills of TAKADJIO Mohamed: Python, Go, TypeScript, Dart, FastAPI, Django, React, Flutter, PostgreSQL, Docker, Nginx, Linux, CI/CD with GitHub Actions, QA / UAT testing, UML and MERISE.",
     "experiencesTitle": "Experience",
     "experiencesDescription": "Career of TAKADJIO Mohamed: fullstack analyst-developer & QA at HR-Skills, web developer at True Site Technology, freelance work for National Energy and AfrikTech.",
     "contactTitle": "Contact",
@@ -76,7 +76,8 @@
       "webMobile": "Web & mobile app development",
       "database": "Database administration",
       "devops": "DevOps",
-      "analysis": "Project analyst"
+      "analysis": "Project analyst",
+      "testing": "Application testing (QA / UAT)"
     }
   },
   "education": {
@@ -145,7 +146,6 @@
     "codeHeading": "Development Projects",
     "empty": "No projects found yet.",
     "loadError": "An error occurred while loading the projects.",
-    "featured": "Featured",
     "learnMore": "Learn more",
     "visit": "Visit"
   },
@@ -175,10 +175,30 @@
     "codeText": "View of the implemented source code ({{stack}}).",
     "codeFrontend": "ReactJS Front-end",
     "codeBackend": "Python Back-end",
+    "codeBackendGo": "Go back-end",
     "technologies": "Technologies used",
+    "modelingTech": "Modeling technologies",
+    "devTech": "Development technologies",
+    "modelingDeliverables": "Modeling deliverables",
+    "platform": {
+      "web": "Web",
+      "mobile": "Mobile"
+    },
     "liveLink": "Production link",
     "visitLive": "Visit the live website",
     "uml": {
+      "deployTitle": "MyNkap deployment diagram",
+      "deployBrowser": "Web browser",
+      "deploySmartphone": "Smartphone",
+      "deployReactApp": "React app",
+      "deployFlutterApp": "Flutter app",
+      "deployServer": "Linux VPS server",
+      "deployProxy": "Nginx: reverse proxy & TLS",
+      "deployAi": "AI module",
+      "deployAiSub": "analysis & prediction",
+      "deployDbSub": "financial data",
+      "deployForward": "API requests",
+      "deployPipeline": "automatic deployment",
       "mobileMoneySystem": "MOBILE MONEY SYSTEM",
       "fintechClient": "Fintech Client",
       "authenticate": "Authenticate (2FA)",
@@ -225,6 +245,10 @@
         "title": "Frameworks & Libraries",
         "description": "The building blocks that speed up the development of interfaces and services."
       },
+      "testing": {
+        "title": "Testing & Quality Assurance",
+        "description": "I make sure every application works correctly and meets its requirements before going to production."
+      },
       "tools": {
         "title": "Development tools",
         "description": "The software I use every day to stay productive."
@@ -249,6 +273,8 @@
       "fastapi": "Ideal for building fast, lightweight asynchronous APIs with automatic OpenAPI documentation.",
       "flutter": "Google's framework that I use to build smooth cross-platform mobile apps (Android and iOS) from a single codebase.",
       "dart": "A modern, typed language at the heart of Flutter, which I use to write the logic and interfaces of my mobile apps.",
+      "qa": "Functional, integration and regression testing to detect and document defects before each release.",
+      "uat": "User acceptance testing (UAT): test scenarios run with the client to validate that the application meets their business needs.",
       "postman": "Essential for testing, documenting, mocking and validating all my API routes.",
       "vscode": "My main code editor, configured to boost my day-to-day productivity.",
       "antigravity": "My AI-powered development environment (IDE) for designing, debugging and coding more efficiently.",

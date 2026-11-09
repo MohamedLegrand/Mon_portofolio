@@ -6,7 +6,7 @@ import type { DetailedProject } from './projectDetails';
 export const projectDetailsEn: Record<string, DetailedProject> = {
   "perenkap": {
     ...projectDetailsFr["perenkap"],
-    subtitle: "Architecture & Modeling of an Interoperable Mobile Fintech",
+    subtitle: "Interoperable Mobile Fintech Transactions App",
     mainDescription: "Père Nkap is an innovative fintech mobile application designed to simplify and democratize money transfers and everyday financial transactions. The main goal of this modeling work is to propose a resilient, secure and interoperable system able to interact with various financial service providers and mobile network operators.",
     umlDiagramName: "UML Use Case Diagram - Père Nkap",
     sections: [
@@ -37,15 +37,6 @@ export const projectDetailsEn: Record<string, DetailedProject> = {
           "One-click multi-operator airtime purchase.",
           "Automated recurring payments for electricity, water and internet subscriptions.",
           "Simple balance view and consolidated history."
-        ]
-      },
-      {
-        title: "4. UML & MERISE Architecture",
-        content: "The technical modeling includes several key deliverables to guide the development teams:",
-        list: [
-          "Use Case Diagram: definition of the actors (Customer, System, Telecom Operator, Card Gateway) and their interactions.",
-          "Sequence Diagram: tracing the validation flow of a transfer with a double balance check.",
-          "Conceptual Data Model (MERISE MCD): optimal structuring of the Customer, Wallet, Transaction and VirtualCard entities with strict referential integrity constraints."
         ]
       }
     ]
@@ -85,12 +76,12 @@ export const projectDetailsEn: Record<string, DetailedProject> = {
         ]
       },
       {
-        title: "4. UML & MERISE Design",
-        content: "The software analysis deliverables ensure the product's compliance and scalability:",
+        title: "4. SEO",
+        content: "The site is live and its search engine optimization is carefully handled to rank well on Google:",
         list: [
-          "Sequence Diagram: modeling of the secure payment flow (Initiation -> Redirection -> OTP Validation -> Webhook Notification).",
-          "UML Class Diagram: modeling of the Merchant, SubAccount, Transaction, Settlement and APIKey entities.",
-          "Logical Data Model (MERISE MLD): a highly normalized relational schema preventing any financial balance inconsistency."
+          "Optimized titles and meta descriptions for every page.",
+          "Content structure and HTML markup designed for search engines.",
+          "Fast loading and mobile-friendly display, two criteria Google takes into account."
         ]
       }
     ]
@@ -99,7 +90,8 @@ export const projectDetailsEn: Record<string, DetailedProject> = {
     ...projectDetailsFr["mynakp"],
     subtitle: "Technical Design of a Budget Intelligence Application",
     mainDescription: "MyNkap is an analysis project for a smart personal finance management application. The study focuses on input ergonomics, automatic expense categorization and the security of users' private financial data.",
-    umlDiagramName: "UML Use Case Diagram - MyNkap",
+    umlDiagramName: "UML Deployment Diagram - MyNkap",
+    modelingSummary: "The deployment diagram shows how MyNkap runs in production. Users access the service from a browser (React app) or a smartphone (Flutter app) over HTTPS. On the Linux VPS, Nginx acts as a reverse proxy and handles TLS encryption, then forwards requests to the FastAPI API. The API, the artificial intelligence module (analysis and prediction) and the PostgreSQL database run in Docker containers. Every update is deployed automatically by a GitHub Actions CI/CD pipeline.",
     sections: [
       {
         title: "1. Automated Expense Tracking",
@@ -117,6 +109,16 @@ export const projectDetailsEn: Record<string, DetailedProject> = {
           "Monthly budget envelopes per category.",
           "Push and in-app notifications when approaching the set limit.",
           "Monthly financial health report generator."
+        ]
+      },
+      {
+        title: "3. AI-Powered Analysis and Prediction",
+        content: "Artificial intelligence analyzes each user's financial habits to help them manage their money better:",
+        list: [
+          "Automatic analysis of income and expenses to identify the largest spending items.",
+          "Prediction of upcoming months' expenses and balance based on history.",
+          "Personalized suggestions to cut certain expenses, save more and reach goals.",
+          "Detection of unusual expenses with user alerts."
         ]
       }
     ]
@@ -186,26 +188,49 @@ export const projectDetailsEn: Record<string, DetailedProject> = {
       {
         title: "2. Simple Integration",
         content: "The API exposes standardized endpoints that make asynchronous communication with the platform's React front-end straightforward."
+      },
+      {
+        title: "3. SEO",
+        content: "The site is live and its search engine optimization is carefully handled to rank well on Google:",
+        list: [
+          "Optimized titles and meta descriptions for every page.",
+          "Content structure and HTML markup designed for search engines.",
+          "Fast loading and mobile-friendly display, two criteria Google takes into account."
+        ]
       }
     ]
   },
   "sagesse-africaine": {
     ...projectDetailsFr["sagesse-africaine"],
-    subtitle: "Django REST Framework Payment Validation API",
-    mainDescription: "Development of a robust backend API with Django REST Framework (DRF) in Python. This view receives Stripe webhooks, validates security signatures and automatically unlocks purchased e-books.",
+    subtitle: "E-Book Platform with a Go API and Secure Payments",
+    mainDescription: "End-to-end development of the Sagesse Africaine e-commerce platform, dedicated to selling and reading e-books about African culture. The backend is written in Go, the interface in ReactJS and the data is stored in PostgreSQL. Payments are secured through the HR-Skills Pay aggregator.",
     sections: [
       {
-        title: "1. Securing Transactions with Stripe",
-        content: "The REST view verifies the authenticity of Stripe requests through the webhook signature before updating user order status:",
+        title: "1. Secure Payments with HR-Skills Pay",
+        content: "Payments are handled by the HR-Skills Pay aggregator, which centralizes several payment methods:",
         list: [
-          "Robust handling of Stripe exceptions (SignatureVerificationError).",
-          "Asynchronous processing of confirmed payment events.",
-          "Reliable audit logs for tracking financial transactions."
+          "Signature verification of every payment notification (webhook) before any processing.",
+          "Automatic e-book unlocking as soon as the payment is confirmed.",
+          "Transaction history stored in PostgreSQL to track sales."
         ]
       },
       {
-        title: "2. Standardized REST API with Django",
-        content: "Django REST Framework provides a clear, clean and modular architecture that makes integrating e-commerce features easier."
+        title: "2. Go Backend & ReactJS Interface",
+        content: "The API is built with Go for speed and reliability, and the interface with ReactJS for smooth navigation:",
+        list: [
+          "Catalog, orders and readers' libraries stored in PostgreSQL.",
+          "Personal space to find and read purchased e-books.",
+          "Responsive interface, pleasant on desktop and mobile."
+        ]
+      },
+      {
+        title: "3. SEO",
+        content: "The site is live and its search engine optimization is carefully handled to rank well on Google:",
+        list: [
+          "Optimized titles and meta descriptions for every page.",
+          "Content structure and HTML markup designed for search engines.",
+          "Fast loading and mobile-friendly display, two criteria Google takes into account."
+        ]
       }
     ]
   },
@@ -239,6 +264,15 @@ export const projectDetailsEn: Record<string, DetailedProject> = {
           "Containerization with Docker.",
           "Deployment on a VPS with Nginx and an SSL certificate.",
           "CI/CD pipeline with GitHub Actions."
+        ]
+      },
+      {
+        title: "4. SEO",
+        content: "The site is live and its search engine optimization is carefully handled to rank well on Google:",
+        list: [
+          "Optimized titles and meta descriptions for every page.",
+          "Content structure and HTML markup designed for search engines.",
+          "Fast loading and mobile-friendly display, two criteria Google takes into account."
         ]
       }
     ]

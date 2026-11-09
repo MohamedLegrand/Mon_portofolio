@@ -7,9 +7,114 @@ import { useLanguage } from '@/presentation/hooks/useLanguage';
 import { useTranslation } from 'react-i18next';
 import { usePageMeta } from '@/presentation/hooks/usePageMeta';
 
+// Nœud UML de déploiement (boîte en 3D)
+function DeployNode({ x, y, w, h, d = 8 }: { x: number; y: number; w: number; h: number; d?: number }) {
+  return (
+    <g stroke="#dc2626" strokeWidth="1.3" fill="#18181b">
+      <polygon points={`${x},${y} ${x + d},${y - d} ${x + w + d},${y - d} ${x + w},${y}`} fill="#27272a" />
+      <polygon points={`${x + w},${y} ${x + w + d},${y - d} ${x + w + d},${y + h - d} ${x + w},${y + h}`} fill="#27272a" />
+      <rect x={x} y={y} width={w} height={h} />
+    </g>
+  );
+}
+
+// Boîte interne (artefact, environnement d'exécution, composant)
+function DeployBox({ x, y, w, h, stereo, name, sub, dashed = false }: {
+  x: number; y: number; w: number; h: number; stereo: string; name: string; sub?: string; dashed?: boolean;
+}) {
+  const cx = x + w / 2;
+  return (
+    <g>
+      <rect x={x} y={y} width={w} height={h} rx="4" fill="#09090b" stroke={dashed ? '#71717a' : '#a1a1aa'} strokeWidth="1" strokeDasharray={dashed ? '4 3' : undefined} />
+      <text x={cx} y={y + 13} fill="#a1a1aa" fontSize="8" textAnchor="middle">«{stereo}»</text>
+      <text x={cx} y={y + 26} fill="#fff" fontSize="10" fontWeight="bold" textAnchor="middle">{name}</text>
+      {sub && <text x={cx} y={y + 38} fill="#f87171" fontSize="8" textAnchor="middle">{sub}</text>}
+    </g>
+  );
+}
+
+// Diagramme de déploiement UML de MyNkap
+function DeploymentDiagram() {
+  const { t } = useTranslation();
+  const u = (k: string) => t(`projectDetail.uml.${k}`);
+  return (
+    <svg viewBox="0 0 450 420" className="w-full h-auto select-none" role="img" aria-label={u('deployTitle')}>
+      <defs>
+        <marker id="deployArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#a1a1aa" />
+        </marker>
+      </defs>
+
+      {/* Postes clients */}
+      <DeployNode x={10} y={16} w={190} h={80} />
+      <text x={105} y={31} fill="#a1a1aa" fontSize="8" textAnchor="middle">«device»</text>
+      <text x={105} y={44} fill="#fff" fontSize="10" fontWeight="bold" textAnchor="middle">{u('deployBrowser')}</text>
+      <DeployBox x={30} y={52} w={150} h={36} stereo="artifact" name={u('deployReactApp')} />
+
+      <DeployNode x={242} y={16} w={190} h={80} />
+      <text x={337} y={31} fill="#a1a1aa" fontSize="8" textAnchor="middle">«device»</text>
+      <text x={337} y={44} fill="#fff" fontSize="10" fontWeight="bold" textAnchor="middle">{u('deploySmartphone')}</text>
+      <DeployBox x={262} y={52} w={150} h={36} stereo="artifact" name={u('deployFlutterApp')} />
+
+      {/* Chemins de communication clients -> serveur */}
+      <g stroke="#a1a1aa" strokeWidth="1.2">
+        <line x1={105} y1={96} x2={105} y2={172} />
+        <line x1={337} y1={96} x2={337} y2={172} />
+      </g>
+      <text x={112} y={122} fill="#d4d4d8" fontSize="8" fontWeight="bold">HTTPS</text>
+      <text x={344} y={122} fill="#d4d4d8" fontSize="8" fontWeight="bold">HTTPS · REST</text>
+
+      {/* Serveur */}
+      <DeployNode x={10} y={136} w={422} h={206} />
+      <text x={221} y={151} fill="#a1a1aa" fontSize="8" textAnchor="middle">«device»</text>
+      <text x={221} y={164} fill="#fff" fontSize="10" fontWeight="bold" textAnchor="middle">{u('deployServer')}</text>
+
+      <DeployBox x={28} y={172} w={386} h={34} stereo="executionEnvironment" name={u('deployProxy')} />
+
+      {/* Environnement Docker */}
+      <rect x={28} y={218} width={386} height={114} rx="6" fill="none" stroke="#3f3f46" strokeWidth="1" strokeDasharray="5 4" />
+      <text x={40} y={232} fill="#a1a1aa" fontSize="8">«executionEnvironment» Docker</text>
+
+      <DeployBox x={40} y={246} w={104} h={74} stereo="component" name={u('deployAi')} sub={u('deployAiSub')} />
+      <DeployBox x={169} y={246} w={104} h={74} stereo="component" name="API FastAPI" sub="API REST" />
+      <DeployBox x={298} y={246} w={104} h={74} stereo="database" name="PostgreSQL" sub={u('deployDbSub')} />
+
+      {/* Dépendances internes */}
+      <g stroke="#a1a1aa" strokeWidth="1.2" fill="none">
+        <line x1={221} y1={206} x2={221} y2={244} markerEnd="url(#deployArrow)" />
+        <line x1={169} y1={283} x2={146} y2={283} markerEnd="url(#deployArrow)" />
+        <line x1={273} y1={283} x2={296} y2={283} markerEnd="url(#deployArrow)" />
+      </g>
+      <text x={228} y={229} fill="#d4d4d8" fontSize="8">{u('deployForward')}</text>
+      <text x={284} y={276} fill="#d4d4d8" fontSize="8" textAnchor="middle">SQL</text>
+
+      {/* CI/CD */}
+      <DeployBox x={125} y={366} w={192} h={46} stereo="device" name="GitHub Actions" sub="CI/CD" dashed />
+      <line x1={221} y1={366} x2={221} y2={344} stroke="#dc2626" strokeWidth="1.2" strokeDasharray="4 3" markerEnd="url(#deployArrow)" />
+      <text x={228} y={359} fill="#f87171" fontSize="8">{u('deployPipeline')}</text>
+    </svg>
+  );
+}
+
+// Liste de technologies sous forme de pastilles
+function TechList({ items }: { items: string[] }) {
+  return (
+    <div className="flex flex-wrap gap-2">
+      {items.map((tech) => (
+        <span
+          key={tech}
+          className="rounded-full bg-zinc-100 dark:bg-zinc-900/60 border border-zinc-300 dark:border-zinc-800 px-3 py-1 text-xs font-semibold text-zinc-700 dark:text-zinc-300"
+        >
+          {tech}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 // Fonction de coloration syntaxique à la volée basée sur regex
 function tokenizeLine(line: string) {
-  const regex = /(\/\/.*|#.*)|("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`)|(\b(?:import|from|export|default|const|let|var|function|class|def|return|async|await|try|except|raise|if|else|elif|for|in|self|from|as|while|break|continue|print)\b)|(\b\d+\b)|(\b[a-zA-Z_]\w*(?=[(\s{]))|([{}()[\].,:;=+\-*/&|!<>])/g;
+  const regex = /(\/\/.*|#.*)|("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`)|(\b(?:import|from|export|default|const|let|var|function|class|def|return|async|await|try|except|raise|if|else|elif|for|in|self|from|as|while|break|continue|print|func|package|nil|type|struct|defer|go)\b)|(\b\d+\b)|(\b[a-zA-Z_]\w*(?=[(\s{]))|([{}()[\].,:;=+\-*/&|!<>])/g;
   
   const elements: React.ReactNode[] = [];
   let lastIndex = 0;
@@ -55,8 +160,9 @@ function tokenizeLine(line: string) {
 }
 
 // Composant pour dessiner le diagramme UML correspondant pour la catégorie 'analyse'
-function UmlDiagram({ type }: { type: 'usecase' | 'sequence' | 'class' }) {
+function UmlDiagram({ type }: { type: 'usecase' | 'sequence' | 'class' | 'deployment' }) {
   const { t } = useTranslation();
+  if (type === 'deployment') return <DeploymentDiagram />;
   if (type === 'usecase') {
     return (
       <svg viewBox="0 0 450 320" className="w-full h-auto text-zinc-400 select-none">
@@ -270,7 +376,7 @@ export function ProjectDetailPage() {
             {isAnalyse ? t('projectDetail.categoryAnalysis') : t('projectDetail.categoryCode')}
           </span>
           <span className="text-xs font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400 font-mono">
-            {isAnalyse ? "UML & MERISE" : "ReactJS / FastAPI / Django REST"}
+            {isAnalyse ? 'UML & MERISE' : project.stack.filter((tech) => tech !== 'SEO').slice(0, 3).join(' / ')}
           </span>
         </div>
         <h1 className="mt-4 text-4xl sm:text-6xl font-bold text-zinc-900 dark:text-white uppercase font-bebas tracking-wide leading-none">
@@ -343,6 +449,17 @@ export function ProjectDetailPage() {
               <p className="text-center text-xs text-zinc-400 font-mono mt-3 uppercase tracking-wider">
                 {detail.umlDiagramName}
               </p>
+
+              {detail.modelingSummary && (
+                <div className="mt-6 border-t border-zinc-900 pt-5">
+                  <h4 className="text-xs font-bold text-white uppercase tracking-widest font-mono mb-3">
+                    {t('projectDetail.modelingDeliverables')}
+                  </h4>
+                  <p className="text-sm text-zinc-300 leading-relaxed">
+                    {detail.modelingSummary}
+                  </p>
+                </div>
+              )}
             </div>
           )}
 
@@ -356,7 +473,7 @@ export function ProjectDetailPage() {
               </div>
 
               <p className="text-sm text-zinc-400 mb-6 italic leading-relaxed">
-                {t('projectDetail.codeText', { stack: detail.codeLanguage === 'javascript' ? t('projectDetail.codeFrontend') : t('projectDetail.codeBackend') })}
+                {t('projectDetail.codeText', { stack: detail.codeLanguage === 'javascript' ? t('projectDetail.codeFrontend') : detail.codeLanguage === 'go' ? t('projectDetail.codeBackendGo') : t('projectDetail.codeBackend') })}
               </p>
 
               {/* Rendu Code avec coloration syntaxique */}
@@ -391,18 +508,29 @@ export function ProjectDetailPage() {
 
           <div className="rounded-2xl border border-zinc-200 dark:border-zinc-900 bg-zinc-100/40 dark:bg-zinc-950/10 p-6 text-left">
             <h4 className="text-xs font-bold text-zinc-900 dark:text-white uppercase tracking-widest font-mono border-b border-zinc-200 dark:border-zinc-900 pb-2 mb-3">
-              {t('projectDetail.technologies')}
+              {isAnalyse ? t('projectDetail.modelingTech') : t('projectDetail.technologies')}
             </h4>
-            <div className="flex flex-wrap gap-2">
-              {project.stack.map((tech, idx) => (
-                <span
-                  key={idx}
-                  className="rounded-full bg-zinc-100 dark:bg-zinc-900/60 border border-zinc-300 dark:border-zinc-800 px-3 py-1 text-xs font-semibold text-zinc-700 dark:text-zinc-300"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
+            <TechList items={project.stack} />
+
+            {project.devStack && project.devStack.length > 0 && (
+              <>
+                <h4 className="mt-6 text-xs font-bold text-zinc-900 dark:text-white uppercase tracking-widest font-mono border-b border-zinc-200 dark:border-zinc-900 pb-2 mb-3">
+                  {t('projectDetail.devTech')}
+                </h4>
+                <div className="flex flex-col gap-3">
+                  {project.devStack.map((group) => (
+                    <div key={group.platform ?? 'all'} className="flex flex-col gap-2">
+                      {group.platform && (
+                        <span className="text-xs font-semibold uppercase tracking-wider text-zinc-600 dark:text-zinc-400">
+                          {t(`projectDetail.platform.${group.platform}`)}
+                        </span>
+                      )}
+                      <TechList items={group.items} />
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
 
             {project.liveUrl && (
               <div className="mt-6 pt-5 border-t border-zinc-200 dark:border-zinc-900 flex flex-col gap-2">
