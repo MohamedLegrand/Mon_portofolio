@@ -61,7 +61,12 @@
   },
   "selectedProjects": {
     "heading": "SELECTED PROJECTS",
-    "viewAll": "View all projects"
+    "viewAll": "View all projects",
+    "descriptions": {
+      "mynkap": "AI-assisted SaaS platform for personal finance management.",
+      "sagesse-africaine": "E-book platform for selling and reading books on African wisdom and culture.",
+      "hr-pay": "B2B multi-service payment aggregator."
+    }
   },
   "educationSkills": {
     "heading": "EDUCATION & SKILLS",

@@ -13,7 +13,7 @@
       "Go",
       "PostgreSQL"
     ],
-    "imageUrl": "/assets/projects/ecommerce.jpg",
+    "imageUrl": "/images/hr-pay-logo.png",
     "featured": true,
     "category": "analyse",
     "details": {
@@ -34,7 +34,7 @@
       "MERISE",
       "Mobile Money"
     ],
-    "imageUrl": "/assets/projects/devops.jpg",
+    "imageUrl": "/images/perenkap-logo.jpg",
     "featured": true,
     "category": "analyse",
     "details": {
@@ -93,7 +93,7 @@
       "Vercel"
     ],
     "liveUrl": "https://national-energ.com",
-    "imageUrl": "/assets/projects/devops.jpg",
+    "imageUrl": "/images/logo-national-energy.png",
     "featured": true,
     "category": "code",
     "details": {

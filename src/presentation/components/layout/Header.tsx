@@ -32,13 +32,13 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-zinc-200 dark:border-zinc-900 bg-white/80 dark:bg-black/80 backdrop-blur-md transition-all duration-300">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo / Nom */}
-        <Link to="/" className="text-xl font-bold tracking-tight text-zinc-900 dark:text-white hover:text-red-500 transition-colors uppercase font-bebas text-2xl">
+        <Link to="/" className="text-lg sm:text-xl font-extrabold tracking-wide text-zinc-900 dark:text-white hover:text-red-500 transition-colors uppercase">
           TAKADJIO <span className="text-red-600">Mohamed</span>
         </Link>
 
         {/* Navigation Desktop */}
-        <div className="hidden md:flex items-center gap-8">
-          <nav className="flex items-center space-x-8 text-sm font-semibold tracking-wider text-zinc-600 dark:text-zinc-400 uppercase font-bebas text-base">
+        <div className="hidden lg:flex items-center gap-8">
+          <nav className="flex items-center space-x-8 text-sm font-semibold tracking-wider text-zinc-700 dark:text-zinc-300 uppercase">
             <Link to="/" className="hover:text-red-600 dark:hover:text-white hover:underline decoration-red-600 underline-offset-4 decoration-2 transition-all">{t('nav.home')}</Link>
             <Link to="/competences" className="hover:text-red-600 dark:hover:text-white hover:underline decoration-red-600 underline-offset-4 decoration-2 transition-all">{t('nav.skills')}</Link>
             <Link to="/experiences" className="hover:text-red-600 dark:hover:text-white hover:underline decoration-red-600 underline-offset-4 decoration-2 transition-all">{t('nav.experiences')}</Link>
@@ -49,7 +49,7 @@ export function Header() {
           {/* Bouton de langue Desktop */}
           <button
             onClick={toggleLanguage}
-            className="flex h-8 min-w-8 px-2 items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-900 bg-zinc-100/60 dark:bg-zinc-950/40 text-[11px] font-bold tracking-wider text-zinc-600 dark:text-zinc-400 hover:text-red-600 dark:hover:text-white hover:border-red-600 transition-all focus:outline-none"
+            className="flex h-8 min-w-8 px-2 items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-900 bg-zinc-100/60 dark:bg-zinc-950/40 text-xs font-bold tracking-wider text-zinc-600 dark:text-zinc-400 hover:text-red-600 dark:hover:text-white hover:border-red-600 transition-all focus:outline-none"
             aria-label={t('nav.switchLanguage')}
             title={t('nav.switchLanguage')}
           >
@@ -67,11 +67,11 @@ export function Header() {
         </div>
 
         {/* Actions à Droite Mobile */}
-        <div className="flex md:hidden items-center gap-4">
+        <div className="flex lg:hidden items-center gap-4">
           {/* Bouton de langue Mobile */}
           <button
             onClick={toggleLanguage}
-            className="flex h-8 min-w-8 px-2 items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-900 bg-zinc-100/60 dark:bg-zinc-950/40 text-[11px] font-bold tracking-wider text-zinc-600 dark:text-zinc-400 hover:text-red-600 dark:hover:text-white hover:border-red-600 transition-all focus:outline-none"
+            className="flex h-8 min-w-8 px-2 items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-900 bg-zinc-100/60 dark:bg-zinc-950/40 text-xs font-bold tracking-wider text-zinc-600 dark:text-zinc-400 hover:text-red-600 dark:hover:text-white hover:border-red-600 transition-all focus:outline-none"
             aria-label={t('nav.switchLanguage')}
             title={t('nav.switchLanguage')}
           >
@@ -108,8 +108,8 @@ export function Header() {
 
       {/* Navigation Mobile */}
       {isOpen && (
-        <div className="md:hidden border-t border-zinc-200 dark:border-zinc-900 bg-white dark:bg-black px-6 py-4 transition-all">
-          <nav className="flex flex-col space-y-4 text-sm font-semibold tracking-wider text-zinc-600 dark:text-zinc-400 uppercase font-bebas text-base">
+        <div className="lg:hidden border-t border-zinc-200 dark:border-zinc-900 bg-white dark:bg-black px-6 py-4 transition-all">
+          <nav className="flex flex-col space-y-4 text-base font-semibold tracking-wider text-zinc-700 dark:text-zinc-300 uppercase">
             <Link to="/" onClick={toggleMenu} className="hover:text-red-600 dark:hover:text-white transition-colors">{t('nav.home')}</Link>
             <Link to="/competences" onClick={toggleMenu} className="hover:text-red-600 dark:hover:text-white transition-colors">{t('nav.skills')}</Link>
             <Link to="/experiences" onClick={toggleMenu} className="hover:text-red-600 dark:hover:text-white transition-colors">{t('nav.experiences')}</Link>

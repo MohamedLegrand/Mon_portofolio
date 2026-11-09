@@ -61,7 +61,12 @@
   },
   "selectedProjects": {
     "heading": "PROJETS PHARES",
-    "viewAll": "Voir tous les projets"
+    "viewAll": "Voir tous les projets",
+    "descriptions": {
+      "mynkap": "Plateforme SaaS de gestion des finances personnelles, assistée par l'IA.",
+      "sagesse-africaine": "Plateforme e-book de vente et de lecture de livres sur la sagesse et la culture africaines.",
+      "hr-pay": "Agrégateur de paiement multi-services B2B."
+    }
   },
   "educationSkills": {
     "heading": "FORMATION & COMPÉTENCES",

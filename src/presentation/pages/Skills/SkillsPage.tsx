@@ -193,10 +193,10 @@ export function SkillsPage() {
           <div key={catIdx} className="space-y-6">
             {/* Titre & Description de la catégorie */}
             <div className="border-b border-zinc-200 dark:border-zinc-900 pb-3 text-left">
-              <h3 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white tracking-wider sm:tracking-widest break-words font-monster">
+              <h3 className="text-xl sm:text-2xl font-extrabold uppercase text-zinc-900 dark:text-white tracking-wide break-words">
                 {t(`skillsPage.categories.${category.key}.title`)}
               </h3>
-              <p className="text-xs text-zinc-600 dark:text-zinc-500 mt-1 font-medium italic">
+              <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1 font-medium italic">
                 {t(`skillsPage.categories.${category.key}.description`)}
               </p>
             </div>

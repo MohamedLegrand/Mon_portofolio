@@ -12,21 +12,21 @@ export function Footer() {
 
           {/* Colonne 1 : Identité (5 cols) */}
           <div className="lg:col-span-5 flex flex-col gap-4 text-left">
-            <h3 className="font-bebas text-2xl text-zinc-900 dark:text-white tracking-wider">
+            <h3 className="text-xl font-extrabold text-zinc-900 dark:text-white tracking-wide">
               TAKADJIO <span className="text-red-600">MOHAMED</span>
             </h3>
-            <p className="text-zinc-600 dark:text-zinc-500 leading-relaxed max-w-sm text-xs">
+            <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-sm text-xs">
               {t('footer.about')}
             </p>
             {/* Badge Disponibilité */}
-            <div className="mt-2 inline-flex items-center gap-2 rounded-full border border-red-500/20 dark:border-red-500/10 bg-red-500/10 dark:bg-red-500/5 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-red-600 dark:text-red-500 w-fit">
+            <div className="mt-2 inline-flex items-center gap-2 rounded-full border border-red-500/20 dark:border-red-500/10 bg-red-500/10 dark:bg-red-500/5 px-3 py-1 text-xs font-bold uppercase tracking-wider text-red-700 dark:text-red-500 w-fit">
               <span className="flex h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" />
               {t('common.available')}
             </div>
             <a
               href={`/images/${t('common.cvFile')}`}
               download={t('common.cvFile')}
-              className="mt-1 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-red-600 dark:text-red-500 hover:text-zinc-900 dark:hover:text-white transition-colors w-fit"
+              className="mt-1 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-red-700 dark:text-red-500 hover:text-zinc-900 dark:hover:text-white transition-colors w-fit"
             >
               <Download className="h-3.5 w-3.5" />
               {t('common.downloadCv')}
@@ -35,10 +35,10 @@ export function Footer() {
 
           {/* Colonne 2 : Liens rapides (3 cols) */}
           <div className="lg:col-span-3 flex flex-col gap-4 text-left">
-            <h4 className="font-bebas text-lg text-zinc-900 dark:text-white tracking-widest uppercase">
+            <h4 className="text-sm font-bold text-zinc-900 dark:text-white tracking-wider uppercase">
               {t('footer.sitemap')}
             </h4>
-            <nav className="flex flex-col space-y-2 text-zinc-600 dark:text-zinc-500">
+            <nav className="flex flex-col space-y-2 text-zinc-600 dark:text-zinc-400">
               <Link to="/" className="hover:text-red-600 dark:hover:text-white transition-colors w-fit">{t('nav.home')}</Link>
               <Link to="/competences" className="hover:text-red-600 dark:hover:text-white transition-colors w-fit">{t('nav.skills')}</Link>
               <Link to="/experiences" className="hover:text-red-600 dark:hover:text-white transition-colors w-fit">{t('nav.experiences')}</Link>
@@ -49,16 +49,16 @@ export function Footer() {
 
           {/* Colonne 3 : Informations de Contact (4 cols) */}
           <div className="lg:col-span-4 flex flex-col gap-4 text-left">
-            <h4 className="font-bebas text-lg text-zinc-900 dark:text-white tracking-widest uppercase">
+            <h4 className="text-sm font-bold text-zinc-900 dark:text-white tracking-wider uppercase">
               {t('footer.contactHeading')}
             </h4>
-            <div className="flex flex-col space-y-3.5 text-zinc-600 dark:text-zinc-500">
+            <div className="flex flex-col space-y-3.5 text-zinc-600 dark:text-zinc-400">
               <div className="flex items-center gap-3 group">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-900 text-zinc-600 dark:text-zinc-500 group-hover:border-red-600 group-hover:text-red-500 transition-colors">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-900 text-zinc-600 dark:text-zinc-400 group-hover:border-red-600 group-hover:text-red-500 transition-colors">
                   <Mail className="h-3.5 w-3.5" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">{t('footer.email')}</span>
+                  <span className="text-xs uppercase font-bold text-zinc-600 dark:text-zinc-400 tracking-wider">{t('footer.email')}</span>
                   <a href="mailto:legrandmohamed67@gmail.com" className="hover:text-red-600 dark:hover:text-white transition-colors text-xs font-mono">
                     legrandmohamed67@gmail.com
                   </a>
@@ -66,11 +66,11 @@ export function Footer() {
               </div>
 
               <div className="flex items-center gap-3 group">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-900 text-zinc-600 dark:text-zinc-500 group-hover:border-red-600 group-hover:text-red-500 transition-colors">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-900 text-zinc-600 dark:text-zinc-400 group-hover:border-red-600 group-hover:text-red-500 transition-colors">
                   <Phone className="h-3.5 w-3.5" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">{t('footer.whatsapp')}</span>
+                  <span className="text-xs uppercase font-bold text-zinc-600 dark:text-zinc-400 tracking-wider">{t('footer.whatsapp')}</span>
                   <a href="https://wa.me/237677246900" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 dark:hover:text-white transition-colors text-xs font-mono">
                     +237 677 24 69 00
                   </a>
@@ -81,11 +81,11 @@ export function Footer() {
               </div>
 
               <div className="flex items-center gap-3 group">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-900 text-zinc-600 dark:text-zinc-500 group-hover:border-red-600 group-hover:text-red-500 transition-colors">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-900 text-zinc-600 dark:text-zinc-400 group-hover:border-red-600 group-hover:text-red-500 transition-colors">
                   <MapPin className="h-3.5 w-3.5" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">{t('footer.location')}</span>
+                  <span className="text-xs uppercase font-bold text-zinc-600 dark:text-zinc-400 tracking-wider">{t('footer.location')}</span>
                   <span className="text-xs text-zinc-600 dark:text-zinc-400">
                     {t('common.location')}
                   </span>
@@ -97,7 +97,7 @@ export function Footer() {
         </div>
 
         {/* Ligne inférieure : Copyright & Réseaux Sociaux */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 text-zinc-500 dark:text-zinc-600 text-[11px]">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 text-zinc-500 dark:text-zinc-400 text-xs">
           <div>
             &copy; {new Date().getFullYear()} TAKADJIO Mohamed. {t('footer.rights')}
           </div>

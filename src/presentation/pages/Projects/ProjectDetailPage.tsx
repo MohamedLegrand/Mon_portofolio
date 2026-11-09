@@ -240,9 +240,9 @@ export function ProjectDetailPage() {
   if (error || !project || !detail) {
     return (
       <section className="mx-auto max-w-xl px-6 py-32 text-center text-zinc-900 dark:text-white">
-        <h2 className="text-2xl font-bold text-red-600 dark:text-red-500">{t('projectDetail.notFound')}</h2>
+        <h2 className="text-2xl font-bold text-red-700 dark:text-red-500">{t('projectDetail.notFound')}</h2>
         <p className="mt-4 text-zinc-600 dark:text-zinc-400 text-sm">{t('projectDetail.notFoundText')}</p>
-        <Link to="/projets" className="mt-8 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-red-600 dark:text-red-500 hover:text-zinc-900 dark:hover:text-white border border-red-500/20 hover:border-red-600 px-4 py-2 rounded transition-all">
+        <Link to="/projets" className="mt-8 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-red-700 dark:text-red-500 hover:text-zinc-900 dark:hover:text-white border border-red-500/20 hover:border-red-600 px-4 py-2 rounded transition-all">
           <ArrowLeft className="h-4 w-4" />
           {t('projectDetail.back')}
         </Link>
@@ -257,7 +257,7 @@ export function ProjectDetailPage() {
       {/* Bouton de retour */}
       <Link
         to="/projets"
-        className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-600 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-colors mb-12"
+        className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors mb-12"
       >
         <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
         {t('projectDetail.back')}
@@ -266,17 +266,17 @@ export function ProjectDetailPage() {
       {/* En-tête */}
       <div className="border-b border-zinc-200 dark:border-zinc-900 pb-8 mb-12">
         <div className="flex items-center gap-3">
-          <span className="rounded-full bg-red-100 dark:bg-red-950/40 border border-red-300 dark:border-red-900/30 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-red-700 dark:text-red-500 font-mono">
+          <span className="rounded-full bg-red-100 dark:bg-red-950/40 border border-red-300 dark:border-red-900/30 px-3 py-1 text-xs font-bold uppercase tracking-widest text-red-700 dark:text-red-500 font-mono">
             {isAnalyse ? t('projectDetail.categoryAnalysis') : t('projectDetail.categoryCode')}
           </span>
-          <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-500 font-mono">
+          <span className="text-xs font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400 font-mono">
             {isAnalyse ? "UML & MERISE" : "ReactJS / FastAPI / Django REST"}
           </span>
         </div>
         <h1 className="mt-4 text-4xl sm:text-6xl font-bold text-zinc-900 dark:text-white uppercase font-bebas tracking-wide leading-none">
           {detail.title}
         </h1>
-        <p className="mt-2 text-md sm:text-lg font-medium text-red-600/90 font-mono">
+        <p className="mt-2 text-md sm:text-lg font-medium text-red-700 dark:text-red-500 font-mono">
           {detail.subtitle}
         </p>
       </div>
@@ -287,7 +287,7 @@ export function ProjectDetailPage() {
         <div className="lg:col-span-7 space-y-10">
           <div className="space-y-4">
             <h3 className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-zinc-900 dark:text-white font-mono">
-              <BookOpen className="h-4 w-4 text-red-600 dark:text-red-500" />
+              <BookOpen className="h-4 w-4 text-red-700 dark:text-red-500" />
               {t('projectDetail.overview')}
             </h3>
             <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed">
@@ -331,7 +331,7 @@ export function ProjectDetailPage() {
                 </h3>
               </div>
               
-              <p className="text-xs text-zinc-500 mb-6 italic leading-relaxed">
+              <p className="text-sm text-zinc-400 mb-6 italic leading-relaxed">
                 {t('projectDetail.umlText')}
               </p>
 
@@ -340,7 +340,7 @@ export function ProjectDetailPage() {
                 <UmlDiagram type={detail.umlSvgType} />
               </div>
 
-              <p className="text-center text-[10px] text-zinc-500 font-mono mt-3 uppercase tracking-wider">
+              <p className="text-center text-xs text-zinc-400 font-mono mt-3 uppercase tracking-wider">
                 {detail.umlDiagramName}
               </p>
             </div>
@@ -355,7 +355,7 @@ export function ProjectDetailPage() {
                 </h3>
               </div>
 
-              <p className="text-xs text-zinc-500 mb-6 italic leading-relaxed">
+              <p className="text-sm text-zinc-400 mb-6 italic leading-relaxed">
                 {t('projectDetail.codeText', { stack: detail.codeLanguage === 'javascript' ? t('projectDetail.codeFrontend') : t('projectDetail.codeBackend') })}
               </p>
 
@@ -368,14 +368,14 @@ export function ProjectDetailPage() {
                     <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e] inline-block" />
                     <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f] inline-block" />
                   </div>
-                  <span className="text-[10px] text-zinc-500 font-mono">
+                  <span className="text-xs text-zinc-400 font-mono">
                     {detail.codeFilename}
                   </span>
                   <div className="w-8" />
                 </div>
                 
                 {/* Corps de l'éditeur */}
-                <div className="p-4 font-mono text-[10px] leading-relaxed overflow-x-auto max-h-[350px] bg-black text-left whitespace-pre">
+                <div className="p-4 font-mono text-xs leading-relaxed overflow-x-auto max-h-[350px] bg-black text-left whitespace-pre">
                   <code>
                     {detail.codeContent.split('\n').map((line, idx) => (
                       <div key={idx} className="table-row">
@@ -406,12 +406,12 @@ export function ProjectDetailPage() {
 
             {project.liveUrl && (
               <div className="mt-6 pt-5 border-t border-zinc-200 dark:border-zinc-900 flex flex-col gap-2">
-                <span className="text-[10px] uppercase font-bold text-zinc-600 dark:text-zinc-500 tracking-wider">{t('projectDetail.liveLink')}</span>
+                <span className="text-xs uppercase font-bold text-zinc-600 dark:text-zinc-400 tracking-wider">{t('projectDetail.liveLink')}</span>
                 <a
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-bold text-red-600 dark:text-red-500 hover:underline flex items-center gap-1.5"
+                  className="text-xs font-bold text-red-700 dark:text-red-500 hover:underline flex items-center gap-1.5"
                 >
                   {t('projectDetail.visitLive')}
                   <ArrowLeft className="h-3 w-3 rotate-180" />

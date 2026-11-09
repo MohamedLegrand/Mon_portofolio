@@ -141,7 +141,7 @@ export function CodeTypewriter() {
   const getTokenClass = (type: string): string => {
     switch (type) {
       case 'comment':
-        return 'text-zinc-600 italic';
+        return 'text-zinc-400 italic';
       case 'keyword':
         return 'text-red-500 font-bold';
       case 'string':
@@ -221,7 +221,7 @@ export function CodeTypewriter() {
         </div>
 
         {/* Corps de l'éditeur */}
-        <div className="p-6 font-mono text-[11px] sm:text-xs md:text-sm text-left overflow-x-auto min-h-[260px] md:min-h-[280px] max-h-[350px] leading-relaxed select-text whitespace-pre bg-black">
+        <div className="p-6 font-mono text-xs sm:text-xs md:text-sm text-left overflow-x-auto min-h-[260px] md:min-h-[280px] max-h-[350px] leading-relaxed select-text whitespace-pre bg-black">
           {renderedElements}
           {/* Curseur vertical de frappe clignotant rouge */}
           <span className="inline-block w-[7px] h-[14px] sm:h-[16px] bg-red-600 ml-[2px] align-middle animate-cursor" />

@@ -30,13 +30,13 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
       {/* Conteneur de l'expérience */}
       <div className="flex flex-col gap-1.5">
         {/* Période */}
-        <span className="text-xs font-semibold uppercase tracking-wider text-red-600 dark:text-red-500">
+        <span className="text-xs font-semibold uppercase tracking-wider text-red-700 dark:text-red-500">
           {startFormatted === endFormatted ? startFormatted : <>{startFormatted} &mdash; {endFormatted}</>}
         </span>
 
         {/* Rôle & Entreprise */}
         <h3 className="text-lg font-bold text-zinc-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors">
-          {experience.role} <span className="text-zinc-600 dark:text-zinc-500 font-normal">{t('experiences.at')}</span> {experience.company}
+          {experience.role} <span className="text-zinc-600 dark:text-zinc-400 font-normal">{t('experiences.at')}</span> {experience.company}
         </h3>
 
         {/* Description */}

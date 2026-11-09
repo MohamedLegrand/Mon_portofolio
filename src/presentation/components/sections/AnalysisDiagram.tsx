@@ -78,7 +78,7 @@ export function AnalysisDiagram() {
           <motion.text
             x="220"
             y="48"
-            className="text-[10px] font-bold fill-zinc-600 dark:fill-zinc-500 uppercase tracking-widest font-mono"
+            className="text-xs font-bold fill-zinc-600 dark:fill-zinc-400 uppercase tracking-widest font-mono"
             variants={fadeInVariants(0.4)}
           >
             {t('analysis.subject')}
@@ -150,7 +150,7 @@ export function AnalysisDiagram() {
             <motion.text
               x="100"
               y="320"
-              className="text-xs font-bold fill-zinc-600 dark:fill-zinc-400 font-monster text-center"
+              className="text-xs font-bold fill-zinc-600 dark:fill-zinc-400 text-center"
               textAnchor="middle"
               variants={fadeInVariants(0.4)}
             >
@@ -309,7 +309,7 @@ export function AnalysisDiagram() {
           <motion.text
             x="545"
             y="132"
-            className="text-[9px] font-bold fill-red-600 dark:fill-red-500 italic"
+            className="text-xs font-bold fill-red-600 dark:fill-red-500 italic"
             textAnchor="middle"
             variants={fadeInVariants(2.1)}
           >
@@ -331,7 +331,7 @@ export function AnalysisDiagram() {
           <motion.text
             x="545"
             y="208"
-            className="text-[9px] font-bold fill-red-600 dark:fill-red-500 italic"
+            className="text-xs font-bold fill-red-600 dark:fill-red-500 italic"
             textAnchor="middle"
             variants={fadeInVariants(2.1)}
           >
@@ -353,7 +353,7 @@ export function AnalysisDiagram() {
             <motion.text
               x="650"
               y="123"
-              className="text-[10px] font-bold fill-zinc-700 dark:fill-zinc-300"
+              className="text-xs font-bold fill-zinc-700 dark:fill-zinc-300"
               textAnchor="middle"
               variants={fadeInVariants(2.4)}
             >
@@ -375,7 +375,7 @@ export function AnalysisDiagram() {
             <motion.text
               x="650"
               y="223"
-              className="text-[10px] font-bold fill-zinc-700 dark:fill-zinc-300"
+              className="text-xs font-bold fill-zinc-700 dark:fill-zinc-300"
               textAnchor="middle"
               variants={fadeInVariants(2.4)}
             >
@@ -386,7 +386,7 @@ export function AnalysisDiagram() {
       </motion.div>
 
       {/* Phrase de transition */}
-      <p className="font-monster text-lg text-red-600 dark:text-red-500 mt-6 tracking-wider text-left">
+      <p className="text-base sm:text-lg font-semibold text-red-700 dark:text-red-500 mt-6 text-left">
         {t('analysis.transition')}
       </p>
     </div>
