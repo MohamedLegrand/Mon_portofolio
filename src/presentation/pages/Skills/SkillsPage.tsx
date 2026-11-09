@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { usePageMeta } from '@/presentation/hooks/usePageMeta';
 
 interface SkillItem {
   name: string;
@@ -149,6 +150,7 @@ const skillCategories: SkillCategory[] = [
 
 export function SkillsPage() {
   const { t } = useTranslation();
+  usePageMeta({ title: t('seo.skillsTitle'), description: t('seo.skillsDescription') });
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

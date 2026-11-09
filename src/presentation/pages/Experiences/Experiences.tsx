@@ -2,9 +2,11 @@ import { useExperiences } from '@/presentation/hooks/useExperiences';
 import { ExperienceItem } from '@/presentation/components/common/ExperienceItem';
 import { LoadingSpinner } from '@/presentation/components/common/LoadingSpinner';
 import { useTranslation } from 'react-i18next';
+import { usePageMeta } from '@/presentation/hooks/usePageMeta';
 
 export function Experiences() {
   const { t } = useTranslation();
+  usePageMeta({ title: t('seo.experiencesTitle'), description: t('seo.experiencesDescription') });
   const educationList = [
     {
       id: 'edu-engineer',

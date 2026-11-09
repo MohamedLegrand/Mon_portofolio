@@ -1,7 +1,18 @@
 {
   "meta": {
-    "title": "TAKADJIO Mohamed — Fullstack Web & Mobile Developer",
-    "description": "Portfolio of TAKADJIO Mohamed, software engineer and fullstack web & mobile developer based in Yaoundé: API design, React, FastAPI, Flutter, UML/MERISE analysis."
+    "title": "TAKADJIO Mohamed — Fullstack Web & Mobile Developer in Yaoundé",
+    "description": "TAKADJIO Mohamed, software engineer and fullstack web & mobile developer in Yaoundé (Cameroon): REST APIs, React, FastAPI, Go, Flutter, PostgreSQL, DevOps. Founder of MyNkap."
+  },
+  "seo": {
+    "projectsTitle": "Projects",
+    "projectsDescription": "Projects by TAKADJIO Mohamed: MyNkap (AI-assisted financial management SaaS), HR-Skills Pay, RayCard, Père Nkap and React showcase websites. From UML/MERISE analysis to production.",
+    "skillsTitle": "Skills",
+    "skillsDescription": "Skills of TAKADJIO Mohamed: Python, Go, TypeScript, Dart, FastAPI, Django, React, Flutter, PostgreSQL, Docker, Nginx, Linux, CI/CD with GitHub Actions, UML and MERISE.",
+    "experiencesTitle": "Experience",
+    "experiencesDescription": "Career of TAKADJIO Mohamed: fullstack analyst-developer & QA at HR-Skills, web developer at True Site Technology, freelance work for National Energy and AfrikTech.",
+    "contactTitle": "Contact",
+    "contactDescription": "Contact TAKADJIO Mohamed, fullstack web & mobile developer in Yaoundé, for a project, a freelance assignment or a collaboration.",
+    "notFoundTitle": "Page not found"
   },
   "common": {
     "loading": "Loading...",

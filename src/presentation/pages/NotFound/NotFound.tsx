@@ -1,10 +1,12 @@
 import { Link, isRouteErrorResponse, useRouteError } from 'react-router-dom';
 import { ArrowLeft, RotateCw } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { usePageMeta } from '@/presentation/hooks/usePageMeta';
 
 /** Page affichée pour une adresse qui n'existe pas (route « * »). */
 export function NotFound() {
   const { t } = useTranslation();
+  usePageMeta({ title: t('seo.notFoundTitle'), noindex: true });
   return (
     <section className="mx-auto max-w-xl px-6 py-32 text-center text-zinc-900 dark:text-white">
       <p className="font-bebas text-8xl text-red-600 dark:text-red-500 leading-none">404</p>

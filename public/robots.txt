@@ -1,0 +1,5 @@
+# Robots : tout le site est public et peut être indexé.
+User-agent: *
+Allow: /
+
+Sitemap: https://mohamed-takadjio.site/sitemap.xml
