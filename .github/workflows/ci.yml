@@ -1,6 +1,6 @@
-# Intégration continue : vérifie que le code est propre et que le site compile
-# à chaque push et à chaque pull request sur main.
-name: CI
+# Intégration et déploiement continus : vérifie le code, compile le site
+# puis, sur un push vers main, le déploie sur le VPS (/opt/portfolio/dist).
+name: CI/CD
 
 on:
   push:
@@ -51,3 +51,51 @@ jobs:
           name: dist
           path: dist
           retention-days: 7
+
+  deploy:
+    name: Déploiement sur le VPS
+    needs: build
+    # Seulement pour un push (ou un lancement manuel) sur main, jamais pour une pull request.
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: production
+      url: https://mohamed-takadjio.site
+    # Un seul déploiement à la fois, sans annuler celui en cours.
+    concurrency:
+      group: deploy-production
+      cancel-in-progress: false
+
+    steps:
+      - name: Récupérer le site compilé
+        uses: actions/download-artifact@v8
+        with:
+          name: dist
+          path: dist
+
+      - name: Préparer la clé SSH de déploiement
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          # Empreinte du serveur vérifiée : refuse tout serveur qui ne serait pas le VPS.
+          printf '%s\n' "${{ secrets.DEPLOY_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+
+      - name: Envoyer le site sur le VPS (rsync)
+        # Côté serveur, la clé est limitée par rrsync à /opt/portfolio/dist :
+        # la destination « ./ » désigne donc ce dossier.
+        run: |
+          rsync -rltz --delete-after --delay-updates --chmod=D775,F664 \
+            -e "ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes" \
+            dist/ "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:./"
+
+      - name: Vérifier que le site répond
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" https://mohamed-takadjio.site/)
+          echo "Code HTTP : $code"
+          test "$code" = "200"
+
+      - name: Nettoyer la clé
+        if: always()
+        run: rm -f ~/.ssh/deploy_key
