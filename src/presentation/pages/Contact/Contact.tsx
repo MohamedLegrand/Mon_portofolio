@@ -1,9 +1,11 @@
 import { useContactForm } from '@/presentation/hooks/useContactForm';
 import { Send, CheckCircle2, AlertCircle, Mail, Phone, MapPin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { usePageMeta } from '@/presentation/hooks/usePageMeta';
 
 export function Contact() {
   const { t } = useTranslation();
+  usePageMeta({ title: t('seo.contactTitle'), description: t('seo.contactDescription') });
   const {
     formData,
     isSubmitting,

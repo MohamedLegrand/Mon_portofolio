@@ -4,8 +4,10 @@ import { SelectedProjects } from '@/presentation/components/sections/SelectedPro
 import { EducationSkills } from '@/presentation/components/sections/EducationSkills';
 import { WorkProcess } from '@/presentation/components/sections/WorkProcess';
 import { QuoteCard } from '@/presentation/components/sections/QuoteCard';
+import { usePageMeta } from '@/presentation/hooks/usePageMeta';
 
 export function Home() {
+  usePageMeta();
   return (
     <div className="bg-white dark:bg-black">
       {/* Section Hero d'introduction tripartite */}

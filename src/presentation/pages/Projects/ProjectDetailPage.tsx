@@ -5,6 +5,7 @@ import { useProject } from '@/presentation/hooks/useProject';
 import { getProjectDetail } from '@/presentation/data/getProjectDetail';
 import { useLanguage } from '@/presentation/hooks/useLanguage';
 import { useTranslation } from 'react-i18next';
+import { usePageMeta } from '@/presentation/hooks/usePageMeta';
 
 // Fonction de coloration syntaxique à la volée basée sur regex
 function tokenizeLine(line: string) {
@@ -220,6 +221,12 @@ export function ProjectDetailPage() {
   const { project, loading, error } = useProject(id);
   const lang = useLanguage();
   const detail = id ? getProjectDetail(id, lang) : null;
+  const found = !loading && !error && !!project && !!detail;
+  usePageMeta({
+    title: project?.title ?? t('projectDetail.notFound'),
+    description: project?.description,
+    noindex: !loading && !found,
+  });
 
   if (loading) {
     return (

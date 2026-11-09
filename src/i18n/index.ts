@@ -29,11 +29,10 @@ i18n
     },
   });
 
-// Garde <html lang> et le titre de l'onglet synchronisés avec la langue active
+// Garde <html lang> synchronisé avec la langue active
+// (titre, description et balises de partage : voir usePageMeta, page par page)
 function syncDocument(lng: string) {
   document.documentElement.lang = lng;
-  document.title = i18n.t('meta.title');
-  document.querySelector('meta[name="description"]')?.setAttribute('content', i18n.t('meta.description'));
 }
 
 syncDocument(i18n.resolvedLanguage ?? 'fr');

@@ -3,9 +3,11 @@ import { ProjectCard } from '@/presentation/components/common/ProjectCard';
 import { LoadingSpinner } from '@/presentation/components/common/LoadingSpinner';
 import type { Project } from '@/domain/entities/Project';
 import { useTranslation } from 'react-i18next';
+import { usePageMeta } from '@/presentation/hooks/usePageMeta';
 
 export function Projects() {
   const { t } = useTranslation();
+  usePageMeta({ title: t('seo.projectsTitle'), description: t('seo.projectsDescription') });
   const { projects, loading, error } = useProjects();
   const analysisProjects = projects.filter((p: Project) => p.category === 'analyse');
   const codeProjects = projects.filter((p: Project) => p.category === 'code');
