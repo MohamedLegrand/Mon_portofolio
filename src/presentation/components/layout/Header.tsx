@@ -32,8 +32,9 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-zinc-200 dark:border-zinc-900 bg-white/80 dark:bg-black/80 backdrop-blur-md transition-all duration-300">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo / Nom */}
-        <Link to="/" className="text-lg sm:text-xl font-extrabold tracking-wide text-zinc-900 dark:text-white hover:text-red-500 transition-colors uppercase">
-          TAKADJIO <span className="text-red-600">Mohamed</span>
+        <Link to="/" className="flex items-center gap-2.5 text-base sm:text-xl font-extrabold tracking-wide text-zinc-900 dark:text-white hover:text-red-500 transition-colors uppercase">
+          <img src="/favicon.svg" alt="" width="36" height="36" className="h-8 w-8 sm:h-9 sm:w-9 shrink-0" />
+          <span>Mohamed <span className="text-red-600">TAKADJIO</span></span>
         </Link>
 
         {/* Navigation Desktop */}

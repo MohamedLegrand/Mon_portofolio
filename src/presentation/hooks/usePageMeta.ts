@@ -32,7 +32,7 @@ export function usePageMeta({ title, description, noindex = false }: PageMeta = 
 
   useEffect(() => {
     const siteTitle = t('meta.title');
-    const fullTitle = title ? `${title} | TAKADJIO Mohamed` : siteTitle;
+    const fullTitle = title ? `${title} | Mohamed TAKADJIO` : siteTitle;
     const desc = (description ?? t('meta.description')).replace(/\s+/g, ' ').trim().slice(0, 300);
     const path = pathname !== '/' ? pathname.replace(/\/+$/, '') : '/';
     const url = SITE_URL + path;
