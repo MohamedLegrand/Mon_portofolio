@@ -7,7 +7,7 @@
     "projectsTitle": "Projets",
     "projectsDescription": "Projets de TAKADJIO Mohamed : MyNkap (SaaS de gestion financière avec IA), HR-Skills Pay, RayCard, Père Nkap et sites vitrines React. De l'analyse UML/MERISE à la mise en production.",
     "skillsTitle": "Compétences",
-    "skillsDescription": "Compétences de TAKADJIO Mohamed : Python, Go, TypeScript, Dart, FastAPI, Django, React, Flutter, PostgreSQL, Docker, Nginx, Linux, CI/CD avec GitHub Actions, UML et MERISE.",
+    "skillsDescription": "Compétences de TAKADJIO Mohamed : Python, Go, TypeScript, Dart, FastAPI, Django, React, Flutter, PostgreSQL, Docker, Nginx, Linux, CI/CD avec GitHub Actions, tests QA / UAT, UML et MERISE.",
     "experiencesTitle": "Expériences",
     "experiencesDescription": "Parcours de TAKADJIO Mohamed : analyste-développeur fullstack & QA chez HR-Skills, développeur web chez True Site Technology, missions freelance pour National Energy et AfrikTech.",
     "contactTitle": "Contact",
@@ -76,7 +76,8 @@
       "webMobile": "Développement d'applications web & mobile",
       "database": "Administration de bases de données",
       "devops": "DevOps",
-      "analysis": "Analyste de projet"
+      "analysis": "Analyste de projet",
+      "testing": "Tests d'applications (QA / UAT)"
     }
   },
   "education": {
@@ -145,7 +146,6 @@
     "codeHeading": "Projets de Développement",
     "empty": "Aucun projet n'a été trouvé pour le moment.",
     "loadError": "Une erreur est survenue lors du chargement des projets.",
-    "featured": "Mis en avant",
     "learnMore": "En savoir plus",
     "visit": "Visiter"
   },
@@ -175,10 +175,30 @@
     "codeText": "Visualisation du code source implémenté ({{stack}}).",
     "codeFrontend": "ReactJS Front-end",
     "codeBackend": "Python Back-end",
+    "codeBackendGo": "Go Back-end",
     "technologies": "Technologies utilisées",
+    "modelingTech": "Technologies de modélisation",
+    "devTech": "Technologies de développement",
+    "modelingDeliverables": "Livrables de modélisation",
+    "platform": {
+      "web": "Web",
+      "mobile": "Mobile"
+    },
     "liveLink": "Lien de production",
     "visitLive": "Consulter le site en ligne",
     "uml": {
+      "deployTitle": "Diagramme de déploiement de MyNkap",
+      "deployBrowser": "Navigateur web",
+      "deploySmartphone": "Smartphone",
+      "deployReactApp": "Application React",
+      "deployFlutterApp": "Application Flutter",
+      "deployServer": "Serveur VPS Linux",
+      "deployProxy": "Nginx : reverse proxy & TLS",
+      "deployAi": "Module IA",
+      "deployAiSub": "analyse & prédiction",
+      "deployDbSub": "données financières",
+      "deployForward": "requêtes API",
+      "deployPipeline": "déploiement automatique",
       "mobileMoneySystem": "SYSTÈME MOBILE MONEY",
       "fintechClient": "Client Fintech",
       "authenticate": "S'authentifier (2FA)",
@@ -225,6 +245,10 @@
         "title": "Frameworks & Librairies",
         "description": "Les briques applicatives qui accélèrent le développement d'interfaces et de services."
       },
+      "testing": {
+        "title": "Tests & Assurance qualité",
+        "description": "Je vérifie que chaque application fonctionne correctement et répond aux besoins avant sa mise en production."
+      },
       "tools": {
         "title": "Outils de développement",
         "description": "Les logiciels qui m'accompagnent au quotidien pour être plus productif."
@@ -249,6 +273,8 @@
       "fastapi": "Idéal pour développer des API asynchrones performantes, légères et documentées automatiquement via OpenAPI.",
       "flutter": "Framework de Google que j'utilise pour créer des applications mobiles multiplateformes (Android et iOS) fluides, à partir d'une seule base de code.",
       "dart": "Langage moderne et typé, au cœur de Flutter, que j'utilise pour écrire la logique et les interfaces de mes applications mobiles.",
+      "qa": "Tests fonctionnels, d'intégration et de non-régression pour détecter et documenter les anomalies avant chaque mise en production.",
+      "uat": "Recette utilisateur (UAT) : scénarios de test menés avec le client pour valider que l'application répond à ses besoins métier.",
       "postman": "Essentiel pour tester, documenter, simuler et valider le comportement de toutes mes routes d'API.",
       "vscode": "Mon éditeur de code principal, configuré pour accroître ma productivité au quotidien.",
       "antigravity": "Mon environnement de développement (IDE) augmenté par l'IA pour concevoir, déboguer et coder plus efficacement.",

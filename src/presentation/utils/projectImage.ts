@@ -1,11 +1,15 @@
 /**
  * Classes d'affichage d'une image de projet selon sa nature :
- * - « logo-xxx » : logo sur fond transparent/blanc → entier, sur fond blanc ;
- * - « xxx-logo » : logo avec son propre fond (carré coloré) → entier, sur fond noir ;
- * - sinon : photo d'illustration → recadrée pour remplir la carte.
+ * - logo avec son propre fond foncé/coloré (carré) → entier, sur fond noir ;
+ * - autre logo (fond blanc ou transparent)        → entier, sur fond blanc ;
+ * - sinon : photo d'illustration                  → recadrée pour remplir la carte.
  */
+const DARK_BACKGROUND_LOGOS = ['hr-pay-logo', 'perenkap-logo'];
+
 export function projectImageClass(url?: string): string {
-  if (url?.includes('/logo-')) return 'object-contain p-6 bg-white group-hover:scale-[1.02]';
-  if (url && /-logo\.\w+$/.test(url)) return 'object-contain p-4 bg-black rounded-xl border border-zinc-300 dark:border-zinc-800 group-hover:scale-[1.02]';
+  if (url && DARK_BACKGROUND_LOGOS.some((name) => url.includes(name))) {
+    return 'object-contain p-4 bg-black rounded-xl border border-zinc-300 dark:border-zinc-800 group-hover:scale-[1.02]';
+  }
+  if (url && /logo/i.test(url)) return 'object-contain p-6 bg-white group-hover:scale-[1.02]';
   return 'object-cover group-hover:scale-105';
 }

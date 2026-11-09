@@ -32,11 +32,6 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             </span>
           </div>
         )}
-        {project.featured && (
-          <span className="absolute right-4 top-4 rounded-full bg-red-600 px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-md">
-            {t('projects.featured')}
-          </span>
-        )}
       </div>
 
       {/* Infos */}

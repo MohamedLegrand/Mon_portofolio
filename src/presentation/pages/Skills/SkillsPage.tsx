@@ -82,6 +82,21 @@ const skillCategories: SkillCategory[] = [
     ]
   },
   {
+    key: "testing",
+    skills: [
+      {
+        name: "Tests QA",
+        image: "/images/tests/qa.svg",
+        descKey: "qa"
+      },
+      {
+        name: "Tests UAT",
+        image: "/images/tests/uat.svg",
+        descKey: "uat"
+      }
+    ]
+  },
+  {
     key: "tools",
     skills: [
       { 
