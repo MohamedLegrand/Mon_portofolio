@@ -45,7 +45,7 @@ export function Projects() {
           {/* Section 1 : Projets d'Analyse */}
           {analysisProjects.length > 0 && (
             <div className="space-y-8">
-              <h2 className="text-2xl font-bold text-zinc-900 dark:text-white tracking-widest border-b border-zinc-200 dark:border-zinc-900 pb-3 font-monster text-3xl text-left">
+              <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white tracking-wider sm:tracking-widest break-words border-b border-zinc-200 dark:border-zinc-900 pb-3 font-monster text-left">
                 {t('projects.analysisHeading')}
               </h2>
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -59,7 +59,7 @@ export function Projects() {
           {/* Section 2 : Projets de Code */}
           {codeProjects.length > 0 && (
             <div className="space-y-8">
-              <h2 className="text-2xl font-bold text-zinc-900 dark:text-white tracking-widest border-b border-zinc-200 dark:border-zinc-900 pb-3 font-monster text-3xl text-left">
+              <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white tracking-wider sm:tracking-widest break-words border-b border-zinc-200 dark:border-zinc-900 pb-3 font-monster text-left">
                 {t('projects.codeHeading')}
               </h2>
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">

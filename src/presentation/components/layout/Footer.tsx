@@ -19,7 +19,7 @@ export function Footer() {
               {t('footer.about')}
             </p>
             {/* Badge Disponibilité */}
-            <div className="mt-2 inline-flex items-center gap-2 rounded-full border border-red-500/20 dark:border-red-500/10 bg-red-500/10 dark:bg-red-500/5 px-3 py-1 text-[9px] font-bold uppercase tracking-wider text-red-600 dark:text-red-500 w-fit">
+            <div className="mt-2 inline-flex items-center gap-2 rounded-full border border-red-500/20 dark:border-red-500/10 bg-red-500/10 dark:bg-red-500/5 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-red-600 dark:text-red-500 w-fit">
               <span className="flex h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" />
               {t('common.available')}
             </div>
@@ -58,7 +58,7 @@ export function Footer() {
                   <Mail className="h-3.5 w-3.5" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[9px] uppercase font-bold text-zinc-500 tracking-wider">{t('footer.email')}</span>
+                  <span className="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">{t('footer.email')}</span>
                   <a href="mailto:legrandmohamed67@gmail.com" className="hover:text-red-600 dark:hover:text-white transition-colors text-xs font-mono">
                     legrandmohamed67@gmail.com
                   </a>
@@ -70,7 +70,7 @@ export function Footer() {
                   <Phone className="h-3.5 w-3.5" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[9px] uppercase font-bold text-zinc-500 tracking-wider">{t('footer.whatsapp')}</span>
+                  <span className="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">{t('footer.whatsapp')}</span>
                   <a href="https://wa.me/237677246900" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 dark:hover:text-white transition-colors text-xs font-mono">
                     +237 677 24 69 00
                   </a>
@@ -85,7 +85,7 @@ export function Footer() {
                   <MapPin className="h-3.5 w-3.5" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[9px] uppercase font-bold text-zinc-500 tracking-wider">{t('footer.location')}</span>
+                  <span className="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">{t('footer.location')}</span>
                   <span className="text-xs text-zinc-600 dark:text-zinc-400">
                     {t('common.location')}
                   </span>
