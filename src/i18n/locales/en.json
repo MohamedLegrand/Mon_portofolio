@@ -1,17 +1,17 @@
 {
   "meta": {
-    "title": "TAKADJIO Mohamed — Fullstack Web & Mobile Developer in Yaoundé",
-    "description": "TAKADJIO Mohamed, software engineer and fullstack web & mobile developer in Yaoundé (Cameroon): REST APIs, React, FastAPI, Go, Flutter, PostgreSQL, DevOps. Founder of MyNkap."
+    "title": "Mohamed TAKADJIO — Fullstack Web & Mobile Developer in Yaoundé",
+    "description": "Mohamed TAKADJIO, software engineer and fullstack web & mobile developer in Yaoundé (Cameroon): REST APIs, React, FastAPI, Go, Flutter, PostgreSQL, DevOps. Founder of MyNkap."
   },
   "seo": {
     "projectsTitle": "Projects",
-    "projectsDescription": "Projects by TAKADJIO Mohamed: MyNkap (AI-assisted financial management SaaS), HR-Skills Pay, RayCard, Père Nkap and React showcase websites. From UML/MERISE analysis to production.",
+    "projectsDescription": "Projects by Mohamed TAKADJIO: MyNkap (AI-assisted financial management SaaS), HR-Skills Pay, RayCard, Père Nkap and React showcase websites. From UML/MERISE analysis to production.",
     "skillsTitle": "Skills",
-    "skillsDescription": "Skills of TAKADJIO Mohamed: Python, Go, TypeScript, Dart, FastAPI, Django, React, Flutter, PostgreSQL, Docker, Nginx, Linux, CI/CD with GitHub Actions, QA / UAT testing, UML and MERISE.",
+    "skillsDescription": "Skills of Mohamed TAKADJIO: Python, Go, TypeScript, Dart, FastAPI, Django, React, Flutter, PostgreSQL, Docker, Nginx, Linux, CI/CD with GitHub Actions, QA / UAT testing, UML and MERISE.",
     "experiencesTitle": "Experience",
-    "experiencesDescription": "Career of TAKADJIO Mohamed: fullstack analyst-developer & QA at HR-Skills, web developer at True Site Technology, freelance work for National Energy and AfrikTech.",
+    "experiencesDescription": "Career of Mohamed TAKADJIO: fullstack analyst-developer & QA at HR-Skills, web developer at True Site Technology, freelance work for National Energy and AfrikTech.",
     "contactTitle": "Contact",
-    "contactDescription": "Contact TAKADJIO Mohamed, fullstack web & mobile developer in Yaoundé, for a project, a freelance assignment or a collaboration.",
+    "contactDescription": "Contact Mohamed TAKADJIO, fullstack web & mobile developer in Yaoundé, for a project, a freelance assignment or a collaboration.",
     "notFoundTitle": "Page not found"
   },
   "common": {
@@ -123,7 +123,7 @@
     "successText": "Thank you for reaching out. I'll get back to you as soon as possible.",
     "errorTitle": "Something went wrong",
     "nameLabel": "Full name",
-    "namePlaceholder": "e.g. TAKADJIO Mohamed",
+    "namePlaceholder": "e.g. Mohamed TAKADJIO",
     "emailLabel": "Email address",
     "emailPlaceholder": "e.g. you@gmail.com",
     "subjectLabel": "Subject",

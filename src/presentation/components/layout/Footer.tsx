@@ -13,7 +13,7 @@ export function Footer() {
           {/* Colonne 1 : Identité (5 cols) */}
           <div className="lg:col-span-5 flex flex-col gap-4 text-left">
             <h3 className="text-xl font-extrabold text-zinc-900 dark:text-white tracking-wide">
-              TAKADJIO <span className="text-red-600">MOHAMED</span>
+              MOHAMED <span className="text-red-600">TAKADJIO</span>
             </h3>
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-sm text-xs">
               {t('footer.about')}
@@ -99,7 +99,7 @@ export function Footer() {
         {/* Ligne inférieure : Copyright & Réseaux Sociaux */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 text-zinc-500 dark:text-zinc-400 text-xs">
           <div>
-            &copy; {new Date().getFullYear()} TAKADJIO Mohamed. {t('footer.rights')}
+            &copy; {new Date().getFullYear()} Mohamed TAKADJIO. {t('footer.rights')}
           </div>
 
           <div className="flex items-center gap-4">

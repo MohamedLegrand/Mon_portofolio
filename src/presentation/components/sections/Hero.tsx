@@ -20,8 +20,8 @@ export function Hero() {
             {t('hero.greeting')}
           </span>
           <h1 className="font-bebas text-6xl sm:text-8xl text-zinc-900 dark:text-white leading-[0.85] tracking-tight">
-            TAKADJIO
-            <span className="block text-red-600">MOHAMED</span>
+            MOHAMED
+            <span className="block text-red-600">TAKADJIO</span>
           </h1>
           <p className="mt-5 text-sm sm:text-base font-bold uppercase tracking-wider text-red-700 dark:text-red-500">
             {t('hero.role')}
@@ -69,7 +69,7 @@ export function Hero() {
             <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-transparent to-transparent z-10" />
             <img
               src="/images/photo.jpg"
-              alt="TAKADJIO Mohamed"
+              alt="Mohamed TAKADJIO"
               className="w-full h-full object-cover grayscale brightness-90 contrast-110 hover:grayscale-0 hover:scale-105 transition-all duration-700"
             />
           </div>
