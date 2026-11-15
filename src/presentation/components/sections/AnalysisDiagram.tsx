@@ -55,7 +55,7 @@ export function AnalysisDiagram() {
               orient="auto-start-reverse"
             >
               {/* Flèche ouverte standard UML */}
-              <path d="M 2 2 L 8 5 L 2 8" fill="none" stroke="#dc2626" strokeWidth="1.5" />
+              <path d="M 2 2 L 8 5 L 2 8" fill="none" stroke="#a82e2e" strokeWidth="1.5" />
             </marker>
           </defs>
 
@@ -209,7 +209,7 @@ export function AnalysisDiagram() {
               rx="95"
               ry="28"
               className="fill-zinc-100 dark:fill-zinc-950"
-              stroke="#dc2626"
+              stroke="#a82e2e"
               strokeWidth="2"
               variants={fadeInVariants(0.8)}
             />
@@ -232,7 +232,7 @@ export function AnalysisDiagram() {
               rx="95"
               ry="28"
               className="fill-zinc-100 dark:fill-zinc-950"
-              stroke="#dc2626"
+              stroke="#a82e2e"
               strokeWidth="2"
               variants={fadeInVariants(1.2)}
             />
@@ -255,7 +255,7 @@ export function AnalysisDiagram() {
               rx="115"
               ry="28"
               className="fill-zinc-100 dark:fill-zinc-950"
-              stroke="#dc2626"
+              stroke="#a82e2e"
               strokeWidth="2"
               variants={fadeInVariants(1.6)}
             />
@@ -278,7 +278,7 @@ export function AnalysisDiagram() {
               rx="125"
               ry="28"
               className="fill-zinc-100 dark:fill-zinc-950"
-              stroke="#dc2626"
+              stroke="#a82e2e"
               strokeWidth="2"
               variants={fadeInVariants(2.0)}
             />
@@ -300,7 +300,7 @@ export function AnalysisDiagram() {
             y1="125"
             x2="480"
             y2="155"
-            stroke="#dc2626"
+            stroke="#a82e2e"
             strokeWidth="1.5"
             strokeDasharray="5 5"
             markerEnd="url(#uml-arrow)"
@@ -322,7 +322,7 @@ export function AnalysisDiagram() {
             y1="215"
             x2="480"
             y2="185"
-            stroke="#dc2626"
+            stroke="#a82e2e"
             strokeWidth="1.5"
             strokeDasharray="5 5"
             markerEnd="url(#uml-arrow)"

@@ -10,7 +10,7 @@ import { usePageMeta } from '@/presentation/hooks/usePageMeta';
 // Nœud UML de déploiement (boîte en 3D)
 function DeployNode({ x, y, w, h, d = 8 }: { x: number; y: number; w: number; h: number; d?: number }) {
   return (
-    <g stroke="#dc2626" strokeWidth="1.3" fill="#18181b">
+    <g stroke="#a82e2e" strokeWidth="1.3" fill="#18181b">
       <polygon points={`${x},${y} ${x + d},${y - d} ${x + w + d},${y - d} ${x + w},${y}`} fill="#27272a" />
       <polygon points={`${x + w},${y} ${x + w + d},${y - d} ${x + w + d},${y + h - d} ${x + w},${y + h}`} fill="#27272a" />
       <rect x={x} y={y} width={w} height={h} />
@@ -28,7 +28,7 @@ function DeployBox({ x, y, w, h, stereo, name, sub, dashed = false }: {
       <rect x={x} y={y} width={w} height={h} rx="4" fill="#09090b" stroke={dashed ? '#71717a' : '#a1a1aa'} strokeWidth="1" strokeDasharray={dashed ? '4 3' : undefined} />
       <text x={cx} y={y + 13} fill="#a1a1aa" fontSize="8" textAnchor="middle">«{stereo}»</text>
       <text x={cx} y={y + 26} fill="#fff" fontSize="10" fontWeight="bold" textAnchor="middle">{name}</text>
-      {sub && <text x={cx} y={y + 38} fill="#f87171" fontSize="8" textAnchor="middle">{sub}</text>}
+      {sub && <text x={cx} y={y + 38} fill="#d66b6b" fontSize="8" textAnchor="middle">{sub}</text>}
     </g>
   );
 }
@@ -90,8 +90,8 @@ function DeploymentDiagram() {
 
       {/* CI/CD */}
       <DeployBox x={125} y={366} w={192} h={46} stereo="device" name="GitHub Actions" sub="CI/CD" dashed />
-      <line x1={221} y1={366} x2={221} y2={344} stroke="#dc2626" strokeWidth="1.2" strokeDasharray="4 3" markerEnd="url(#deployArrow)" />
-      <text x={228} y={359} fill="#f87171" fontSize="8">{u('deployPipeline')}</text>
+      <line x1={221} y1={366} x2={221} y2={344} stroke="#a82e2e" strokeWidth="1.2" strokeDasharray="4 3" markerEnd="url(#deployArrow)" />
+      <text x={228} y={359} fill="#d66b6b" fontSize="8">{u('deployPipeline')}</text>
     </svg>
   );
 }
@@ -167,8 +167,8 @@ function UmlDiagram({ type }: { type: 'usecase' | 'sequence' | 'class' | 'deploy
     return (
       <svg viewBox="0 0 450 320" className="w-full h-auto text-zinc-400 select-none">
         {/* Cadre du Système */}
-        <rect x="140" y="20" width="280" height="280" rx="12" fill="#000" stroke="#dc2626" strokeWidth="1.5" opacity="0.3" />
-        <text x="150" y="40" fill="#dc2626" fontSize="10" fontWeight="bold" letterSpacing="0.05em">{t('projectDetail.uml.mobileMoneySystem')}</text>
+        <rect x="140" y="20" width="280" height="280" rx="12" fill="#000" stroke="#a82e2e" strokeWidth="1.5" opacity="0.3" />
+        <text x="150" y="40" fill="#a82e2e" fontSize="10" fontWeight="bold" letterSpacing="0.05em">{t('projectDetail.uml.mobileMoneySystem')}</text>
 
         {/* Acteur Stick Figure */}
         <g transform="translate(50, 130)" stroke="#fff" strokeWidth="2.5" fill="none">
@@ -182,16 +182,16 @@ function UmlDiagram({ type }: { type: 'usecase' | 'sequence' | 'class' | 'deploy
 
         {/* Cas d'utilisation (ellipses) */}
         <g transform="translate(160, 60)">
-          <ellipse cx="120" cy="25" rx="90" ry="20" fill="#18181b" stroke="#dc2626" strokeWidth="1.5" />
+          <ellipse cx="120" cy="25" rx="90" ry="20" fill="#18181b" stroke="#a82e2e" strokeWidth="1.5" />
           <text x="120" y="28" fill="#fff" fontSize="9" fontWeight="bold" textAnchor="middle">{t('projectDetail.uml.authenticate')}</text>
 
-          <ellipse cx="120" cy="85" rx="90" ry="20" fill="#18181b" stroke="#dc2626" strokeWidth="1.5" />
+          <ellipse cx="120" cy="85" rx="90" ry="20" fill="#18181b" stroke="#a82e2e" strokeWidth="1.5" />
           <text x="120" y="88" fill="#fff" fontSize="9" fontWeight="bold" textAnchor="middle">{t('projectDetail.uml.transferFunds')}</text>
 
-          <ellipse cx="120" cy="145" rx="90" ry="20" fill="#18181b" stroke="#dc2626" strokeWidth="1.5" />
+          <ellipse cx="120" cy="145" rx="90" ry="20" fill="#18181b" stroke="#a82e2e" strokeWidth="1.5" />
           <text x="120" y="148" fill="#fff" fontSize="9" fontWeight="bold" textAnchor="middle">{t('projectDetail.uml.manageCards')}</text>
 
-          <ellipse cx="120" cy="205" rx="90" ry="20" fill="#18181b" stroke="#dc2626" strokeWidth="1.5" />
+          <ellipse cx="120" cy="205" rx="90" ry="20" fill="#18181b" stroke="#a82e2e" strokeWidth="1.5" />
           <text x="120" y="208" fill="#fff" fontSize="9" fontWeight="bold" textAnchor="middle">{t('projectDetail.uml.buyAirtime')}</text>
         </g>
 
@@ -218,7 +218,7 @@ function UmlDiagram({ type }: { type: 'usecase' | 'sequence' | 'class' | 'deploy
         </g>
 
         {/* En-tête des participants */}
-        <g fill="#18181b" stroke="#dc2626" strokeWidth="1.5" textAnchor="middle" fontSize="9" fontWeight="bold">
+        <g fill="#18181b" stroke="#a82e2e" strokeWidth="1.5" textAnchor="middle" fontSize="9" fontWeight="bold">
           <rect x="20" y="20" width="80" height="30" rx="4" />
           <text x="60" y="38" fill="#fff" stroke="none">{t('projectDetail.uml.client')}</text>
 
@@ -233,7 +233,7 @@ function UmlDiagram({ type }: { type: 'usecase' | 'sequence' | 'class' | 'deploy
         </g>
 
         {/* Blocs d'activation */}
-        <g fill="#dc2626" opacity="0.3">
+        <g fill="#a82e2e" opacity="0.3">
           <rect x="57" y="70" width="6" height="190" />
           <rect x="177" y="85" width="6" height="150" />
           <rect x="297" y="105" width="6" height="110" />
@@ -244,8 +244,8 @@ function UmlDiagram({ type }: { type: 'usecase' | 'sequence' | 'class' | 'deploy
           <path d="M 63 90 L 171 90" fill="none" stroke="#fff" markerEnd="url(#arrow)" />
           <text x="117" y="85" fill="#fff" textAnchor="middle">{t('projectDetail.uml.step1')}</text>
 
-          <path d="M 183 110 L 291 110" fill="none" stroke="#dc2626" markerEnd="url(#arrow)" />
-          <text x="237" y="105" fill="#dc2626" textAnchor="middle">{t('projectDetail.uml.step2')}</text>
+          <path d="M 183 110 L 291 110" fill="none" stroke="#a82e2e" markerEnd="url(#arrow)" />
+          <text x="237" y="105" fill="#a82e2e" textAnchor="middle">{t('projectDetail.uml.step2')}</text>
 
           <path d="M 303 130 L 391 130" fill="none" stroke="#fff" markerEnd="url(#arrow)" />
           <text x="347" y="125" fill="#fff" textAnchor="middle">{t('projectDetail.uml.step3')}</text>
@@ -253,8 +253,8 @@ function UmlDiagram({ type }: { type: 'usecase' | 'sequence' | 'class' | 'deploy
           <path d="M 391 160 L 303 160" fill="none" stroke="#9ca3af" strokeDasharray="3 3" markerEnd="url(#arrow)" />
           <text x="347" y="155" fill="#9ca3af" textAnchor="middle">{t('projectDetail.uml.step4')}</text>
 
-          <path d="M 297 190 L 183 190" fill="none" stroke="#dc2626" markerEnd="url(#arrow)" />
-          <text x="237" y="185" fill="#dc2626" textAnchor="middle">{t('projectDetail.uml.step5')}</text>
+          <path d="M 297 190 L 183 190" fill="none" stroke="#a82e2e" markerEnd="url(#arrow)" />
+          <text x="237" y="185" fill="#a82e2e" textAnchor="middle">{t('projectDetail.uml.step5')}</text>
 
           <path d="M 177 220 L 63 220" fill="none" stroke="#9ca3af" strokeDasharray="3 3" markerEnd="url(#arrow)" />
           <text x="117" y="215" fill="#9ca3af" textAnchor="middle">{t('projectDetail.uml.step6')}</text>
@@ -272,10 +272,10 @@ function UmlDiagram({ type }: { type: 'usecase' | 'sequence' | 'class' | 'deploy
   return (
     <svg viewBox="0 0 450 320" className="w-full h-auto text-zinc-400 select-none">
       {/* Box Utilisateur */}
-      <g transform="translate(30, 40)" fill="#18181b" stroke="#dc2626" strokeWidth="1.5">
+      <g transform="translate(30, 40)" fill="#18181b" stroke="#a82e2e" strokeWidth="1.5">
         <rect width="120" height="90" rx="4" />
-        <line x1="0" y1="25" x2="120" y2="25" stroke="#dc2626" strokeWidth="1.5" />
-        <line x1="0" y1="60" x2="120" y2="60" stroke="#dc2626" strokeWidth="1.5" />
+        <line x1="0" y1="25" x2="120" y2="25" stroke="#a82e2e" strokeWidth="1.5" />
+        <line x1="0" y1="60" x2="120" y2="60" stroke="#a82e2e" strokeWidth="1.5" />
         <text x="60" y="17" fill="#fff" fontSize="9" fontWeight="bold" textAnchor="middle" stroke="none">Utilisateur</text>
         <text x="10" y="38" fill="#9ca3af" fontSize="8" stroke="none">- id : UUID</text>
         <text x="10" y="50" fill="#9ca3af" fontSize="8" stroke="none">- email : String</text>
@@ -284,10 +284,10 @@ function UmlDiagram({ type }: { type: 'usecase' | 'sequence' | 'class' | 'deploy
       </g>
 
       {/* Box Livre */}
-      <g transform="translate(290, 40)" fill="#18181b" stroke="#dc2626" strokeWidth="1.5">
+      <g transform="translate(290, 40)" fill="#18181b" stroke="#a82e2e" strokeWidth="1.5">
         <rect width="120" height="90" rx="4" />
-        <line x1="0" y1="25" x2="120" y2="25" stroke="#dc2626" strokeWidth="1.5" />
-        <line x1="0" y1="60" x2="120" y2="60" stroke="#dc2626" strokeWidth="1.5" />
+        <line x1="0" y1="25" x2="120" y2="25" stroke="#a82e2e" strokeWidth="1.5" />
+        <line x1="0" y1="60" x2="120" y2="60" stroke="#a82e2e" strokeWidth="1.5" />
         <text x="60" y="17" fill="#fff" fontSize="9" fontWeight="bold" textAnchor="middle" stroke="none">LivreNumérique</text>
         <text x="10" y="38" fill="#9ca3af" fontSize="8" stroke="none">- codeISBN : String</text>
         <text x="10" y="50" fill="#9ca3af" fontSize="8" stroke="none">- titre : String</text>
@@ -296,10 +296,10 @@ function UmlDiagram({ type }: { type: 'usecase' | 'sequence' | 'class' | 'deploy
       </g>
 
       {/* Box Achat */}
-      <g transform="translate(160, 190)" fill="#18181b" stroke="#dc2626" strokeWidth="1.5">
+      <g transform="translate(160, 190)" fill="#18181b" stroke="#a82e2e" strokeWidth="1.5">
         <rect width="120" height="95" rx="4" />
-        <line x1="0" y1="25" x2="120" y2="25" stroke="#dc2626" strokeWidth="1.5" />
-        <line x1="0" y1="65" x2="120" y2="65" stroke="#dc2626" strokeWidth="1.5" />
+        <line x1="0" y1="25" x2="120" y2="25" stroke="#a82e2e" strokeWidth="1.5" />
+        <line x1="0" y1="65" x2="120" y2="65" stroke="#a82e2e" strokeWidth="1.5" />
         <text x="60" y="17" fill="#fff" fontSize="9" fontWeight="bold" textAnchor="middle" stroke="none">Commande / Achat</text>
         <text x="10" y="38" fill="#9ca3af" fontSize="8" stroke="none">- idTransaction : String</text>
         <text x="10" y="48" fill="#9ca3af" fontSize="8" stroke="none">- dateCommande : Date</text>

@@ -222,7 +222,7 @@ export function SkillsPage() {
                 <motion.div
                   key={skillIdx}
                   variants={itemVariants}
-                  whileHover={{ y: -4, borderColor: '#dc2626' }}
+                  whileHover={{ y: -4, borderColor: '#a82e2e' }}
                   className="flex items-start gap-4 p-5 rounded-xl border border-zinc-200 dark:border-zinc-900 bg-zinc-100/60 dark:bg-zinc-950/20 backdrop-blur-sm transition-all duration-300 group select-none text-left min-h-[110px]"
                 >
                   {/* Logo de la techno */}
