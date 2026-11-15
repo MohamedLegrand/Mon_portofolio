@@ -158,6 +158,26 @@
     }
   },
   {
+    "id": "inktech",
+    "title": "InkTech Group",
+    "description": {
+      "fr": "Conception et développement du site vitrine de la startup InkTech Group avec ReactJS et TypeScript (TSX), mis en production via un pipeline CI/CD.",
+      "en": "Design and development of the showcase website of the startup InkTech Group with ReactJS and TypeScript (TSX), deployed to production through a CI/CD pipeline."
+    },
+    "stack": [
+      "React",
+      "TypeScript",
+      "CI/CD"
+    ],
+    "liveUrl": "https://inktechgroup.tech",
+    "imageUrl": "/images/inktech-logos.png",
+    "category": "code",
+    "details": {
+      "fr": "InkTech Group est le site vitrine officiel de la startup. Il est développé avec ReactJS et TypeScript (composants TSX typés) pour une interface moderne, fiable et responsive. Chaque mise à jour est testée, construite et déployée automatiquement grâce à un pipeline CI/CD.",
+      "en": "InkTech Group is the startup's official showcase website. It is built with ReactJS and TypeScript (typed TSX components) for a modern, reliable and responsive interface. Every update is tested, built and deployed automatically through a CI/CD pipeline."
+    }
+  },
+  {
     "id": "sagesse-africaine",
     "title": "Sagesse Africaine E-Book",
     "description": {

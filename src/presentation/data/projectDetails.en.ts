@@ -171,6 +171,31 @@ export const projectDetailsEn: Record<string, DetailedProject> = {
       }
     ]
   },
+  "inktech": {
+    ...projectDetailsFr["inktech"],
+    subtitle: "Startup Showcase Website with ReactJS / TypeScript and CI/CD",
+    mainDescription: "Design and development of the showcase website of the startup InkTech Group, live at inktechgroup.tech. The site is built with ReactJS and TypeScript (typed TSX components), and every update is deployed automatically through a CI/CD pipeline.",
+    sections: [
+      {
+        title: "1. ReactJS and TypeScript (TSX)",
+        content: "The interface is built with React components typed in TypeScript:",
+        list: [
+          "Reusable TSX components with strictly typed props.",
+          "Errors caught at compile time instead of in production.",
+          "Modern and fully responsive interface."
+        ]
+      },
+      {
+        title: "2. Continuous Integration and Deployment (CI/CD)",
+        content: "Releasing to production is fully automated:",
+        list: [
+          "Every push automatically triggers the CI/CD pipeline.",
+          "The application is checked and built before every release.",
+          "Automatic deployment to inktechgroup.tech, with no manual step."
+        ]
+      }
+    ]
+  },
   "afritech-sas": {
     ...projectDetailsFr["afritech-sas"],
     subtitle: "Asynchronous Lead Capture API with FastAPI",

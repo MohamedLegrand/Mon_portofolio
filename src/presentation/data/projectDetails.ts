@@ -317,6 +317,61 @@ async def create_lead(lead: LeadCreate):
       }
     ]
   },
+  "inktech": {
+    id: "inktech",
+    title: "InkTech Group",
+    category: "code",
+    subtitle: "Site Vitrine de Startup en ReactJS / TypeScript avec CI/CD",
+    mainDescription: "Conception et développement du site vitrine de la startup InkTech Group, en production sur inktechgroup.tech. Le site est développé avec ReactJS et TypeScript (composants TSX typés) et chaque mise à jour est déployée automatiquement grâce à un pipeline CI/CD.",
+    codeFilename: "ServiceCard.tsx",
+    codeLanguage: "javascript",
+    codeContent: `import type { LucideIcon } from 'lucide-react';
+
+// Contrat typé d'un service présenté sur le site vitrine
+export interface Service {
+  id: string;
+  title: string;
+  description: string;
+  icon: LucideIcon;
+}
+
+interface ServiceCardProps {
+  service: Service;
+}
+
+// Composant TSX réutilisable : TypeScript vérifie les props à la compilation
+export function ServiceCard({ service }: ServiceCardProps) {
+  const { title, description, icon: Icon } = service;
+
+  return (
+    <article className="rounded-xl border p-6 transition hover:shadow-lg">
+      <Icon className="h-8 w-8" aria-hidden="true" />
+      <h3 className="mt-4 text-lg font-bold">{title}</h3>
+      <p className="mt-2 text-sm">{description}</p>
+    </article>
+  );
+}`,
+    sections: [
+      {
+        title: "1. ReactJS et TypeScript (TSX)",
+        content: "L'interface est construite avec des composants React typés en TypeScript :",
+        list: [
+          "Composants TSX réutilisables avec des props strictement typées.",
+          "Erreurs détectées dès la compilation plutôt qu'en production.",
+          "Interface moderne et 100 % responsive."
+        ]
+      },
+      {
+        title: "2. Intégration et Déploiement Continus (CI/CD)",
+        content: "La mise en production est entièrement automatisée :",
+        list: [
+          "Chaque push déclenche automatiquement le pipeline CI/CD.",
+          "Vérification et build de l'application avant chaque mise en ligne.",
+          "Déploiement automatique sur inktechgroup.tech, sans intervention manuelle."
+        ]
+      }
+    ]
+  },
   "sagesse-africaine": {
     id: "sagesse-africaine",
     title: "Sagesse Africaine E-Book",
