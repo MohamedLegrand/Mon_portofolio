@@ -1,17 +1,17 @@
 {
   "meta": {
-    "title": "Mohamed TAKADJIO — Développeur Fullstack Web & Mobile à Yaoundé",
-    "description": "Mohamed TAKADJIO, ingénieur des travaux informatiques et développeur fullstack web & mobile à Yaoundé (Cameroun) : API REST, React, FastAPI, Go, Flutter, PostgreSQL, DevOps. Fondateur de MyNkap."
+    "title": "Mohamed TAKADJIO — Développeur Fullstack Web & Mobile au Cameroun (Yaoundé)",
+    "description": "Mohamed TAKADJIO, développeur fullstack web & mobile au Cameroun, basé à Yaoundé : création de sites web, d'applications mobiles et d'API (React, FastAPI, Go, Flutter). Ingénieur IAI-Cameroun, fondateur de MyNkap."
   },
   "seo": {
     "projectsTitle": "Projets",
-    "projectsDescription": "Projets de Mohamed TAKADJIO : MyNkap (SaaS de gestion financière avec IA), HR-Skills Pay, RayCard, Père Nkap et sites vitrines React. De l'analyse UML/MERISE à la mise en production.",
+    "projectsDescription": "Projets de Mohamed TAKADJIO, développeur au Cameroun : MyNkap (SaaS de gestion financière avec IA), HR-Skills Pay, RayCard, Père Nkap et sites vitrines React (InkTech Group, National Energy, AfrikTech). De l'analyse UML/MERISE à la mise en production.",
     "skillsTitle": "Compétences",
     "skillsDescription": "Compétences de Mohamed TAKADJIO : Python, Go, TypeScript, Dart, FastAPI, Django, React, Flutter, PostgreSQL, Docker, Nginx, Linux, CI/CD avec GitHub Actions, tests QA / UAT, UML et MERISE.",
     "experiencesTitle": "Expériences",
     "experiencesDescription": "Parcours de Mohamed TAKADJIO : analyste-développeur fullstack & QA chez HR-Skills, développeur web chez True Site Technology, missions freelance pour National Energy et AfrikTech.",
     "contactTitle": "Contact",
-    "contactDescription": "Contactez Mohamed TAKADJIO, développeur fullstack web & mobile à Yaoundé, pour un projet, une mission freelance ou une collaboration.",
+    "contactDescription": "Contactez Mohamed TAKADJIO, développeur fullstack web & mobile au Cameroun (Yaoundé), pour un site web, une application mobile, une mission freelance ou une collaboration, au Cameroun ou à distance.",
     "notFoundTitle": "Page introuvable"
   },
   "common": {
@@ -34,7 +34,7 @@
   },
   "hero": {
     "greeting": "Bonjour, je suis",
-    "role": "INGÉNIEUR DES TRAVAUX INFORMATIQUES · DÉVELOPPEUR FULLSTACK WEB & MOBILE",
+    "role": "INGÉNIEUR DES TRAVAUX INFORMATIQUES · DÉVELOPPEUR FULLSTACK WEB & MOBILE AU CAMEROUN",
     "intro": "Spécialisé dans la conception d'API, je développe des applications web et mobiles complètes et j'assure leur mise en production, de l'analyse UML/MERISE jusqu'au déploiement.",
     "myProjects": "Mes projets",
     "contactMe": "Me contacter",
@@ -90,13 +90,34 @@
   "process": {
     "heading": "CYCLE DE VIE D'UN PROJET",
     "steps": [
-      { "title": "EXPRESSION DES BESOINS", "desc": "Écoute attentive, recueil des exigences du client et définition précise du périmètre." },
-      { "title": "ANALYSE", "desc": "Étude technique de faisabilité, structuration de l'architecture et choix technologiques." },
-      { "title": "MODÉLISATION", "desc": "Conception des schémas de données et élaboration des diagrammes UML / MERISE." },
-      { "title": "CODAGE", "desc": "Développement de la solution avec écriture d'un code propre, modulaire et performant." },
-      { "title": "TEST", "desc": "Validation complète des fonctionnalités, vérification de la sécurité et tests d'intégration." },
-      { "title": "DÉPLOIEMENT", "desc": "Mise en production sécurisée de l'application et automatisation du pipeline CI/CD." },
-      { "title": "MAINTENANCE", "desc": "Suivi post-déploiement, correction des anomalies et évolutions applicatives." }
+      {
+        "title": "EXPRESSION DES BESOINS",
+        "desc": "Écoute attentive, recueil des exigences du client et définition précise du périmètre."
+      },
+      {
+        "title": "ANALYSE",
+        "desc": "Étude technique de faisabilité, structuration de l'architecture et choix technologiques."
+      },
+      {
+        "title": "MODÉLISATION",
+        "desc": "Conception des schémas de données et élaboration des diagrammes UML / MERISE."
+      },
+      {
+        "title": "CODAGE",
+        "desc": "Développement de la solution avec écriture d'un code propre, modulaire et performant."
+      },
+      {
+        "title": "TEST",
+        "desc": "Validation complète des fonctionnalités, vérification de la sécurité et tests d'intégration."
+      },
+      {
+        "title": "DÉPLOIEMENT",
+        "desc": "Mise en production sécurisée de l'application et automatisation du pipeline CI/CD."
+      },
+      {
+        "title": "MAINTENANCE",
+        "desc": "Suivi post-déploiement, correction des anomalies et évolutions applicatives."
+      }
     ]
   },
   "quote": {
@@ -104,7 +125,7 @@
     "caption": "Méthodologie & Modélisation"
   },
   "footer": {
-    "about": "Ingénieur des travaux informatiques et développeur fullstack web & mobile. Je conçois des API, modélise sous UML/MERISE et mets en production des applications complètes.",
+    "about": "Ingénieur des travaux informatiques et développeur fullstack web & mobile basé à Yaoundé, au Cameroun. Je conçois des API, modélise sous UML/MERISE et mets en production des applications complètes.",
     "sitemap": "Plan du site",
     "contactHeading": "Contact & Localisation",
     "email": "Email",
@@ -226,7 +247,20 @@
     "loadError": "Une erreur est survenue lors du chargement des expériences.",
     "at": "chez",
     "present": "Présent",
-    "months": ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+    "months": [
+      "Janvier",
+      "Février",
+      "Mars",
+      "Avril",
+      "Mai",
+      "Juin",
+      "Juillet",
+      "Août",
+      "Septembre",
+      "Octobre",
+      "Novembre",
+      "Décembre"
+    ]
   },
   "skillsPage": {
     "titleA": "Mes",

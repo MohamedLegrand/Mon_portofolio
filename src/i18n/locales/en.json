@@ -1,17 +1,17 @@
 {
   "meta": {
-    "title": "Mohamed TAKADJIO — Fullstack Web & Mobile Developer in Yaoundé",
-    "description": "Mohamed TAKADJIO, software engineer and fullstack web & mobile developer in Yaoundé (Cameroon): REST APIs, React, FastAPI, Go, Flutter, PostgreSQL, DevOps. Founder of MyNkap."
+    "title": "Mohamed TAKADJIO — Fullstack Web & Mobile Developer in Cameroon (Yaoundé)",
+    "description": "Mohamed TAKADJIO, fullstack web & mobile developer in Cameroon, based in Yaoundé: websites, mobile apps and APIs (React, FastAPI, Go, Flutter). IAI-Cameroon software engineer, founder of MyNkap."
   },
   "seo": {
     "projectsTitle": "Projects",
-    "projectsDescription": "Projects by Mohamed TAKADJIO: MyNkap (AI-assisted financial management SaaS), HR-Skills Pay, RayCard, Père Nkap and React showcase websites. From UML/MERISE analysis to production.",
+    "projectsDescription": "Projects by Mohamed TAKADJIO, developer in Cameroon: MyNkap (AI-assisted financial management SaaS), HR-Skills Pay, RayCard, Père Nkap and React showcase websites (InkTech Group, National Energy, AfrikTech). From UML/MERISE analysis to production.",
     "skillsTitle": "Skills",
     "skillsDescription": "Skills of Mohamed TAKADJIO: Python, Go, TypeScript, Dart, FastAPI, Django, React, Flutter, PostgreSQL, Docker, Nginx, Linux, CI/CD with GitHub Actions, QA / UAT testing, UML and MERISE.",
     "experiencesTitle": "Experience",
     "experiencesDescription": "Career of Mohamed TAKADJIO: fullstack analyst-developer & QA at HR-Skills, web developer at True Site Technology, freelance work for National Energy and AfrikTech.",
     "contactTitle": "Contact",
-    "contactDescription": "Contact Mohamed TAKADJIO, fullstack web & mobile developer in Yaoundé, for a project, a freelance assignment or a collaboration.",
+    "contactDescription": "Contact Mohamed TAKADJIO, fullstack web & mobile developer in Cameroon (Yaoundé), for a website, a mobile app, a freelance assignment or a collaboration, in Cameroon or remotely.",
     "notFoundTitle": "Page not found"
   },
   "common": {
@@ -34,7 +34,7 @@
   },
   "hero": {
     "greeting": "Hello, I'm",
-    "role": "SOFTWARE ENGINEER · FULLSTACK WEB & MOBILE DEVELOPER",
+    "role": "SOFTWARE ENGINEER · FULLSTACK WEB & MOBILE DEVELOPER IN CAMEROON",
     "intro": "Specialized in API design, I build complete web and mobile applications and take them to production, from UML/MERISE analysis all the way to deployment.",
     "myProjects": "My projects",
     "contactMe": "Contact me",
@@ -90,13 +90,34 @@
   "process": {
     "heading": "PROJECT LIFECYCLE",
     "steps": [
-      { "title": "REQUIREMENTS", "desc": "Careful listening, gathering the client's requirements and precisely defining the scope." },
-      { "title": "ANALYSIS", "desc": "Technical feasibility study, architecture structuring and technology choices." },
-      { "title": "MODELING", "desc": "Designing data schemas and producing UML / MERISE diagrams." },
-      { "title": "CODING", "desc": "Building the solution with clean, modular and efficient code." },
-      { "title": "TESTING", "desc": "Full feature validation, security checks and integration testing." },
-      { "title": "DEPLOYMENT", "desc": "Secure release to production and automation of the CI/CD pipeline." },
-      { "title": "MAINTENANCE", "desc": "Post-deployment follow-up, bug fixes and application improvements." }
+      {
+        "title": "REQUIREMENTS",
+        "desc": "Careful listening, gathering the client's requirements and precisely defining the scope."
+      },
+      {
+        "title": "ANALYSIS",
+        "desc": "Technical feasibility study, architecture structuring and technology choices."
+      },
+      {
+        "title": "MODELING",
+        "desc": "Designing data schemas and producing UML / MERISE diagrams."
+      },
+      {
+        "title": "CODING",
+        "desc": "Building the solution with clean, modular and efficient code."
+      },
+      {
+        "title": "TESTING",
+        "desc": "Full feature validation, security checks and integration testing."
+      },
+      {
+        "title": "DEPLOYMENT",
+        "desc": "Secure release to production and automation of the CI/CD pipeline."
+      },
+      {
+        "title": "MAINTENANCE",
+        "desc": "Post-deployment follow-up, bug fixes and application improvements."
+      }
     ]
   },
   "quote": {
@@ -104,7 +125,7 @@
     "caption": "Methodology & Modeling"
   },
   "footer": {
-    "about": "Software engineer and fullstack web & mobile developer. I design APIs, model systems with UML/MERISE and ship complete applications to production.",
+    "about": "Software engineer and fullstack web & mobile developer based in Yaoundé, Cameroon. I design APIs, model systems with UML/MERISE and ship complete applications to production.",
     "sitemap": "Sitemap",
     "contactHeading": "Contact & Location",
     "email": "Email",
@@ -226,7 +247,20 @@
     "loadError": "An error occurred while loading the experiences.",
     "at": "at",
     "present": "Present",
-    "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ]
   },
   "skillsPage": {
     "titleA": "My",
