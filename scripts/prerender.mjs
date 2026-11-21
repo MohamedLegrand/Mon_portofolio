@@ -39,7 +39,7 @@ const nav = `<nav aria-label="Navigation principale"><ul>
 <li><a href="/contact">Contact</a></li>
 </ul></nav>`;
 
-const footer = `<footer><p>${esc(NAME)}, développeur fullstack web &amp; mobile au Cameroun (Yaoundé). ${esc(fr.footer.about)}</p>
+const footer = `<footer><p>${esc(NAME)}, développeur fullstack web &amp; mobile et DevOps au Cameroun (Yaoundé). ${esc(fr.footer.about)}</p>
 <p>Email : <a href="mailto:legrandmohamed67@gmail.com">legrandmohamed67@gmail.com</a> · WhatsApp : <a href="https://wa.me/237677246900">+237 677 24 69 00</a></p></footer>`;
 
 const projectList = (list) =>
@@ -58,7 +58,7 @@ const pages = [
     path: '/',
     title: fr.meta.title,
     description: fr.meta.description,
-    body: `<h1>${esc(NAME)} — Développeur Fullstack Web &amp; Mobile au Cameroun</h1>
+    body: `<h1>${esc(NAME)} — Développeur Fullstack Web &amp; Mobile et DevOps au Cameroun</h1>
 <p><strong>${esc(fr.hero.role)}</strong></p>
 <p>${esc(fr.hero.intro)}</p>
 <p>${esc(fr.hero.tagline)}</p>
@@ -78,7 +78,7 @@ const pages = [
     path: '/competences',
     title: `${fr.seo.skillsTitle} | ${NAME}`,
     description: fr.seo.skillsDescription,
-    body: `<h1>Compétences de ${esc(NAME)}, développeur fullstack au Cameroun</h1>
+    body: `<h1>Compétences de ${esc(NAME)}, développeur fullstack et DevOps au Cameroun</h1>
 <p>${esc(fr.seo.skillsDescription)}</p>`,
   },
   {
