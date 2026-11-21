@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Mohamed TAKADJIO — Fullstack & DevOps Developer in Cameroon (Yaoundé)",
-    "description": "Mohamed TAKADJIO, fullstack web & mobile developer and DevOps in Cameroon, based in Yaoundé: websites, mobile apps, APIs (React, FastAPI, Go, Flutter) and production delivery (Docker, CI/CD, Linux). Founder of MyNkap."
+    "description": "Mohamed TAKADJIO, fullstack developer, DevOps and analyst in Cameroon (Yaoundé): software architecture, APIs, websites, mobile apps, information systems security and production delivery. Founder of MyNkap."
   },
   "seo": {
     "projectsTitle": "Projects",
     "projectsDescription": "Projects by Mohamed TAKADJIO, developer in Cameroon: MyNkap (AI-assisted financial management SaaS), HR-Skills Pay, RayCard, Père Nkap and React showcase websites (InkTech Group, National Energy, AfrikTech). From UML/MERISE analysis to production.",
     "skillsTitle": "Skills",
-    "skillsDescription": "Skills of Mohamed TAKADJIO, fullstack and DevOps developer in Cameroon: Python, Go, TypeScript, Dart, FastAPI, Django, React, Flutter, PostgreSQL, DevOps (Docker, Nginx, Linux, CI/CD with GitHub Actions), QA / UAT testing, UML and MERISE.",
+    "skillsDescription": "Skills of Mohamed TAKADJIO, fullstack and DevOps developer in Cameroon: Python, Go, TypeScript, Dart, FastAPI, Django, React, Flutter, PostgreSQL, DevOps (Docker, Nginx, Linux, CI/CD with GitHub Actions), software analysis and architecture (UML, MERISE), application security, database administration and QA / UAT testing.",
     "experiencesTitle": "Experience",
     "experiencesDescription": "Career of Mohamed TAKADJIO: fullstack analyst-developer & QA at HR-Skills, web developer at True Site Technology, freelance work for National Energy and AfrikTech.",
     "contactTitle": "Contact",
@@ -35,7 +35,7 @@
   "hero": {
     "greeting": "Hello, I'm",
     "role": "SOFTWARE ENGINEER · FULLSTACK WEB & MOBILE DEVELOPER AND DEVOPS IN CAMEROON",
-    "intro": "Specialized in API design, I build complete web and mobile applications and take them to production, from UML/MERISE analysis all the way to deployment.",
+    "intro": "An analyst and software architect specialized in API design, I build complete, secure web and mobile applications and take them to production, from UML/MERISE analysis all the way to deployment.",
     "myProjects": "My projects",
     "contactMe": "Contact me",
     "tagline": "Founder of MyNkap, an AI-assisted financial management SaaS platform already used in production.",
@@ -125,7 +125,7 @@
     "caption": "Methodology & Modeling"
   },
   "footer": {
-    "about": "Software engineer, fullstack web & mobile developer and DevOps based in Yaoundé, Cameroon. I design APIs, model systems with UML/MERISE and automate production delivery (Docker, CI/CD, Linux).",
+    "about": "Software engineer based in Yaoundé, Cameroon: fullstack web & mobile developer, DevOps, analyst and software architect. I design APIs and secure architectures, model systems with UML/MERISE and automate production delivery (Docker, CI/CD, Linux).",
     "sitemap": "Sitemap",
     "contactHeading": "Contact & Location",
     "email": "Email",

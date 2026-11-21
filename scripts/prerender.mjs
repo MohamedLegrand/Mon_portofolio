@@ -62,6 +62,15 @@ const pages = [
 <p><strong>${esc(fr.hero.role)}</strong></p>
 <p>${esc(fr.hero.intro)}</p>
 <p>${esc(fr.hero.tagline)}</p>
+<h2>Domaines d'expertise</h2>
+<ul>
+<li>Développement fullstack web &amp; mobile (React, TypeScript, FastAPI, Go, Django, Flutter)</li>
+<li>DevOps : Docker, Nginx, Linux, CI/CD avec GitHub Actions, déploiement sur VPS</li>
+<li>Analyse et architecture logicielle : UML, MERISE, conception d'API REST</li>
+<li>Sécurité des systèmes d'information : TLS, authentification à deux facteurs, chiffrement, gestion sécurisée des clés d'API</li>
+<li>Administration de bases de données : PostgreSQL, MySQL</li>
+<li>Tests et assurance qualité (QA / UAT)</li>
+</ul>
 <h2>Projets en production</h2>${projectList(codeProjects)}
 <h2>Analyse et conception</h2>${projectList(analysisProjects)}`,
   },
